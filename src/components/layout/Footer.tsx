@@ -1,28 +1,27 @@
 import * as $ from './Footer.styles';
-import Link from 'next/link';
 
 const Footer = () => {
   return (
     <$.Footer>
       <$.Menus role="navigation">
-        <$.Menu>2023 뭐시기</$.Menu>
+        <$.Copyright>© 2023, OYS.</$.Copyright>
         <$.Menu>
-          <Link href="/">ABOUT</Link>
+          <$.SLink href="/">ABOUT</$.SLink>
         </$.Menu>
         <$.Menu>
-          <Link href="/">STOCKIST</Link>
+          <$.SLink href="/">STOCKIST</$.SLink>
         </$.Menu>
         <$.Menu>
-          <Link href="/">ORDER</Link>
+          <$.SLink href="/">ORDER</$.SLink>
         </$.Menu>
         <$.Menu>
-          <Link href="/">COSTOMER SERVICE</Link>
+          <$.SLink href="/">COSTOMER SERVICE</$.SLink>
         </$.Menu>
         <$.Menu>
-          <Link href="/">LEGAL</Link>
+          <$.SLink href="/">LEGAL</$.SLink>
         </$.Menu>
         <$.Menu>
-          <Link href="/">INSTAGRAM</Link>
+          <$.SLink href="/">INSTAGRAM</$.SLink>
         </$.Menu>
       </$.Menus>
     </$.Footer>
