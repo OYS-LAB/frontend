@@ -34,6 +34,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	width: 100%;
+    height: 100vh;
 }
 ol, ul {
 	list-style: none;
@@ -49,5 +51,9 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+#__next {
+	width: 100%;
+    height: 100%;
 }
 `;

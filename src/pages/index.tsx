@@ -1,13 +1,5 @@
-import MainHeader from 'components/main/MainHeader';
-import Menu from 'components/main/Menu';
+import Main from 'components/main';
 
 export default function IndexPage() {
-  return (
-    <>
-      <div>
-        <MainHeader />
-        <Menu />
-      </div>
-    </>
-  );
+  return <Main />;
 }

@@ -1,12 +1,11 @@
-import Image from 'next/image';
-import logo from '../../assets/logo.png';
+import logo from 'images/img-logo.png';
 import * as $ from './MainHeader.styles';
 
 const MainHeader = () => {
   return (
     <$.MainHeader>
       <$.Logo>
-        <Image src={logo} alt="logo" quality={100} />
+        <$.Image src={logo.src} alt="logo" />
       </$.Logo>
       <$.CartSection>
         <$.CartMenus>

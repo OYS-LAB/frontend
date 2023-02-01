@@ -1,15 +1,15 @@
 import * as $ from './TopMarquee.styles';
-import styled, { keyframes } from 'styled-components';
 
-const Header = () => {
-  const welcomeMsg = 'welcome! soft open will be coming soon';
-  const welcome = welcomeMsg.toUpperCase();
+const TopMarquee = () => {
+  const welcomeMessage = 'welcome! soft open will be coming soon';
 
   return (
-    <$.Section>
-      <$.Header>{welcome}</$.Header>
-    </$.Section>
+    <$.Wrap>
+      <$.Header>
+        <$.Message>{welcomeMessage}</$.Message>
+      </$.Header>
+    </$.Wrap>
   );
 };
 
-export default Header;
+export default TopMarquee;

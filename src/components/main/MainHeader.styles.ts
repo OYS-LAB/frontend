@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 export const MainHeader = styled.section`
-  margin-top: 20px;
   text-align: center;
 `;
 export const Logo = styled.div`
@@ -14,6 +13,10 @@ export const CartSection = styled.div`
   background: #000;
   display: flex;
   top: -100px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 export const CartMenus = styled.ul`
   color: #fff;
@@ -30,3 +33,5 @@ export const CartMenu = styled.li`
     margin: 0 25px;
   }
 `;
+
+export const Image = styled.img``;

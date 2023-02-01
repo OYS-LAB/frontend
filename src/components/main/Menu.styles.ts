@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import darkLightIcon from 'images/icon-dark-light.png';
+import searchIcon from 'images/icon-search.png';
 
 export const Main = styled.section`
   text-align: center;
@@ -56,4 +58,21 @@ export const picSec = styled.div`
   padding: 0;
   display: flex;
   justify-content: center;
+`;
+
+const Icon = styled.i`
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center;
+`;
+
+export const SearchIcon = styled(Icon)`
+  background-image: url('${searchIcon.src}');
+`;
+
+export const DarkLightIcon = styled(Icon)`
+  background-image: url('${darkLightIcon.src}');
 `;
