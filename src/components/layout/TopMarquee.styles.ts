@@ -1,9 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Section = styled.div`
-  width: 100%;
+  width: auto;
   border-bottom: 1px solid #000;
-  padding: 6px 50px 7px;
+  padding: 6px 50px 7px 0;
 `;
 
 const slideInLeft = keyframes`
@@ -13,9 +13,12 @@ const slideInLeft = keyframes`
 `;
 
 export const Header = styled.p`
+  display: inline-block;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 400;
   font-size: 10px;
   animation-name: ${slideInLeft};
-  animation-duration: 30s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal;
