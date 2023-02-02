@@ -6,7 +6,7 @@ const Menu = () => {
       <$.MenuSec>
         <$.Menus>
           <$.Menu>
-            <$.SLink href="/">MENU</$.SLink>
+            <$.SLink href="/">SHOP</$.SLink>
           </$.Menu>
           <$.Menu>
             <$.SLink href="/">ARCHIVE</$.SLink>

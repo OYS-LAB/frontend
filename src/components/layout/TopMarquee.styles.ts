@@ -9,24 +9,25 @@ export const Wrap = styled.div`
 `;
 
 const slideInLeft = keyframes`
- from { transform: translate(0px, 0px); }
+ from { transform: translate(0%, 0px); }
   to { transform: translate(100%, 0px); }
 }
 `;
 
 export const Header = styled.div`
-  width: calc(100% - 100px);
+  width: calc(100% - 50px);
+  padding-bottom: 5px;
   border-bottom: 1px solid #000;
-  margin: 0 auto;
 `;
 
 export const Message = styled.p`
   display: inline-block;
+  width: 100%;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 400;
   font-size: 10px;
   animation-name: ${slideInLeft};
-  animation-duration: 10s;
+  animation-duration: 20s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal;
