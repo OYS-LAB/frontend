@@ -1,13 +1,21 @@
 import Link from 'next/link';
+import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
-
-export const Footer = styled.section`
-  border-top: 1px solid #000;
+interface Props {
+  backgroundColor: string;
+  textColor: string;
+  borderColor: string;
+}
+interface LinkType {
+  textColor: string;
+}
+export const Footer = styled.section<Props>`
+  border-top: 1px solid ${props => props.borderColor};
   padding: 6px 50px 7px;
   position: fixed;
   width: calc(100% - 50px);
   bottom: 0;
-  background-color: #fff;
+  background-color: ${props => props.backgroundColor};
   height: 30px;
   &:hover {
     height: 300px;
@@ -29,8 +37,8 @@ export const Copyright = styled.em`
   font-size: 10pt;
   position: absolute;
 `;
-export const SLink = styled(Link)`
-  color: #000;
+export const SLink = styled(Link)<LinkType>`
+  color: ${props => props.textColor};
 `;
 
 export const Menu = styled.li`

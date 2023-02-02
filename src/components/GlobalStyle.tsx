@@ -1,6 +1,12 @@
+import { useRecoilValue } from 'recoil';
+import { currentState } from 'store/atoms/darkMode';
 import { createGlobalStyle } from 'styled-components';
+interface Props {
+  backgroundColor: string;
+  textColor: string;
+}
 
-export default createGlobalStyle`
+const Globalstyle = createGlobalStyle<Props>`
 * {
     	margin: 0;
         padding: 0;
@@ -56,4 +62,20 @@ table {
 	width: 100%;
     height: 100%;
 }
+html{
+  color : ${props => props.textColor};
+  background-color : ${props => props.backgroundColor};
+}
+
 `;
+
+const GlobalStyles = () => {
+  const current = useRecoilValue(currentState);
+  const backgroundColor = current.backgroundColor;
+  const textColor = current.color;
+
+  return (
+    <Globalstyle backgroundColor={backgroundColor} textColor={textColor} />
+  );
+};
+export default GlobalStyles;

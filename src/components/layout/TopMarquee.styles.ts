@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
+interface Props {
+  borderColor: string;
+}
+
 export const Wrap = styled.div`
   position: fixed;
   width: 100%;
@@ -14,10 +18,10 @@ const slideInLeft = keyframes`
 }
 `;
 
-export const Header = styled.div`
+export const Header = styled.div<Props>`
   width: calc(100% - 50px);
   padding-bottom: 5px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid ${props => props.borderColor};
 `;
 
 export const Message = styled.p`
@@ -27,7 +31,7 @@ export const Message = styled.p`
   font-weight: 400;
   font-size: 10px;
   animation-name: ${slideInLeft};
-  animation-duration: 20s;
+  animation-duration: 25s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal;

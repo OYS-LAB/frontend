@@ -1,28 +1,51 @@
+import { useRecoilValue } from 'recoil';
+import { currentState } from 'store/atoms/darkMode';
 import * as $ from './Footer.styles';
 
 const Footer = () => {
+  const current = useRecoilValue(currentState);
+  const backgroundColor = current.backgroundColor;
+  const textColor = current.color;
+  const borderColor = current.borderColor;
+
   return (
-    <$.Footer>
+    <$.Footer
+      backgroundColor={backgroundColor}
+      textColor={textColor}
+      borderColor={borderColor}
+    >
       <$.MenuContainer>
         <$.Copyright>© 2023, OYS.</$.Copyright>
         <$.Menus role="navigation">
           <$.Menu>
-            <$.SLink href="/">ABOUT</$.SLink>
+            <$.SLink textColor={textColor} href="/">
+              ABOUT
+            </$.SLink>
           </$.Menu>
           <$.Menu>
-            <$.SLink href="/">STOCKIST</$.SLink>
+            <$.SLink textColor={textColor} href="/">
+              STOCKIST
+            </$.SLink>
           </$.Menu>
           <$.Menu>
-            <$.SLink href="/">ORDER</$.SLink>
+            <$.SLink textColor={textColor} href="/">
+              ORDER
+            </$.SLink>
           </$.Menu>
           <$.Menu>
-            <$.SLink href="/">COSTOMER SERVICE</$.SLink>
+            <$.SLink textColor={textColor} href="/">
+              COSTOMER SERVICE
+            </$.SLink>
           </$.Menu>
           <$.Menu>
-            <$.SLink href="/">LEGAL</$.SLink>
+            <$.SLink textColor={textColor} href="/">
+              LEGAL
+            </$.SLink>
           </$.Menu>
           <$.Menu>
-            <$.SLink href="/">INSTAGRAM</$.SLink>
+            <$.SLink textColor={textColor} href="/">
+              INSTAGRAM
+            </$.SLink>
           </$.Menu>
         </$.Menus>
       </$.MenuContainer>

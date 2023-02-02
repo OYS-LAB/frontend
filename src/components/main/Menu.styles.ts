@@ -3,6 +3,10 @@ import Link from 'next/link';
 import darkLightIcon from 'images/icon-dark-light.png';
 import searchIcon from 'images/icon-search.png';
 
+interface Props {
+  textColor: string;
+}
+
 export const Main = styled.section`
   text-align: center;
   clear: both;
@@ -26,8 +30,8 @@ export const Menu = styled.li`
     margin: 6px 0 18px 0;
   }
 `;
-export const SLink = styled(Link)`
-  color: #000;
+export const SLink = styled(Link)<Props>`
+  color: ${props => props.textColor};
 `;
 
 export const Button = styled.button`
@@ -52,7 +56,6 @@ export const Button = styled.button`
     border: none;
   }
 `;
-
 export const picSec = styled.div`
   margin: 0;
   padding: 0;

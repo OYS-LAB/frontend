@@ -1,16 +1,20 @@
 import styled from 'styled-components';
+
+interface Props {
+  backgroundColor2: string;
+}
 export const MainHeader = styled.section`
   text-align: center;
 `;
 export const Logo = styled.div`
   text-align: center;
 `;
-export const CartSection = styled.div`
+export const CartSection = styled.div<Props>`
   margin-top: -10px;
   float: right;
   width: 343px;
   height: 23px;
-  background: #000;
+  background-color: ${props => props.backgroundColor2};
   display: flex;
   top: -100px;
 
@@ -18,8 +22,11 @@ export const CartSection = styled.div`
     display: none;
   }
 `;
-export const CartMenus = styled.ul`
-  color: #fff;
+interface Cart {
+  textColor2: string;
+}
+export const CartMenus = styled.ul<Cart>`
+  color: ${props => props.textColor2};
   font-size: 12pt;
   padding: 0 50px;
   display: flex;
