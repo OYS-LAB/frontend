@@ -1,11 +1,9 @@
-import { useRecoilValue } from 'recoil';
-import { currentState } from 'store/atoms/darkMode';
+import useColorMode from 'hooks/useColorMode';
 import * as $ from './TopMarquee.styles';
 
 const TopMarquee = () => {
   const welcomeMessage = 'welcome! soft open will be coming soon';
-  const current = useRecoilValue(currentState);
-  const borderColor = current.borderColor;
+  const { borderColor } = useColorMode();
 
   return (
     <$.Wrap>

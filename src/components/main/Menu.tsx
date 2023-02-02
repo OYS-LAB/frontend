@@ -1,15 +1,9 @@
-import DarkMode from 'components/layout/UI/DarkMode';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import {
-  currentState,
-  DarkState,
-  LightState,
-} from '../../store/atoms/darkMode';
+import ColorModeButton from './ColorModeButton';
+import useColorMode from 'hooks/useColorMode';
 import * as $ from './Menu.styles';
 
 const Menu = () => {
-  const current = useRecoilValue(currentState);
-  const textColor = current.color;
+  const { textColor1: textColor } = useColorMode();
   return (
     <$.Main>
       <$.MenuSec>
@@ -26,7 +20,7 @@ const Menu = () => {
           </$.Menu>
         </$.Menus>
         <$.btnSec>
-          <DarkMode />
+          <ColorModeButton />
           <$.Button aria-label="search">
             <$.SearchIcon />
           </$.Button>

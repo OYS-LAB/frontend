@@ -1,12 +1,10 @@
+import useColorMode from 'hooks/useColorMode';
 import logo from 'images/img-logo.png';
-import { useRecoilValue } from 'recoil';
-import { currentState } from 'store/atoms/darkMode';
 import * as $ from './MainHeader.styles';
 
 const MainHeader = () => {
-  const current = useRecoilValue(currentState);
-  const backgroundColor2 = current.backgroundColor2;
-  const textColor2 = current.color2;
+  const { backgroundColor2, textColor2 } = useColorMode();
+
   return (
     <$.MainHeader>
       <$.Logo>

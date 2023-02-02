@@ -1,12 +1,12 @@
-import { useRecoilValue } from 'recoil';
-import { currentState } from 'store/atoms/darkMode';
+import useColorMode from 'hooks/useColorMode';
 import * as $ from './Footer.styles';
 
 const Footer = () => {
-  const current = useRecoilValue(currentState);
-  const backgroundColor = current.backgroundColor;
-  const textColor = current.color;
-  const borderColor = current.borderColor;
+  const {
+    borderColor,
+    backgroundColor1: backgroundColor,
+    textColor1: textColor,
+  } = useColorMode();
 
   return (
     <$.Footer
@@ -49,6 +49,16 @@ const Footer = () => {
           </$.Menu>
         </$.Menus>
       </$.MenuContainer>
+      <$.Container>
+        이게진짜 푸터
+        <br />
+        이게진짜 푸터
+        <br />
+        이게진짜 푸터
+        <br />
+        이게진짜 푸터
+        <br />
+      </$.Container>
     </$.Footer>
   );
 };

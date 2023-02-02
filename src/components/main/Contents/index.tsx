@@ -1,4 +1,4 @@
-import * as $ from './Contents.styles';
+import * as $ from './styles';
 import mainImage from 'images/img-main.jpeg';
 
 const Contents = () => {

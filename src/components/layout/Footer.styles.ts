@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
-interface Props {
+interface FooterProps {
   backgroundColor: string;
   textColor: string;
   borderColor: string;
@@ -9,16 +8,24 @@ interface Props {
 interface LinkType {
   textColor: string;
 }
-export const Footer = styled.section<Props>`
-  border-top: 1px solid ${props => props.borderColor};
+
+export const Container = styled.section`
+  display: none;
+`;
+
+export const Footer = styled.section<FooterProps>`
+  border-top: 1px solid ${({ borderColor }) => borderColor};
   padding: 6px 50px 7px;
   position: fixed;
   width: calc(100% - 50px);
   bottom: 0;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${({ backgroundColor }) => backgroundColor};
   height: 30px;
   &:hover {
-    height: 300px;
+    height: auto;
+    & ${Container} {
+      display: block;
+    }
   }
 `;
 
@@ -38,7 +45,7 @@ export const Copyright = styled.em`
   position: absolute;
 `;
 export const SLink = styled(Link)<LinkType>`
-  color: ${props => props.textColor};
+  color: ${({ textColor }) => textColor};
 `;
 
 export const Menu = styled.li`
