@@ -1,4 +1,5 @@
 import useColorMode from 'hooks/useColorMode';
+import useSideMenuMode from 'hooks/useSideMenuMode';
 import * as $ from './styles';
 
 const ColorModeButton = () => {
@@ -10,6 +11,7 @@ const ColorModeButton = () => {
     textColor2,
     borderColor,
   } = useColorMode();
+  const { colorButtonDisplay } = useSideMenuMode();
 
   return (
     <$.Button
@@ -20,6 +22,7 @@ const ColorModeButton = () => {
       backgroundColor2={backgroundColor2}
       textColor2={textColor2}
       borderColor={borderColor}
+      colorButtonDisplay={colorButtonDisplay}
     >
       <$.DarkLightIcon />
     </$.Button>

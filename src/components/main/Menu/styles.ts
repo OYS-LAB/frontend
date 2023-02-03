@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import darkLightIcon from 'images/icon-dark-light.png';
 import searchIcon from 'images/icon-search.png';
 
-interface Props {
-  textColor: string;
+interface iProps {
+  searchButtonDisplay: string;
 }
-
 export const Main = styled.section`
   text-align: center;
   clear: both;
@@ -15,23 +13,10 @@ export const Main = styled.section`
 export const MenuSec = styled.div`
   display: inline-block;
 `;
-export const btnSec = styled.div`
+export const BtnSec = styled.section`
   display: flex;
   justify-content: space-between;
   padding: 0 14px;
-`;
-export const Menus = styled.ul`
-  font-size: 19pt;
-`;
-export const Menu = styled.li`
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: 600;
-  &:nth-child(2) {
-    margin: 6px 0 18px 0;
-  }
-`;
-export const SLink = styled(Link)<Props>`
-  color: ${props => props.textColor};
 `;
 
 export const Button = styled.button`
@@ -63,8 +48,8 @@ export const picSec = styled.div`
   justify-content: center;
 `;
 
-const Icon = styled.i`
-  display: block;
+const Icon = styled.i<iProps>`
+  display: ${({ searchButtonDisplay }) => searchButtonDisplay};
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
@@ -72,7 +57,7 @@ const Icon = styled.i`
   background-position: center, center;
 `;
 
-export const SearchIcon = styled(Icon)`
+export const SearchIcon = styled(Icon)<iProps>`
   background-image: url('${searchIcon.src}');
 `;
 

@@ -4,13 +4,30 @@ interface FooterProps {
   backgroundColor: string;
   textColor: string;
   borderColor: string;
+  height: string;
 }
 interface LinkType {
   textColor: string;
 }
+interface SectionType {
+  display: string;
+}
 
-export const Container = styled.section`
-  display: none;
+export const Container = styled.section<SectionType>`
+  display: ${({ display }) => display};
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 500;
+  font-size: 9pt;
+  text-align: center;
+`;
+export const ContainerChild = styled.p`
+  display: inline-block;
+  margin-right: 20pt;
+  padding-top: 20px;
+  &:nth-last-child(1) {
+    display: block;
+    padding-top: 0;
+  }
 `;
 
 export const Footer = styled.section<FooterProps>`
@@ -20,7 +37,7 @@ export const Footer = styled.section<FooterProps>`
   width: calc(100% - 50px);
   bottom: 0;
   background-color: ${({ backgroundColor }) => backgroundColor};
-  height: 30px;
+  height: ${({ height }) => height};
   &:hover {
     height: auto;
     & ${Container} {

@@ -1,5 +1,6 @@
 import useColorMode from 'hooks/useColorMode';
-import * as $ from './Footer.styles';
+import useSideMenuMode from 'hooks/useSideMenuMode';
+import * as $ from './styles';
 
 const Footer = () => {
   const {
@@ -8,11 +9,14 @@ const Footer = () => {
     textColor1: textColor,
   } = useColorMode();
 
+  const { height, display } = useSideMenuMode();
+
   return (
     <$.Footer
       backgroundColor={backgroundColor}
       textColor={textColor}
       borderColor={borderColor}
+      height={height}
     >
       <$.MenuContainer>
         <$.Copyright>© 2023, OYS.</$.Copyright>
@@ -49,15 +53,12 @@ const Footer = () => {
           </$.Menu>
         </$.Menus>
       </$.MenuContainer>
-      <$.Container>
-        이게진짜 푸터
-        <br />
-        이게진짜 푸터
-        <br />
-        이게진짜 푸터
-        <br />
-        이게진짜 푸터
-        <br />
+      <$.Container display={display}>
+        <$.ContainerChild>COMPANY : OYS CO.,LTD</$.ContainerChild>
+        <$.ContainerChild>OWNER : KIM OK HEE</$.ContainerChild>
+        <$.ContainerChild>REGISTRATION : </$.ContainerChild>
+        <$.ContainerChild>MAIL ORDER LICENSE : </$.ContainerChild>
+        <$.ContainerChild>EMAIL : CONTACT@OYS-LAB.COM</$.ContainerChild>
       </$.Container>
     </$.Footer>
   );

@@ -1,5 +1,5 @@
 import useColorMode from 'hooks/useColorMode';
-import * as $ from './TopMarquee.styles';
+import * as $ from './styles';
 
 const TopMarquee = () => {
   const welcomeMessage = 'welcome! soft open will be coming soon';

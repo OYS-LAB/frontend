@@ -7,22 +7,16 @@ interface DarkMode {
   borderColor: string;
   backgroundColor2: string;
   textColor2: string;
+  colorButtonDisplay: string;
 }
 
 export const Button = styled.button<DarkMode>`
   background-color: transparent;
   border: none;
   padding: 0;
-  margin: 0;
   display: inline-block;
   width: 20px;
   height: 20px;
-  &:first-child {
-    // border: 1px solid red;
-  }
-  &:last-child {
-    // border: 1px solid blue;
-  }
   margin-bottom: 38px;
   &:hover {
     cursor: pointer;
@@ -30,6 +24,7 @@ export const Button = styled.button<DarkMode>`
   &: active, focus {
     border: none;
   }
+  margin: ${({ colorButtonDisplay }) => colorButtonDisplay};
 `;
 
 const Icon = styled.i`

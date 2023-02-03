@@ -1,6 +1,6 @@
 import useColorMode from 'hooks/useColorMode';
 import logo from 'images/img-logo.png';
-import * as $ from './MainHeader.styles';
+import * as $ from './styles';
 
 const MainHeader = () => {
   const { backgroundColor2, textColor2 } = useColorMode();

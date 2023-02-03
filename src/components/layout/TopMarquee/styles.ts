@@ -13,8 +13,8 @@ export const Wrap = styled.div`
 `;
 
 const slideInLeft = keyframes`
- from { transform: translate(0%, 0px); }
-  to { transform: translate(100%, 0px); }
+ from { transform: translate(-18%, 0px); }
+  to { transform: translate(104%, 0px); }
 }
 `;
 
