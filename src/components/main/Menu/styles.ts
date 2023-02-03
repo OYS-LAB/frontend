@@ -7,15 +7,17 @@ interface iProps {
 }
 export const Main = styled.section`
   text-align: center;
-  clear: both;
   margin-top: 30px;
+  height: 100%;
+  padding-bottom: 140px;
 `;
-export const MenuSec = styled.div`
+export const MenuSection = styled.div`
   display: inline-block;
+  height: 100%;
 `;
-export const BtnSec = styled.section`
+export const ButtonSection = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 14px;
 `;
 
@@ -40,12 +42,6 @@ export const Button = styled.button`
   &: active, focus {
     border: none;
   }
-`;
-export const picSec = styled.div`
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
 `;
 
 const Icon = styled.i<iProps>`

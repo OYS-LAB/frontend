@@ -2,22 +2,24 @@ import ColorModeButton from '../ColorModeButton';
 import * as $ from './styles';
 import SideMenu from '../SideMenu';
 import SideMenus from '../SideMenus';
-import useSideMenuMode from 'hooks/useSideMenuMode';
+import useSideMenu from 'hooks/useSideMenu';
 
 const Menu = () => {
-  const { searchButtonDisplay } = useSideMenuMode();
+  const { searchButtonDisplay } = useSideMenu();
   return (
     <$.Main>
-      <$.MenuSec>
+      <$.MenuSection>
         <SideMenus />
-        <$.BtnSec>
+        <$.ButtonSection>
           <ColorModeButton />
+          {/* 
           <$.Button aria-label="search">
             <$.SearchIcon searchButtonDisplay={searchButtonDisplay} />
           </$.Button>
-        </$.BtnSec>
+        */}
+        </$.ButtonSection>
         <SideMenu />
-      </$.MenuSec>
+      </$.MenuSection>
     </$.Main>
   );
 };

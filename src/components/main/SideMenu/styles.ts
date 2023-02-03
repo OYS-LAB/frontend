@@ -1,14 +1,18 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-interface ulProps {
-  sideMenuDisplay: string;
+interface MenusProps {
+  isSideMenuVisible: boolean;
 }
 interface Props {
   textColor: string;
 }
 
-export const Menus = styled.ul<ulProps>`
-  display: ${({ sideMenuDisplay }) => sideMenuDisplay};
+export const Menus = styled.ul<MenusProps>`
+  display: ${({ isSideMenuVisible }) => (isSideMenuVisible ? 'flex' : 'none')};
+  margin-top: 50px;
+  flex-flow: column;
+  height: 100%;
+  padding-bottom: 140px;
 `;
 export const Menu = styled.li`
   font-family: 'Red Hat Display', sans-serif;
@@ -20,6 +24,7 @@ export const Menu = styled.li`
   }
   &:nth-last-child(1) {
     padding-bottom: 0;
+    margin-top: auto;
   }
   &:hover {
     cursor: pointer;

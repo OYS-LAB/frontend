@@ -1,14 +1,16 @@
 import * as $ from './styles';
 import mainImage from 'images/img-main.jpeg';
-import useSideMenuMode from 'hooks/useSideMenuMode';
+import useSideMenu from 'hooks/useSideMenu';
 
 const Contents = () => {
-  const { contentDisplay } = useSideMenuMode();
-  return (
-    <$.Wrap contentDisplay={contentDisplay}>
+  const { contentDisplay } = useSideMenu();
+  const isVisible = contentDisplay === 'block';
+
+  return isVisible ? (
+    <$.Wrap>
       <$.MainImage src={mainImage.src} />
     </$.Wrap>
-  );
+  ) : null;
 };
 
 export default Contents;

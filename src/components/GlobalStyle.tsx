@@ -41,6 +41,8 @@ body {
 	line-height: 1;
 	width: 100%;
     height: 100vh;
+	color : ${props => props.textColor};
+  	background-color : ${props => props.backgroundColor};
 }
 ol, ul {
 	list-style: none;
@@ -60,10 +62,6 @@ table {
 #__next {
 	width: 100%;
     height: 100%;
-}
-html{
-  color : ${props => props.textColor};
-  background-color : ${props => props.backgroundColor};
 }
 
 `;

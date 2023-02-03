@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 
-interface sectionProps {
-  contentDisplay: string;
-}
-
-export const Wrap = styled.section<sectionProps>`
+export const Wrap = styled.section`
   margin-top: 0 auto;
-  display: ${({ contentDisplay }) => contentDisplay};
 `;
 
 export const MainImage = styled.img`

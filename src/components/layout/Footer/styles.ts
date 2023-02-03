@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 interface FooterProps {
   backgroundColor: string;
   textColor: string;
   borderColor: string;
   height: string;
+  isSideMenuVisible: boolean;
 }
 interface LinkType {
   textColor: string;
@@ -38,12 +39,16 @@ export const Footer = styled.section<FooterProps>`
   bottom: 0;
   background-color: ${({ backgroundColor }) => backgroundColor};
   height: ${({ height }) => height};
-  &:hover {
-    height: auto;
-    & ${Container} {
-      display: block;
-    }
-  }
+  ${({ isSideMenuVisible }) =>
+    !isSideMenuVisible &&
+    css`
+      &:hover {
+        height: auto;
+        & ${Container} {
+          display: block;
+        }
+      }
+    `}
 `;
 
 export const MenuContainer = styled.div`

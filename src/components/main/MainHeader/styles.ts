@@ -5,6 +5,7 @@ interface Props {
 }
 export const MainHeader = styled.section`
   text-align: center;
+  padding-top: 30px;
 `;
 export const Logo = styled.div`
   text-align: center;

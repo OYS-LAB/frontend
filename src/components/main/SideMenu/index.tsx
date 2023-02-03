@@ -1,11 +1,11 @@
 import useColorMode from 'hooks/useColorMode';
-import useSideMenuMode from 'hooks/useSideMenuMode';
+import useSideMenu from 'hooks/useSideMenu';
 import * as $ from './styles';
 const SideMenu = () => {
-  const { sideMenuDisplay, closeToggle } = useSideMenuMode();
+  const { isVisible: isSideMenuVisible, handleToggle } = useSideMenu();
   const { textColor1: textColor } = useColorMode();
   return (
-    <$.Menus sideMenuDisplay={sideMenuDisplay}>
+    <$.Menus isSideMenuVisible={isSideMenuVisible}>
       <$.Menu>
         <$.SLink textColor={textColor} href="/">
           ALL
@@ -36,11 +36,11 @@ const SideMenu = () => {
           ETC.
         </$.SLink>
       </$.Menu>
-      <div>
-        <$.CloseButton textColor={textColor} onClick={closeToggle}>
+      <$.Menu>
+        <$.CloseButton textColor={textColor} onClick={handleToggle}>
           X
         </$.CloseButton>
-      </div>
+      </$.Menu>
     </$.Menus>
   );
 };

@@ -1,5 +1,5 @@
 import useColorMode from 'hooks/useColorMode';
-import useSideMenuMode from 'hooks/useSideMenuMode';
+import useSideMenu from 'hooks/useSideMenu';
 import * as $ from './styles';
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
     textColor1: textColor,
   } = useColorMode();
 
-  const { height, display } = useSideMenuMode();
+  const { isVisible: isSideMenuVisible, height, display } = useSideMenu();
 
   return (
     <$.Footer
@@ -17,6 +17,7 @@ const Footer = () => {
       textColor={textColor}
       borderColor={borderColor}
       height={height}
+      isSideMenuVisible={isSideMenuVisible}
     >
       <$.MenuContainer>
         <$.Copyright>© 2023, OYS.</$.Copyright>
