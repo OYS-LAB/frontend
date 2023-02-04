@@ -9,7 +9,6 @@ export type ColorStateMap = {
     textColor1: '#000' | '#fff';
     textColor2: '#fff' | '#000';
     borderColor: '#000' | '#fff';
-    flakeColor: 'images/icon-dark-flake.png' | 'images/icon-light-flake.png';
   };
 };
 
@@ -20,7 +19,6 @@ export const colorStateMap: ColorStateMap = {
     textColor1: '#000',
     textColor2: '#fff',
     borderColor: '#000',
-    flakeColor: 'images/icon-dark-flake.png',
   },
   DARK: {
     backgroundColor1: '#000',
@@ -28,7 +26,6 @@ export const colorStateMap: ColorStateMap = {
     textColor1: '#fff',
     textColor2: '#000',
     borderColor: '#fff',
-    flakeColor: 'images/icon-light-flake.png',
   },
 };
 

@@ -13,6 +13,7 @@ const useColorMode = () => {
 
   return {
     ...colorStateMap[color],
+    colorMode: color,
     isDark,
     handleToggle,
   };

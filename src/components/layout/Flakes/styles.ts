@@ -1,7 +1,15 @@
 import styled, { keyframes } from 'styled-components';
+import flakeDarkIcon from 'images/icon-dark-flake.png';
+import flakeLightIcon from 'images/icon-light-flake.png';
+import { ColorModeState } from 'atoms/colorMode';
+
 interface IconProps {
-  flakeColor: string;
+  colorMode: ColorModeState;
 }
+
+const getFlakeIconSrc = (colorMode: ColorModeState) =>
+  colorMode === 'DARK' ? flakeDarkIcon.src : flakeLightIcon.src;
+
 export const Flakes = styled.div`
   width: 100%;
 `;
@@ -42,7 +50,7 @@ const FlakeShake = keyframes`
 `;
 
 export const FlakeIcon = styled(Icon)<IconProps>`
-  background-image: url(' ${({ flakeColor }) => flakeColor}');
+  background-image: url('${({ colorMode }) => getFlakeIconSrc(colorMode)}');
   position: fixed;
   top: -10%;
   z-index: 9999;

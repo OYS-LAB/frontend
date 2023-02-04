@@ -3,19 +3,20 @@ import useColorMode from 'hooks/useColorMode';
 import * as $ from './styles';
 
 const Flakes = () => {
-  const { flakeColor } = useColorMode();
+  const { colorMode } = useColorMode();
   return (
     <$.Flakes aria-hidden="true">
       <$.Flake>
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
-        <$.FlakeIcon flakeColor={flakeColor} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
+        <$.FlakeIcon colorMode={colorMode} />
       </$.Flake>
     </$.Flakes>
   );
