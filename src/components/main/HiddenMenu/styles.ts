@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 interface MenusProps {
   isHiddenMenuVisible: boolean;
 }
