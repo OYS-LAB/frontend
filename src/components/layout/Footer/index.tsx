@@ -1,5 +1,5 @@
 import useColorMode from 'hooks/useColorMode';
-import useSideMenu from 'hooks/useSideMenu';
+import useHiddenMenu from 'hooks/useHiddenMenu';
 import * as $ from './styles';
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
     textColor1: textColor,
   } = useColorMode();
 
-  const { isVisible: isSideMenuVisible, height, display } = useSideMenu();
+  const { isVisible: isHiddenMenuVisible, height, display } = useHiddenMenu();
 
   return (
     <$.Footer
@@ -17,40 +17,40 @@ const Footer = () => {
       textColor={textColor}
       borderColor={borderColor}
       height={height}
-      isSideMenuVisible={isSideMenuVisible}
+      isHiddenMenuVisible={isHiddenMenuVisible}
     >
       <$.MenuContainer>
         <$.Copyright>© 2023, OYS.</$.Copyright>
         <$.Menus role="navigation">
           <$.Menu>
-            <$.SLink textColor={textColor} href="/">
+            <$.Anchor textColor={textColor} href="/">
               ABOUT
-            </$.SLink>
+            </$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.SLink textColor={textColor} href="/">
+            <$.Anchor textColor={textColor} href="/">
               STOCKIST
-            </$.SLink>
+            </$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.SLink textColor={textColor} href="/">
+            <$.Anchor textColor={textColor} href="/">
               ORDER
-            </$.SLink>
+            </$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.SLink textColor={textColor} href="/">
+            <$.Anchor textColor={textColor} href="/">
               COSTOMER SERVICE
-            </$.SLink>
+            </$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.SLink textColor={textColor} href="/">
+            <$.Anchor textColor={textColor} href="/">
               LEGAL
-            </$.SLink>
+            </$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.SLink textColor={textColor} href="/">
+            <$.Anchor textColor={textColor} href="/">
               INSTAGRAM
-            </$.SLink>
+            </$.Anchor>
           </$.Menu>
         </$.Menus>
       </$.MenuContainer>

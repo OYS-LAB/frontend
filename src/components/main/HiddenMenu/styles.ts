@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 interface MenusProps {
-  isSideMenuVisible: boolean;
+  isHiddenMenuVisible: boolean;
 }
 interface Props {
   textColor: string;
 }
 
-export const Menus = styled.ul<MenusProps>`
-  display: ${({ isSideMenuVisible }) => (isSideMenuVisible ? 'flex' : 'none')};
+export const HiddenMenu = styled.ul<MenusProps>`
+  display: ${({ isHiddenMenuVisible }) =>
+    isHiddenMenuVisible ? 'flex' : 'none'};
   margin-top: 50px;
   flex-flow: column;
   height: 100%;
@@ -30,7 +31,7 @@ export const Menu = styled.li`
     cursor: pointer;
   }
 `;
-export const SLink = styled(Link)<Props>`
+export const Anchor = styled(Link)<Props>`
   color: ${({ textColor }) => textColor};
 `;
 export const CloseButton = styled.button<Props>`

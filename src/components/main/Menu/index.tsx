@@ -1,15 +1,15 @@
 import ColorModeButton from '../ColorModeButton';
 import * as $ from './styles';
-import SideMenu from '../SideMenu';
-import SideMenus from '../SideMenus';
-import useSideMenu from 'hooks/useSideMenu';
+import useHiddenMenu from 'hooks/useHiddenMenu';
+import ShopMenu from '../ShopMenu';
+import HiddenMenu from '../HiddenMenu';
 
 const Menu = () => {
-  const { searchButtonDisplay } = useSideMenu();
+  const { searchButtonDisplay } = useHiddenMenu();
   return (
     <$.Main>
       <$.MenuSection>
-        <SideMenus />
+        <ShopMenu />
         <$.ButtonSection>
           <ColorModeButton />
           {/* 
@@ -18,7 +18,7 @@ const Menu = () => {
           </$.Button>
         */}
         </$.ButtonSection>
-        <SideMenu />
+        <HiddenMenu />
       </$.MenuSection>
     </$.Main>
   );

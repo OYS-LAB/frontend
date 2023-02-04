@@ -1,24 +1,24 @@
 import { atom } from 'recoil';
 
-export type SideMenuVisibleState = 'VISIBLE' | 'HIDE';
+export type HiddenMenuVisibleState = 'VISIBLE' | 'HIDE';
 
-export type SideMenuStylesMap = {
-  [key in SideMenuVisibleState]: {
+export type HiddenMenuStylesMap = {
+  [key in HiddenMenuVisibleState]: {
     height: '110px' | '30px';
     display: 'none' | 'block';
     contentDisplay: 'none' | 'block';
-    sideMenuDisplay: 'none' | 'block';
+    hiddenMenuDisplay: 'none' | 'block';
     searchButtonDisplay: 'none' | 'block';
     colorButtonDisplay: '0 auto' | 'block';
   };
 };
 
-export const sideMenuStylesMap: SideMenuStylesMap = {
+export const hiddenMenuStylesMap: HiddenMenuStylesMap = {
   VISIBLE: {
     height: '110px',
     display: 'block',
     contentDisplay: 'none',
-    sideMenuDisplay: 'block',
+    hiddenMenuDisplay: 'block',
     searchButtonDisplay: 'none',
     colorButtonDisplay: '0 auto',
   },
@@ -26,13 +26,13 @@ export const sideMenuStylesMap: SideMenuStylesMap = {
     height: '30px',
     display: 'none',
     contentDisplay: 'block',
-    sideMenuDisplay: 'none',
+    hiddenMenuDisplay: 'none',
     searchButtonDisplay: 'block',
-    colorButtonDisplay: 'block',
+    colorButtonDisplay: '0 auto',
   },
 };
 
-export const sideMenuVisiblSetate = atom<SideMenuVisibleState>({
-  key: 'sideMenuVisiblSetate',
+export const hiddenMenuVisibleState = atom<HiddenMenuVisibleState>({
+  key: 'hiddenMenuVisibleState',
   default: 'HIDE',
 });

@@ -1,9 +1,9 @@
 import * as $ from './styles';
 import mainImage from 'images/img-main.jpeg';
-import useSideMenu from 'hooks/useSideMenu';
+import useHiddenMenu from 'hooks/useHiddenMenu';
 
 const Contents = () => {
-  const { contentDisplay } = useSideMenu();
+  const { contentDisplay } = useHiddenMenu();
   const isVisible = contentDisplay === 'block';
 
   return isVisible ? (

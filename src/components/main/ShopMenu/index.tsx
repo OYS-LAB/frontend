@@ -1,23 +1,23 @@
-import useSideMenu from 'hooks/useSideMenu';
+import useHiddenMenu from 'hooks/useHiddenMenu';
 import useColorMode from 'hooks/useColorMode';
 import * as $ from './styles';
 
-const SideMenus = () => {
-  const { handleToggle, height, display, contentDisplay } = useSideMenu();
+const HiddenMenu = () => {
+  const { handleToggle, height, display, contentDisplay } = useHiddenMenu();
   const { textColor1: textColor } = useColorMode();
 
   return (
-    <$.SideMenus>
+    <$.ShopMenu>
       <$.List height={height} display={display} contentDisplay={contentDisplay}>
         <li onClick={handleToggle}>SHOP</li>
         <li>
-          <$.SLink textColor={textColor} href="/">
+          <$.Anchor textColor={textColor} href="/">
             ARCHIVE
-          </$.SLink>
+          </$.Anchor>
         </li>
       </$.List>
-    </$.SideMenus>
+    </$.ShopMenu>
   );
 };
 
-export default SideMenus;
+export default HiddenMenu;

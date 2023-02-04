@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-interface Props {
+interface AnchorProps {
   textColor: string;
 }
-interface SideMode {
+interface ListProps {
   height: string;
   display: string;
   contentDisplay: string;
 }
 
-export const SideMenus = styled.section`
+export const ShopMenu = styled.section`
   padding-bottom: 18px;
 `;
-export const List = styled.ul<SideMode>`
+export const List = styled.ul<ListProps>`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 19pt;
@@ -22,7 +22,7 @@ export const List = styled.ul<SideMode>`
     cursor: pointer;
   }
 `;
-export const SLink = styled(Link)<Props>`
+export const Anchor = styled(Link)<AnchorProps>`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 19pt;

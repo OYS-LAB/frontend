@@ -1,5 +1,5 @@
 import useColorMode from 'hooks/useColorMode';
-import useSideMenu from 'hooks/useSideMenu';
+import useHiddenMenu from 'hooks/useHiddenMenu';
 import * as $ from './styles';
 
 const ColorModeButton = () => {
@@ -11,7 +11,7 @@ const ColorModeButton = () => {
     textColor2,
     borderColor,
   } = useColorMode();
-  const { colorButtonDisplay } = useSideMenu();
+  const { colorButtonDisplay } = useHiddenMenu();
 
   return (
     <$.Button

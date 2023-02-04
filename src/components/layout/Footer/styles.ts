@@ -5,9 +5,9 @@ interface FooterProps {
   textColor: string;
   borderColor: string;
   height: string;
-  isSideMenuVisible: boolean;
+  isHiddenMenuVisible: boolean;
 }
-interface LinkType {
+interface AnchorType {
   textColor: string;
 }
 interface SectionType {
@@ -39,8 +39,8 @@ export const Footer = styled.section<FooterProps>`
   bottom: 0;
   background-color: ${({ backgroundColor }) => backgroundColor};
   height: ${({ height }) => height};
-  ${({ isSideMenuVisible }) =>
-    !isSideMenuVisible &&
+  ${({ isHiddenMenuVisible }) =>
+    !isHiddenMenuVisible &&
     css`
       &:hover {
         height: auto;
@@ -66,7 +66,7 @@ export const Copyright = styled.em`
   font-size: 10pt;
   position: absolute;
 `;
-export const SLink = styled(Link)<LinkType>`
+export const Anchor = styled(Link)<AnchorType>`
   color: ${({ textColor }) => textColor};
 `;
 
