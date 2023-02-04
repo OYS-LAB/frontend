@@ -38,6 +38,7 @@ export const Footer = styled.section<FooterProps>`
   width: calc(100% - 50px);
   bottom: 0;
   background-color: ${({ backgroundColor }) => backgroundColor};
+  transition: background 0.4s ease, color 0.4s ease;
   height: ${({ height }) => height};
   ${({ isHiddenMenuVisible }) =>
     !isHiddenMenuVisible &&

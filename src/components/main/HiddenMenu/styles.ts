@@ -1,19 +1,33 @@
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 interface MenusProps {
   isHiddenMenuVisible: boolean;
 }
 interface Props {
   textColor: string;
 }
+const fadeInDown = keyframes`
+0% {
+            opacity: 0;
+            transform: translate3d(0, -40%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+`;
 
 export const HiddenMenu = styled.ul<MenusProps>`
   display: ${({ isHiddenMenuVisible }) =>
     isHiddenMenuVisible ? 'flex' : 'none'};
+  animation: fadeInDown 1s;
   margin-top: 50px;
   flex-flow: column;
   height: 100%;
   padding-bottom: 140px;
+  animation-name: ${fadeInDown};
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
 `;
 export const Menu = styled.li`
   font-family: 'Red Hat Display', sans-serif;

@@ -43,6 +43,7 @@ body {
     height: 100vh;
 	color : ${props => props.textColor};
   	background-color : ${props => props.backgroundColor};
+	transition: background 0.4s ease, color 0.4s ease;
 }
 ol, ul {
 	list-style: none;
