@@ -4,7 +4,7 @@ import Link from 'next/link';
 interface AnchorProps {
   textColor: string;
 }
-interface ListProps {
+interface ListsProps {
   height: string;
   display: string;
   contentDisplay: string;
@@ -13,7 +13,7 @@ interface ListProps {
 export const ShopMenu = styled.section`
   padding-bottom: 18px;
 `;
-export const List = styled.ul<ListProps>`
+export const Lists = styled.ul<ListsProps>`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 19pt;
@@ -22,9 +22,14 @@ export const List = styled.ul<ListProps>`
     cursor: pointer;
   }
 `;
+export const List = styled.li`
+  &: nth-child(1) {
+    padding-bottom: 6px;
+  }
+`;
 export const Anchor = styled(Link)<AnchorProps>`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 19pt;
-  color: ${props => props.textColor};
+  color: ${({ textColor }) => textColor};
 `;

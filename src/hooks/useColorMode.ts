@@ -1,20 +1,39 @@
 import { useRecoilState } from 'recoil';
-import { colorState, LIGHT_COLOR, DARK_COLOR } from 'atoms/colorMode';
+// import { colorState, LIGHT_COLOR, DARK_COLOR } from 'atoms/colorMode';
+import { colorModeState, colorStateMap } from 'atoms/colorMode';
 
 const useColorMode = () => {
-  const [color, setColor] = useRecoilState(colorState);
+  const [color, setColor] = useRecoilState(colorModeState);
 
   const handleToggle = () => {
-    setColor(color.mode === 'LIGHT' ? DARK_COLOR : LIGHT_COLOR);
+    setColor(color === 'LIGHT' ? 'DARK' : 'LIGHT');
   };
 
+  const isDark = color === 'LIGHT';
+
   return {
-    ...color,
+    ...colorStateMap[color],
+    isDark,
     handleToggle,
   };
 };
 
 export default useColorMode;
+
+// const useColorMode = () => {
+//   const [color, setColor] = useRecoilState(colorState);
+
+//   const handleToggle = () => {
+//     setColor(color.mode === 'LIGHT' ? DARK_COLOR : LIGHT_COLOR);
+//   };
+
+//   return {
+//     ...color,
+//     handleToggle,
+//   };
+// };
+
+// export default useColorMode;
 
 /**
 const useColorMode = () => {

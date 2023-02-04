@@ -5,7 +5,6 @@ interface Props {
 }
 export const MainHeader = styled.section`
   text-align: center;
-  padding-top: 30px;
 `;
 export const Logo = styled.div`
   text-align: center;
@@ -15,7 +14,7 @@ export const CartSection = styled.div<Props>`
   float: right;
   width: 343px;
   height: 23px;
-  background-color: ${props => props.backgroundColor2};
+  background-color: ${({ backgroundColor2 }) => backgroundColor2};
   display: flex;
   top: -100px;
 
@@ -27,7 +26,7 @@ interface Cart {
   textColor2: string;
 }
 export const CartMenus = styled.ul<Cart>`
-  color: ${props => props.textColor2};
+  color: ${({ textColor2 }) => textColor2};
   font-size: 12pt;
   padding: 0 50px;
   display: flex;

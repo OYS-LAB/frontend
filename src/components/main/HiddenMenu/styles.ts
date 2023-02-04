@@ -9,7 +9,7 @@ interface Props {
 const fadeInDown = keyframes`
 0% {
             opacity: 0;
-            transform: translate3d(0, -40%, 0);
+            transform: translate3d(0, -30%, 0);
         }
         to {
             opacity: 1;

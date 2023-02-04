@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
-import flakeLogo from 'images/icon-dark-flake.png';
-
+interface IconProps {
+  flakeColor: string;
+}
 export const Flakes = styled.div`
   width: 100%;
 `;
@@ -40,8 +41,8 @@ const FlakeShake = keyframes`
   }
 `;
 
-export const FlakeIcon = styled(Icon)`
-  background-image: url('${flakeLogo.src}');
+export const FlakeIcon = styled(Icon)<IconProps>`
+  background-image: url(' ${({ flakeColor }) => flakeColor}');
   position: fixed;
   top: -10%;
   z-index: 9999;
