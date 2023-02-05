@@ -7,8 +7,7 @@ interface Props {
 export const Wrap = styled.div`
   position: fixed;
   width: 100%;
-  height: 30px;
-  padding: 6px 0 7px;
+  padding: 3px 0;
   top: 0;
 `;
 

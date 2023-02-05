@@ -10,9 +10,9 @@ export const Logo = styled.div`
   text-align: center;
 `;
 export const CartSection = styled.div<Props>`
-  margin-top: -10px;
+  margin-top: 4px;
   float: right;
-  width: 343px;
+  width: 35%;
   height: 23px;
   background-color: ${({ backgroundColor2 }) => backgroundColor2};
   display: flex;
@@ -27,7 +27,7 @@ interface Cart {
 }
 export const CartMenus = styled.ul<Cart>`
   color: ${({ textColor2 }) => textColor2};
-  font-size: 12pt;
+  font-size: 10pt;
   padding: 0 50px;
   display: flex;
   align-items: center;

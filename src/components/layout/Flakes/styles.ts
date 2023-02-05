@@ -14,16 +14,16 @@ export const Flakes = styled.div`
   width: 100%;
 `;
 export const Flake = styled.div`
-  position: flex;
+  display: flex;
   top: -10%;
   z-index: 1000;
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  padding-top: 13px;
 `;
 const Icon = styled.i`
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center, center;
@@ -54,8 +54,8 @@ export const FlakeIcon = styled(Icon)<IconProps>`
   position: fixed;
   top: -10%;
   z-index: 9999;
-  width: 15px;
-  height: 15px;
+  width: 8px;
+  height: 8px;
   user-select: none;
   cursor: default;
   animation-name: ${FlakesFall}, ${FlakeShake};

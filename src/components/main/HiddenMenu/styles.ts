@@ -32,7 +32,7 @@ export const HiddenMenu = styled.ul<MenusProps>`
 export const Menu = styled.li`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
-  font-size: 19pt;
+  font-size: 18pt;
   padding: 3px 0;
   &:nth-child(1) {
     padding-top: 0;
