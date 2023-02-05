@@ -28,7 +28,7 @@ export const Message = styled.p`
   width: 100%;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 10pt;
   animation-name: ${slideInLeft};
   animation-duration: 25s;
   animation-timing-function: linear;

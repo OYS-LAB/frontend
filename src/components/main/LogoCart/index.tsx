@@ -1,9 +1,10 @@
 import useColorMode from 'hooks/useColorMode';
-import logo from 'images/img-logo.png';
+import logo from 'images/icon-logo-dark.png';
 import * as $ from './styles';
 
 const MainHeader = () => {
   const { backgroundColor2, textColor2 } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <$.MainHeader>

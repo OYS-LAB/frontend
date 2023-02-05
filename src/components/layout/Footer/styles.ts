@@ -16,9 +16,9 @@ interface SectionType {
 
 export const Container = styled.section<SectionType>`
   display: ${({ display }) => display};
-  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-weight: 500;
-  font-size: 9pt;
+  font-size: 10px;
   text-align: center;
 `;
 export const ContainerChild = styled.p`
@@ -33,10 +33,11 @@ export const ContainerChild = styled.p`
 
 export const Footer = styled.section<FooterProps>`
   border-top: 1px solid ${({ borderColor }) => borderColor};
-  padding: 6px 50px 7px;
+  padding: 6px 0 7px;
   position: fixed;
   width: calc(100% - 50px);
   bottom: 0;
+  margin-left: 50px;
   background-color: ${({ backgroundColor }) => backgroundColor};
   transition: background 0.4s ease, color 0.4s ease;
   height: ${({ height }) => height};
@@ -58,13 +59,14 @@ export const MenuContainer = styled.div`
 
 export const Menus = styled.ul`
   text-align: center;
-  font-size: 10pt;
+  font-size: 9pt;
+  padding-right: 50px;
 `;
 export const Copyright = styled.em`
   display: inline;
-  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-weight: 400;
-  font-size: 10pt;
+  font-size: 9pt;
   position: absolute;
 `;
 export const Anchor = styled(Link)<AnchorType>`

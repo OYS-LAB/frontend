@@ -41,4 +41,7 @@ export const CartMenu = styled.li`
   }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  width: 230px;
+  height: 40px;
+`;
