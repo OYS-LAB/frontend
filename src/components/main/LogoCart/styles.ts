@@ -17,16 +17,22 @@ export const Logo = styled.div`
   padding-top: 13px;
 `;
 export const CartSection = styled.div<Props>`
+  z-index: 9999;
+  background-color: ${({ backgroundColor2 }) => backgroundColor2};
+
   margin-top: 4px;
-  float: right;
   width: 35%;
   height: 23px;
-  background-color: ${({ backgroundColor2 }) => backgroundColor2};
   display: flex;
-  top: -100px;
+  top: 72px;
+  right: 0;
+  position: fixed;
 
-  @media (max-width: 800px) {
-    display: none;
+  @media (max-width: 1023px) {
+    width: 90%;
+    right: 5%;
+    bottom: 20px;
+    top: auto;
   }
 `;
 interface Cart {

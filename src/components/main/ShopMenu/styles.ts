@@ -11,7 +11,7 @@ interface ListsProps {
 }
 
 export const ShopMenu = styled.section`
-  padding-bottom: 18px;
+  padding: 18px 0;
 `;
 export const Lists = styled.ul<ListsProps>`
   font-family: 'Red Hat Display', sans-serif;
@@ -23,7 +23,7 @@ export const Lists = styled.ul<ListsProps>`
   }
 `;
 export const List = styled.li`
-  &: nth-child(1) {
+  &:nth-child(1) {
     padding-bottom: 6px;
   }
 `;

@@ -12,8 +12,7 @@ const MainHeader = () => {
   return (
     <$.MainHeader>
       <$.Logo>
-        {/* <$.Image src={`${changeLogoColor}.src`} alt="logo" /> */}
-        <$.Img colorMode={colorMode} />
+        <$.Img colorMode={colorMode} aria-label="OYS-LAB" />
       </$.Logo>
       <$.CartSection backgroundColor2={backgroundColor2}>
         <$.CartMenus textColor2={textColor2}>

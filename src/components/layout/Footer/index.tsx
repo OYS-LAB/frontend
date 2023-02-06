@@ -61,6 +61,7 @@ const Footer = () => {
         <$.ContainerChild>MAIL ORDER LICENSE : </$.ContainerChild>
         <$.ContainerChild>EMAIL : CONTACT@OYS-LAB.COM</$.ContainerChild>
       </$.Container>
+      <$.Copyright isMobile>© 2023, OYS.</$.Copyright>
     </$.Footer>
   );
 };

@@ -2,7 +2,7 @@ import ColorModeButton from '../ColorModeButton';
 import * as $ from './styles';
 import useHiddenMenu from 'hooks/useHiddenMenu';
 import ShopMenu from '../ShopMenu';
-import PopUpMenu from '../PopUpMenu';
+import PopUpMenu from 'components/main/PopUpMenu';
 
 const Menu = () => {
   const { searchButtonDisplay } = useHiddenMenu();

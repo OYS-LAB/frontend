@@ -1,3 +1,4 @@
+import { BlockList } from 'net';
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
 interface FooterProps {
@@ -51,6 +52,15 @@ export const Footer = styled.section<FooterProps>`
         }
       }
     `}
+
+  @media (max-width: 1023px) {
+    display: none;
+    ${({ isHiddenMenuVisible }) =>
+      isHiddenMenuVisible &&
+      css`
+        display: block;
+      `}
+  }
 `;
 
 export const MenuContainer = styled.div`
@@ -62,12 +72,30 @@ export const Menus = styled.ul`
   font-size: 9pt;
   padding-right: 50px;
 `;
-export const Copyright = styled.em`
-  display: inline;
+
+interface CopyrightProps {
+  isMobile?: boolean;
+}
+export const Copyright = styled.em<CopyrightProps>`
+  display: ${({ isMobile }) => (isMobile ? 'none' : 'inline')};
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 400;
   font-size: 9pt;
   position: absolute;
+
+  @media (max-width: 1023px) {
+    ${({ isMobile }) =>
+      isMobile
+        ? css`
+            display: block;
+            position: unset;
+            text-align: center;
+            margin-top: 10px;
+          `
+        : css`
+            display: none;
+          `};
+  }
 `;
 export const Anchor = styled(Link)<AnchorType>`
   color: ${({ textColor }) => textColor};
