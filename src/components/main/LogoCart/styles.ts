@@ -1,13 +1,20 @@
 import styled from 'styled-components';
+import logoDark from 'images/icon-logo-dark.png';
+import logoLight from 'images/icon-logo-light.png';
+import { ColorModeState } from 'atoms/colorMode';
 
 interface Props {
   backgroundColor2: string;
 }
+
 export const MainHeader = styled.section`
   text-align: center;
 `;
 export const Logo = styled.div`
-  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-top: 13px;
 `;
 export const CartSection = styled.div<Props>`
   margin-top: 4px;
@@ -42,6 +49,29 @@ export const CartMenu = styled.li`
 `;
 
 export const Image = styled.img`
+  width: 230px;
+  height: 40px;
+`;
+
+interface IconProps {
+  colorMode: ColorModeState;
+}
+
+const getLogoIconSrc = (colorMode: ColorModeState) =>
+  colorMode === 'DARK' ? logoLight.src : logoDark.src;
+
+const Icon = styled.i`
+  display: block;
+  width: 230px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center, center;
+`;
+
+export const Img = styled(Icon)<IconProps>`
+  background-image: url('${({ colorMode }) => getLogoIconSrc(colorMode)}');
+  position: fixed;
   width: 230px;
   height: 40px;
 `;

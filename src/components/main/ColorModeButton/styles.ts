@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import darkLightIcon from 'images/icon-dark-light.png';
+import darkIcon from 'images/icon-dark-light.png';
+import lightIcon from 'images/icon-light-light.png';
+import { ColorModeState } from 'atoms/colorMode';
 
 interface DarkMode {
   backgroundColor: string;
@@ -9,6 +11,12 @@ interface DarkMode {
   textColor2: string;
   colorButtonDisplay: string;
 }
+interface IconProps {
+  colorMode: ColorModeState;
+}
+
+const getLogoIconSrc = (colorMode: ColorModeState) =>
+  colorMode === 'DARK' ? lightIcon.src : darkIcon.src;
 
 export const Button = styled.button<DarkMode>`
   background-color: transparent;
@@ -36,6 +44,6 @@ const Icon = styled.i`
   background-position: center, center;
 `;
 
-export const DarkLightIcon = styled(Icon)`
-  background-image: url('${darkLightIcon.src}');
+export const DarkLightIcon = styled(Icon)<IconProps>`
+  background-image: url('${({ colorMode }) => getLogoIconSrc(colorMode)}');
 `;

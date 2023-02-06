@@ -6,8 +6,8 @@ export const Wrap = styled.section`
 
 export const MainImage = styled.img`
   display: block;
-  width: 500px;
-  height: 500px;
+  width: 720px;
+  height: 540px;
   margin: 0 auto;
   position: absolute;
   bottom: 0;

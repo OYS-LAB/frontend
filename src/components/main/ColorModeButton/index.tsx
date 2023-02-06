@@ -12,6 +12,7 @@ const ColorModeButton = () => {
     borderColor,
   } = useColorMode();
   const { colorButtonDisplay } = useHiddenMenu();
+  const { colorMode } = useColorMode();
 
   return (
     <$.Button
@@ -24,7 +25,7 @@ const ColorModeButton = () => {
       borderColor={borderColor}
       colorButtonDisplay={colorButtonDisplay}
     >
-      <$.DarkLightIcon />
+      <$.DarkLightIcon colorMode={colorMode} />
     </$.Button>
   );
 };
