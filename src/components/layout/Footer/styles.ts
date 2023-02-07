@@ -23,6 +23,11 @@ export const Container = styled.section<SectionType>`
   @media (max-width: 1023px) {
     margin-left: -35px;
     font-size: 9pt;
+    padding-top: 25px;
+  }
+  @media (max-width: 600px) {
+    margin-left: -35px;
+    font-size: 9pt;
     padding-top: 10px;
   }
 `;
@@ -67,6 +72,17 @@ export const Footer = styled.section<FooterProps>`
       isHiddenMenuVisible &&
       css`
         display: block;
+        height: 170px;
+        padding: 35px 0;
+      `}
+  }
+  @media (max-width: 600px) {
+    display: none;
+    border-top-width: 0.4px;
+    ${({ isHiddenMenuVisible }) =>
+      isHiddenMenuVisible &&
+      css`
+        display: block;
         height: 150px;
         padding: 20px 0;
       `}
@@ -98,6 +114,21 @@ export const Copyright = styled.em<CopyrightProps>`
   position: absolute;
 
   @media (max-width: 1023px) {
+    font-weight: 500;
+    margin-left: -35px;
+    ${({ isMobile }) =>
+      isMobile
+        ? css`
+            display: block;
+            position: unset;
+            text-align: center;
+            margin-top: 20px;
+          `
+        : css`
+            display: none;
+          `};
+  }
+  @media (max-width: 600px) {
     margin-left: -35px;
     ${({ isMobile }) =>
       isMobile
@@ -128,5 +159,6 @@ export const Menu = styled.li`
     margin-right: 10pt;
     margin-bottom: 7pt;
     font-size: 10pt;
+    font-weight: 500;
   }
 `;

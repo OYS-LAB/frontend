@@ -13,6 +13,9 @@ interface ListsProps {
 export const ShopMenu = styled.section`
   padding: 18px 0;
   @media (max-width: 1023px) {
+    padding: 20px 0;
+  }
+  @media (max-width: 600px) {
     padding: 16px 0 9px 0;
   }
 `;

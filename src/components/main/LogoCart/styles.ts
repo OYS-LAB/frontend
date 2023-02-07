@@ -30,15 +30,22 @@ export const CartSection = styled.div<Props>`
   position: fixed;
 
   @media (max-width: 1023px) {
-    width: 90%;
-    right: 5%;
+    width: 87.5%;
+    right: 6.2%;
     bottom: 7px;
     top: auto;
+    justify-content: center;
     ${({ isHiddenMenuVisible }) =>
       isHiddenMenuVisible &&
       css`
         display: none;
       `}
+  }
+  @media (max-width: 600px) {
+    width: 90%;
+    right: 5%;
+    bottom: 7px;
+    top: auto;
   }
 `;
 interface Cart {

@@ -30,8 +30,11 @@ export const PopupMenu = styled.ul<MenusProps>`
   animation-timing-function: linear;
   @media (max-width: 1023px) {
     margin-top: 0;
-    height: 85%;
+    height: 89%;
     padding-bottom: inherit;
+  }
+  @media (max-width: 600px) {
+    height: 85%;
   }
 `;
 export const Menu = styled.li`

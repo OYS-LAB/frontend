@@ -15,6 +15,9 @@ export const MainImage = styled.img`
   transform: translate(-50%, 0);
 
   @media (max-width: 1023px) {
+    height: 80%;
+  }
+  @media (max-width: 600px) {
     width: 100%;
     height: 504px;
   }
