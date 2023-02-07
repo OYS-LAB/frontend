@@ -44,6 +44,7 @@ body {
 	color : ${props => props.textColor};
   	background-color : ${props => props.backgroundColor};
 	transition: background 0.4s ease, color 0.4s ease;
+	overflow-y: hidden;
 }
 ol, ul {
 	list-style: none;

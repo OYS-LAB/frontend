@@ -14,6 +14,19 @@ interface SectionType {
   display: string;
 }
 
+interface HrProps {
+  borderColor: string;
+}
+export const Hr = styled.hr<HrProps>`
+  border: none;
+  border-top: 1px solid ${({ borderColor }) => borderColor};
+  margin-left: 50px;
+  padding-bottom: 5px;
+  @media (max-width: 1023px) {
+    border-top: 0.4px solid ${({ borderColor }) => borderColor};
+  }
+`;
+
 export const Container = styled.section<SectionType>`
   display: ${({ display }) => display};
   font-family: 'Red Hat Display', sans-serif;
@@ -45,12 +58,10 @@ export const ContainerChild = styled.p`
 `;
 
 export const Footer = styled.section<FooterProps>`
-  border-top: 1px solid ${({ borderColor }) => borderColor};
   padding: 6px 0 7px;
   position: fixed;
-  width: calc(100% - 50px);
+  width: 100%;
   bottom: 0;
-  margin-left: 50px;
   background-color: ${({ backgroundColor }) => backgroundColor};
   transition: background 0.4s ease, color 0.4s ease;
   height: ${({ height }) => height};
@@ -96,10 +107,8 @@ export const MenuContainer = styled.div`
 export const Menus = styled.ul`
   text-align: center;
   font-size: 9pt;
-  padding-right: 50px;
   @media (max-width: 1023px) {
     padding-right: 0;
-    margin-left: -35px;
   }
 `;
 
@@ -112,10 +121,12 @@ export const Copyright = styled.em<CopyrightProps>`
   font-weight: 400;
   font-size: 9pt;
   position: absolute;
+  padding-left: 50px;
 
   @media (max-width: 1023px) {
     font-weight: 500;
     margin-left: -35px;
+    padding-left: 0;
     ${({ isMobile }) =>
       isMobile
         ? css`

@@ -19,6 +19,7 @@ const Footer = () => {
       height={height}
       isHiddenMenuVisible={isHiddenMenuVisible}
     >
+      <$.Hr borderColor={borderColor} />
       <$.MenuContainer>
         <$.Copyright>© 2023, OYS.</$.Copyright>
         <$.Menus role="navigation">
