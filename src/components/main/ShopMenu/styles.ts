@@ -12,6 +12,9 @@ interface ListsProps {
 
 export const ShopMenu = styled.section`
   padding: 18px 0;
+  @media (max-width: 1023px) {
+    padding: 16px 0 9px 0;
+  }
 `;
 export const Lists = styled.ul<ListsProps>`
   font-family: 'Red Hat Display', sans-serif;
@@ -21,10 +24,18 @@ export const Lists = styled.ul<ListsProps>`
   &:hover {
     cursor: pointer;
   }
+  @media (max-width: 1023px) {
+    font-size: 14pt;
+  }
 `;
 export const List = styled.li`
   &:nth-child(1) {
     padding-bottom: 6px;
+  }
+  @media (max-width: 1023px) {
+    &:nth-child(1) {
+      padding-bottom: 4px;
+    }
   }
 `;
 export const Anchor = styled(Link)<AnchorProps>`
@@ -32,4 +43,7 @@ export const Anchor = styled(Link)<AnchorProps>`
   font-weight: 600;
   font-size: 17pt;
   color: ${({ textColor }) => textColor};
+  @media (max-width: 1023px) {
+    font-size: 14pt;
+  }
 `;

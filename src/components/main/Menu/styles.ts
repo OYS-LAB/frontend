@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import darkLightIcon from 'images/icon-dark-light.png';
 import searchIcon from 'images/icon-search.png';
 
@@ -10,6 +10,9 @@ export const Main = styled.section`
   margin-top: 30px;
   height: 100%;
   padding-bottom: 140px;
+  @media (max-width: 1023px) {
+    margin-top: 10px;
+  }
 `;
 export const MenuSection = styled.div`
   display: inline-block;

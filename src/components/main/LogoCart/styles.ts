@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import logoDark from 'images/icon-logo-dark.png';
 import logoLight from 'images/icon-logo-light.png';
 import { ColorModeState } from 'atoms/colorMode';
 
 interface Props {
   backgroundColor2: string;
+  isHiddenMenuVisible: boolean;
 }
 
 export const MainHeader = styled.section`
@@ -31,8 +32,13 @@ export const CartSection = styled.div<Props>`
   @media (max-width: 1023px) {
     width: 90%;
     right: 5%;
-    bottom: 20px;
+    bottom: 7px;
     top: auto;
+    ${({ isHiddenMenuVisible }) =>
+      isHiddenMenuVisible &&
+      css`
+        display: none;
+      `}
   }
 `;
 interface Cart {
@@ -80,4 +86,8 @@ export const Img = styled(Icon)<IconProps>`
   position: fixed;
   width: 230px;
   height: 40px;
+  @media (max-width: 1023px) {
+    width: 172px;
+    height: 30px;
+  }
 `;

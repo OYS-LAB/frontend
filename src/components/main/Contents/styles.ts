@@ -13,4 +13,9 @@ export const MainImage = styled.img`
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    height: 504px;
+  }
 `;

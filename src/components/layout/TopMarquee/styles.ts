@@ -21,6 +21,9 @@ export const Header = styled.div<Props>`
   width: calc(100% - 50px);
   padding-bottom: 5px;
   border-bottom: 1px solid ${props => props.borderColor};
+  @media (max-width: 1023px) {
+    border-bottom-width: 0.4px;
+  }
 `;
 
 export const Message = styled.p`
@@ -35,4 +38,7 @@ export const Message = styled.p`
   animation-iteration-count: infinite;
   animation-direction: normal;
   text-transform: uppercase;
+  @media (max-width: 1023px) {
+    font-size: 10px;
+  }
 `;

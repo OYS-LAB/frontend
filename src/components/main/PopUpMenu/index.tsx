@@ -5,7 +5,7 @@ const ShopMenu = () => {
   const { isVisible: isHiddenMenuVisible, handleToggle } = useHiddenMenu();
   const { textColor1: textColor } = useColorMode();
   return (
-    <$.HiddenMenu isHiddenMenuVisible={isHiddenMenuVisible}>
+    <$.PopupMenu isHiddenMenuVisible={isHiddenMenuVisible}>
       <$.Menu>
         <$.Anchor textColor={textColor} href="/">
           ALL
@@ -41,7 +41,7 @@ const ShopMenu = () => {
           X
         </$.CloseButton>
       </$.Menu>
-    </$.HiddenMenu>
+    </$.PopupMenu>
   );
 };
 
