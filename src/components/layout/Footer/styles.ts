@@ -25,6 +25,9 @@ export const Hr = styled.hr<HrProps>`
   @media (max-width: 1023px) {
     border-top: 0.4px solid ${({ borderColor }) => borderColor};
   }
+  @media (max-width: 600px) {
+    padding-bottom: 14px;
+  }
 `;
 
 export const Container = styled.section<SectionType>`
