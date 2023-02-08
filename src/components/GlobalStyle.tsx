@@ -45,6 +45,10 @@ body {
   	background-color : ${props => props.backgroundColor};
 	transition: background 0.4s ease, color 0.4s ease;
 	overflow-y: hidden;
+	 padding:env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
 }
 ol, ul {
 	list-style: none;

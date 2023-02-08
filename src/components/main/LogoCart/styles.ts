@@ -10,6 +10,10 @@ interface Props {
 
 export const MainHeader = styled.section`
   text-align: center;
+
+  @media (max-width: 600px) {
+    padding-top: 10px;
+  }
 `;
 export const Logo = styled.div`
   justify-content: center;

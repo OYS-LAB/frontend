@@ -32,12 +32,6 @@ export const Button = styled.button`
   display: inline-block;
   width: 20px;
   height: 20px;
-  &:first-child {
-    // border: 1px solid red;
-  }
-  &:last-child {
-    // border: 1px solid blue;
-  }
   margin-bottom: 38px;
   &:hover {
     cursor: pointer;

@@ -24,8 +24,6 @@ export const Button = styled.button<DarkMode>`
   border: none;
   padding: 0;
   display: inline-block;
-  // width: 20px;
-  // height: 20px;
   margin-bottom: 38px;
   &:hover {
     cursor: pointer;

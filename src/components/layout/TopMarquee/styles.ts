@@ -41,6 +41,9 @@ export const Message = styled.p`
   @media (max-width: 1023px) {
     font-size: 10px;
   }
+  @media (max-width: 600px) {
+    padding-top: calc(env(safe-area-inset-top) + 15px);
+  }
 `;
 
 export const Hr = styled.hr<HrProps>`

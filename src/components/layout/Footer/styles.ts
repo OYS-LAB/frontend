@@ -23,6 +23,7 @@ export const Hr = styled.hr<HrProps>`
   margin-left: 50px;
   padding-bottom: 9px;
   @media (max-width: 1023px) {
+    padding-bottom: 20px;
     border-top: 0.4px solid ${({ borderColor }) => borderColor};
   }
   @media (max-width: 600px) {
@@ -69,6 +70,7 @@ export const Footer = styled.section<FooterProps>`
   bottom: 0;
   background-color: ${({ backgroundColor }) => backgroundColor};
   transition: background 0.4s ease, color 0.4s ease;
+
   height: ${({ height }) => height};
   ${({ isHiddenMenuVisible }) =>
     !isHiddenMenuVisible &&
@@ -88,18 +90,21 @@ export const Footer = styled.section<FooterProps>`
       isHiddenMenuVisible &&
       css`
         display: block;
-        height: 170px;
+        height: 190px;
         padding: 35px 0;
       `}
   }
   @media (max-width: 600px) {
     display: none;
     border-top-width: 0.4px;
+
     ${({ isHiddenMenuVisible }) =>
       isHiddenMenuVisible &&
       css`
         display: block;
-        padding: 20px 0;
+        padding-top: 20px;
+        height: 170px;
+        padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
       `}
   }
 `;
@@ -130,7 +135,6 @@ export const Copyright = styled.em<CopyrightProps>`
 
   @media (max-width: 1023px) {
     font-weight: 500;
-    margin-left: -35px;
     padding-left: 5%;
     ${({ isMobile }) =>
       isMobile
@@ -145,15 +149,13 @@ export const Copyright = styled.em<CopyrightProps>`
           `};
   }
   @media (max-width: 600px) {
-    margin-left: -35px;
     ${({ isMobile }) =>
       isMobile
         ? css`
             display: block;
             position: unset;
             text-align: center;
-            margin-top: 10px;
-            padding-left: 10%;
+            margin-top: 0;
           `
         : css`
             display: none;
