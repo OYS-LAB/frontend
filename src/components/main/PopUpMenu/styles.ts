@@ -21,7 +21,7 @@ export const PopupMenu = styled.ul<MenusProps>`
   display: ${({ isHiddenMenuVisible }) =>
     isHiddenMenuVisible ? 'flex' : 'none'};
   animation: fadeInDown 1s;
-  margin-top: 50px;
+  padding-top: 50px;
   flex-flow: column;
   height: 100%;
   padding-bottom: 140px;
@@ -30,7 +30,7 @@ export const PopupMenu = styled.ul<MenusProps>`
   animation-timing-function: linear;
   @media (max-width: 1023px) {
     margin-top: 0;
-    height: 89%;
+    height: 90%;
     padding-bottom: inherit;
   }
   @media (max-width: 600px) {

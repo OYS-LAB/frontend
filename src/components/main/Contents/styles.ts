@@ -6,8 +6,9 @@ export const Wrap = styled.section`
 
 export const MainImage = styled.img`
   display: block;
-  width: 720px;
-  height: 540px;
+  max-width: 720px;
+  width: 60vh;
+  height: 70vh;
   margin: 0 auto;
   position: absolute;
   bottom: 0;
@@ -15,10 +16,10 @@ export const MainImage = styled.img`
   transform: translate(-50%, 0);
 
   @media (max-width: 1023px) {
-    height: 80%;
+    height: 80vh;
   }
   @media (max-width: 600px) {
     width: 100%;
-    height: 504px;
+    height: 75vh;
   }
 `;

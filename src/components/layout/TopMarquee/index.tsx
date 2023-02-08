@@ -7,8 +7,9 @@ const TopMarquee = () => {
 
   return (
     <$.Wrap>
-      <$.Header borderColor={borderColor}>
+      <$.Header>
         <$.Message>{welcomeMessage}</$.Message>
+        <$.Hr borderColor={borderColor} />
       </$.Header>
     </$.Wrap>
   );

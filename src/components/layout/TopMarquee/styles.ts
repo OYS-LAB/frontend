@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-interface Props {
+interface HrProps {
   borderColor: string;
 }
 
@@ -17,10 +17,9 @@ const slideInLeft = keyframes`
 }
 `;
 
-export const Header = styled.div<Props>`
+export const Header = styled.div`
   width: calc(100% - 50px);
   padding-bottom: 5px;
-  border-bottom: 1px solid ${props => props.borderColor};
   @media (max-width: 1023px) {
     border-bottom-width: 0.4px;
   }
@@ -32,6 +31,7 @@ export const Message = styled.p`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 400;
   font-size: 10pt;
+  padding-bottom: 4px;
   animation-name: ${slideInLeft};
   animation-duration: 25s;
   animation-timing-function: linear;
@@ -41,4 +41,9 @@ export const Message = styled.p`
   @media (max-width: 1023px) {
     font-size: 10px;
   }
+`;
+
+export const Hr = styled.hr<HrProps>`
+  border: none;
+  border-top: 1px solid ${({ borderColor }) => borderColor};
 `;
