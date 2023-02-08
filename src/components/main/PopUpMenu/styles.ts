@@ -35,7 +35,6 @@ export const PopupMenu = styled.ul<MenusProps>`
     margin-top: 0;
     height: 86%;
     padding-top: 0px;
-    padding-bottom: inherit;
   }
   @media (max-width: 600px) {
     height: 85%;

@@ -19,7 +19,7 @@ export const ShopMenu = styled.section`
     padding: 16px 0 9px 0;
   }
 `;
-export const Lists = styled.ul<ListsProps>`
+export const Menus = styled.ul<ListsProps>`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 17pt;
@@ -31,7 +31,7 @@ export const Lists = styled.ul<ListsProps>`
     font-size: 14pt;
   }
 `;
-export const List = styled.li`
+export const Menu = styled.li`
   &:nth-child(1) {
     padding-bottom: 6px;
   }

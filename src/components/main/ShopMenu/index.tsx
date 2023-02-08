@@ -8,18 +8,18 @@ const HiddenMenu = () => {
 
   return (
     <$.ShopMenu>
-      <$.Lists
+      <$.Menus
         height={height}
         display={display}
         contentDisplay={contentDisplay}
       >
-        <$.List onClick={handleToggle}>SHOP</$.List>
-        <$.List>
+        <$.Menu onClick={handleToggle}>SHOP</$.Menu>
+        <$.Menu>
           <$.Anchor textColor={textColor} href="/">
             ARCHIVE
           </$.Anchor>
-        </$.List>
-      </$.Lists>
+        </$.Menu>
+      </$.Menus>
     </$.ShopMenu>
   );
 };

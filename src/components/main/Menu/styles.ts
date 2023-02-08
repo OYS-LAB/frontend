@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import darkLightIcon from 'images/icon-dark-light.png';
 import searchIcon from 'images/icon-search.png';
 
-interface iProps {
+interface IconProps {
   searchButtonDisplay: string;
 }
 export const Main = styled.section`
@@ -41,7 +41,7 @@ export const Button = styled.button`
   }
 `;
 
-const Icon = styled.i<iProps>`
+const Icon = styled.i<IconProps>`
   display: ${({ searchButtonDisplay }) => searchButtonDisplay};
   width: 20px;
   height: 20px;
@@ -50,7 +50,7 @@ const Icon = styled.i<iProps>`
   background-position: center, center;
 `;
 
-export const SearchIcon = styled(Icon)<iProps>`
+export const SearchIcon = styled(Icon)<IconProps>`
   background-image: url('${searchIcon.src}');
 `;
 

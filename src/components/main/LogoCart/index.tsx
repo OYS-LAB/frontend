@@ -7,7 +7,7 @@ import * as $ from './styles';
 const MainHeader = () => {
   const { backgroundColor2, textColor2 } = useColorMode();
   const { colorMode } = useColorMode();
-  const { isVisible: isHiddenMenuVisible, display } = useHiddenMenu();
+  const { isVisible: isHiddenMenuVisible } = useHiddenMenu();
   return (
     <$.MainHeader>
       <$.Logo>

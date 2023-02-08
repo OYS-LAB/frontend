@@ -91,7 +91,7 @@ export const Footer = styled.section<FooterProps>`
       css`
         display: block;
         height: 190px;
-        padding: 35px 0;
+        padding: 0 0 35px 0;
       `}
   }
   @media (max-width: 600px) {
@@ -102,8 +102,7 @@ export const Footer = styled.section<FooterProps>`
       isHiddenMenuVisible &&
       css`
         display: block;
-        padding-top: 20px;
-        height: 170px;
+        height: 150px;
         padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
       `}
   }
