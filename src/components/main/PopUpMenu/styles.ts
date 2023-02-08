@@ -1,9 +1,13 @@
 import Link from 'next/link';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 interface MenusProps {
   isHiddenMenuVisible: boolean;
 }
 interface Props {
+  textColor: string;
+}
+
+interface ToggleProps {
   textColor: string;
 }
 const fadeInDown = keyframes`
@@ -16,7 +20,6 @@ opacity: 1;
 transform: translateY(0%);
 }
 `;
-
 export const PopupMenu = styled.ul<MenusProps>`
   display: ${({ isHiddenMenuVisible }) =>
     isHiddenMenuVisible ? 'flex' : 'none'};
@@ -30,7 +33,8 @@ export const PopupMenu = styled.ul<MenusProps>`
   animation-timing-function: linear;
   @media (max-width: 1023px) {
     margin-top: 0;
-    height: 90%;
+    height: 86%;
+    padding-top: 0px;
     padding-bottom: inherit;
   }
   @media (max-width: 600px) {

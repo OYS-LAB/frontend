@@ -5,7 +5,8 @@ import ShopMenu from '../ShopMenu';
 import PopUpMenu from 'components/main/PopUpMenu';
 
 const Menu = () => {
-  const { searchButtonDisplay } = useHiddenMenu();
+  const { isVisible: isHiddenMenuVisible, searchButtonDisplay } =
+    useHiddenMenu();
   return (
     <$.Main>
       <$.MenuSection>
@@ -18,7 +19,8 @@ const Menu = () => {
           </$.Button>
         */}
         </$.ButtonSection>
-        <PopUpMenu />
+        {isHiddenMenuVisible ? <PopUpMenu /> : null}
+        {/* <PopUpMenu /> */}
       </$.MenuSection>
     </$.Main>
   );

@@ -4,6 +4,7 @@ import * as $ from './styles';
 const ShopMenu = () => {
   const { isVisible: isHiddenMenuVisible, handleToggle } = useHiddenMenu();
   const { textColor1: textColor } = useColorMode();
+
   return (
     <$.PopupMenu isHiddenMenuVisible={isHiddenMenuVisible}>
       <$.Menu>

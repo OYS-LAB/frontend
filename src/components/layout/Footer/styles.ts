@@ -135,7 +135,7 @@ export const Copyright = styled.em<CopyrightProps>`
 
   @media (max-width: 1023px) {
     font-weight: 500;
-    padding-left: 5%;
+    padding-left: 2%;
     ${({ isMobile }) =>
       isMobile
         ? css`

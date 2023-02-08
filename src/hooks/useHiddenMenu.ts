@@ -9,7 +9,6 @@ const useHiddenMenu = () => {
   const handleToggle = () => {
     setHiddenMenuVisible(hiddenMenuVisible === 'HIDE' ? 'VISIBLE' : 'HIDE');
   };
-
   const isVisible = hiddenMenuVisible === 'VISIBLE';
 
   return {
