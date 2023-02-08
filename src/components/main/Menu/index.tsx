@@ -14,12 +14,13 @@ const Menu = () => {
         <$.ButtonSection>
           <ColorModeButton />
           {/* 
+          1차 오픈 이후 개발 예정
           <$.Button aria-label="search">
             <$.SearchIcon searchButtonDisplay={searchButtonDisplay} />
           </$.Button>
         */}
         </$.ButtonSection>
-        {isHiddenMenuVisible ? <PopUpMenu /> : null}
+        {isHiddenMenuVisible && <PopUpMenu />}
         {/* <PopUpMenu /> */}
       </$.MenuSection>
     </$.Main>
