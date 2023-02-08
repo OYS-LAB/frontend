@@ -7,14 +7,14 @@ interface Props {
   textColor: string;
 }
 const fadeInDown = keyframes`
-0% {
-            opacity: 0;
-            transform: translate3d(0, -5%, 0);
-        }
-        to {
-            opacity: 1;
-            transform: translateZ(0);
-        }
+0%{
+opacity: 0;
+transform: translateY(-5%);
+
+}100%{
+opacity: 1;
+transform: translateY(0%);
+}
 `;
 
 export const PopupMenu = styled.ul<MenusProps>`
