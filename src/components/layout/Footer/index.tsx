@@ -57,9 +57,8 @@ const Footer = () => {
       </$.MenuContainer>
       <$.Container display={display}>
         <$.ContainerChild>COMPANY : OYS CO.,LTD</$.ContainerChild>
-        <$.ContainerChild>OWNER : KIM OK HEE</$.ContainerChild>
+        <$.ContainerChild>REPRESENTATIVE : SYO</$.ContainerChild>
         <$.ContainerChild>REGISTRATION : </$.ContainerChild>
-        <$.ContainerChild>MAIL ORDER LICENSE : </$.ContainerChild>
         <$.ContainerChild>EMAIL : CONTACT@OYS-LAB.COM</$.ContainerChild>
       </$.Container>
       <$.Copyright isMobile>© 2023, OYS.</$.Copyright>

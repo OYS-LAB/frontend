@@ -27,7 +27,7 @@ export const CartSection = styled.div<Props>`
 
   margin-top: 4px;
   width: 35%;
-  height: 23px;
+  height: 18px;
   display: flex;
   top: 72px;
   right: 0;
@@ -57,7 +57,7 @@ interface Cart {
 }
 export const CartMenus = styled.ul<Cart>`
   color: ${({ textColor2 }) => textColor2};
-  font-size: 10pt;
+  font-size: 12px;
   padding: 0 50px;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@ export const CartMenu = styled.li`
 
 export const Image = styled.img`
   width: 230px;
-  height: 40px;
+  height: 40px;image.png
 `;
 
 interface IconProps {

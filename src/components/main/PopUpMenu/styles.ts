@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import styled, { keyframes, css } from 'styled-components';
+import { ColorModeState } from 'atoms/colorMode';
+import closeDark from 'images/icon-dark-close.png';
+import closeLight from 'images/icon-light-close.png';
+
 interface MenusProps {
   isHiddenMenuVisible: boolean;
 }
@@ -7,8 +11,8 @@ interface Props {
   textColor: string;
 }
 
-interface ToggleProps {
-  textColor: string;
+interface IconProps {
+  colorMode: ColorModeState;
 }
 const fadeInDown = keyframes`
 0%{
@@ -27,17 +31,17 @@ export const PopupMenu = styled.ul<MenusProps>`
   padding-top: 50px;
   flex-flow: column;
   height: 100%;
-  padding-bottom: 140px;
+  padding-bottom: 100px;
   animation-name: ${fadeInDown};
   animation-duration: 0.5s;
   animation-timing-function: linear;
   @media (max-width: 1023px) {
     margin-top: 0;
-    height: 86%;
+    height: 81%;
     padding-top: 0px;
   }
   @media (max-width: 600px) {
-    height: 85%;
+    height: 91%;
   }
 `;
 export const Menu = styled.li`
@@ -67,7 +71,28 @@ export const CloseButton = styled.button<Props>`
   background-color: transparent;
   border: none;
   bottom: 0;
-  font-size: 50px;
   cursor: pointer;
   color: ${({ textColor }) => textColor};
+`;
+
+const getLogoIconSrc = (colorMode: ColorModeState) =>
+  colorMode === 'DARK' ? closeLight.src : closeDark.src;
+
+const Icon = styled.i`
+  display: block;
+  width: 230px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center, center;
+`;
+
+export const Img = styled(Icon)<IconProps>`
+  background-image: url('${({ colorMode }) => getLogoIconSrc(colorMode)}');
+  width: 230px;
+  height: 40px;
+  @media (max-width: 1023px) {
+    width: 172px;
+    height: 30px;
+  }
 `;

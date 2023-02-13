@@ -4,6 +4,7 @@ import * as $ from './styles';
 const ShopMenu = () => {
   const { isVisible: isHiddenMenuVisible, handleToggle } = useHiddenMenu();
   const { textColor1: textColor } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <$.PopupMenu isHiddenMenuVisible={isHiddenMenuVisible}>
@@ -39,7 +40,7 @@ const ShopMenu = () => {
       </$.Menu>
       <$.Menu>
         <$.CloseButton textColor={textColor} onClick={handleToggle}>
-          X
+          <$.Img colorMode={colorMode} aria-label="close" />
         </$.CloseButton>
       </$.Menu>
     </$.PopupMenu>

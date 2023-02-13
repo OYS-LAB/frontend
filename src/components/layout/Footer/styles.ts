@@ -34,8 +34,8 @@ export const Hr = styled.hr<HrProps>`
 export const Container = styled.section<SectionType>`
   display: ${({ display }) => display};
   font-family: 'Red Hat Display', sans-serif;
-  font-weight: 500;
-  font-size: 10px;
+  font-weight: 400;
+  font-size: 9pt;
   text-align: center;
   padding-bottom: 10px;
   @media (max-width: 1023px) {

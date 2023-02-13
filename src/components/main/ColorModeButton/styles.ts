@@ -10,7 +10,6 @@ interface DarkMode {
   backgroundColor2: string;
   textColor2: string;
   colorButtonDisplay: string;
-  isHiddenMenuVisible: boolean;
 }
 interface IconProps {
   colorMode: ColorModeState;
@@ -34,11 +33,7 @@ export const Button = styled.button<DarkMode>`
   margin: ${({ colorButtonDisplay }) => colorButtonDisplay};
 
   @media (max-width: 1023px) {
-    ${({ isHiddenMenuVisible }) =>
-      isHiddenMenuVisible &&
-      css`
-        display: none;
-      `};
+    padding-bottom: 40px;
   }
 `;
 
