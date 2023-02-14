@@ -1,14 +1,14 @@
-import Header from 'components/layout/Header';
-import Footer from 'components/layout/Footer';
+import Layout from 'components/layout';
 import GlobalStyle from 'components/GlobalStyle';
 import type { AppProps } from 'next/app';
+import { RecoilRoot } from 'recoil';
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <RecoilRoot>
       <GlobalStyle />
-      {/* <Header /> */}
-      <Component {...pageProps} />
-      <Footer />
-    </>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </RecoilRoot>
   );
 }

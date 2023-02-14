@@ -1,6 +1,16 @@
+import useColorMode from 'hooks/useColorMode';
 import { createGlobalStyle } from 'styled-components';
+interface GlobalStyleProps {
+  backgroundColor: string;
+  textColor: string;
+}
 
-export default createGlobalStyle`
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
+* {
+    	margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
   html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,6 +30,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration:none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -28,6 +39,16 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	width: 100%;
+    height: 100vh;
+	color : ${props => props.textColor};
+  	background-color : ${props => props.backgroundColor};
+	transition: background 0.4s ease, color 0.4s ease;
+	overflow-y: hidden;
+	 padding:env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
 }
 ol, ul {
 	list-style: none;
@@ -44,4 +65,19 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+#__next {
+	width: 100%;
+    height: 100%;
+}
+
 `;
+
+const GlobalStyleComponent = () => {
+  const { backgroundColor1: backgroundColor, textColor1: textColor } =
+    useColorMode();
+
+  return (
+    <GlobalStyle backgroundColor={backgroundColor} textColor={textColor} />
+  );
+};
+export default GlobalStyleComponent;
