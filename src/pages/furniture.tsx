@@ -1,5 +1,5 @@
-import Main from 'components/main';
+import Furniture from 'components/furniture';
 
-export default function IndexPage() {
-  return <Main />;
+export default function FurniturePage() {
+  return <Furniture />;
 }

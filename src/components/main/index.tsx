@@ -1,16 +1,16 @@
-import * as $ from './Main.styles';
-import LogoCart from './LogoCart';
-import Menu from './Menu';
-import Contents from './Contents';
+import * as $ from './styles';
+import mainImage from 'images/img-main.jpeg';
+import useHiddenMenu from 'hooks/useHiddenMenu';
 
-const Main = () => {
-  return (
+const Contents = () => {
+  const { contentDisplay } = useHiddenMenu();
+  const isVisible = contentDisplay === 'block';
+
+  return isVisible ? (
     <$.Wrap>
-      <LogoCart />
-      <Menu />
-      <Contents />
+      <$.MainImage src={mainImage.src} />
     </$.Wrap>
-  );
+  ) : null;
 };
 
-export default Main;
+export default Contents;

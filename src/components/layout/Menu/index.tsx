@@ -1,8 +1,8 @@
-import ColorModeButton from '../ColorModeButton';
+import ColorModeButton from './ColorModeButton';
 import * as $ from './styles';
 import useHiddenMenu from 'hooks/useHiddenMenu';
-import ShopMenu from '../ShopMenu';
-import PopUpMenu from 'components/main/PopUpMenu';
+import ShopMenu from './ShopMenu';
+import PopUpMenu from './PopUpMenu';
 
 const Menu = () => {
   const { isVisible: isHiddenMenuVisible, searchButtonDisplay } =
