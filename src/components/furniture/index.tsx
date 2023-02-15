@@ -6,20 +6,20 @@ const MOCK_PRODUCTS = [
   {
     id: 0,
     image: '',
-    title: '상품명1',
-    price: '120만원',
+    title: 'Half Moon Table',
+    price: 'KRW 1,800,000',
   },
   {
     id: 1,
     image: '',
-    title: '상품명2',
-    price: '120만원',
+    title: 'Lean Shelf System',
+    price: 'KRW 450,000',
   },
   {
     id: 2,
     image: '',
-    title: '상품명3',
-    price: '120만원',
+    title: 'Side Table 4 Piece',
+    price: 'Not For Sale',
   },
   {
     id: 3,

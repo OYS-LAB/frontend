@@ -36,7 +36,8 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
   }
-  &: active, focus {
+  &:active,
+  focus {
     border: none;
   }
 `;

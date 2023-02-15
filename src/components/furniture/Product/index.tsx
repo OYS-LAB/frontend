@@ -18,12 +18,16 @@ const Product: FC<ProductProps> = props => {
           <$.Product_wrap_image>
             <$.Product_image src={dummyImage.src} />
           </$.Product_wrap_image>
-          <dd>
-            <strong>{title}</strong>
-            <span>{price}</span>
-          </dd>
+          <$.Product_footer>
+            <$.Product_description>
+              <strong>{title}</strong>
+              <span>{price}</span>
+            </$.Product_description>
+            <$.Product_soldOut_wrap>
+              <button>Sold Out</button>
+            </$.Product_soldOut_wrap>
+          </$.Product_footer>
         </$.Product_wrap>
-        <button>솔드아웃</button>
       </$.Product>
     </>
   );
