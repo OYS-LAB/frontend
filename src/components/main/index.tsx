@@ -1,5 +1,5 @@
 import * as $ from './styles';
-import mainImage from 'images/img-main.jpeg';
+import mainImage from 'images/img-main.png';
 import useHiddenMenu from 'hooks/useHiddenMenu';
 
 const Contents = () => {

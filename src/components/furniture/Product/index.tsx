@@ -1,32 +1,32 @@
 import { FC } from 'react';
-
+import * as $ from './product.styles';
+import dummyImage from 'images/img-dummy.jpg';
 
 interface ProductProps {
-    image: string;
-    title: string;
-    price: string;
-  }
-  
+  image: string;
+  title: string;
+  price: string;
+}
 
-const Product: FC<ProductProps> = (props) => {
-    const { image, title, price} = props;
+const Product: FC<ProductProps> = props => {
+  const { image, title, price } = props;
 
   return (
     <>
-        <li>
-          <img />
-          <dl>
-            <dt>
-              <strong>{title}</strong>
-            </dt>
-            <dd>
-              <span>{price}</span>
-            </dd>
-          </dl>
-          <button>솔드아웃</button>
-        </li>
+      <$.Product>
+        <$.Product_wrap>
+          <$.Product_wrap_image>
+            <$.Product_image src={dummyImage.src} />
+          </$.Product_wrap_image>
+          <dd>
+            <strong>{title}</strong>
+            <span>{price}</span>
+          </dd>
+        </$.Product_wrap>
+        <button>솔드아웃</button>
+      </$.Product>
     </>
-    );
+  );
 };
 
 export default Product;
