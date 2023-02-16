@@ -11,7 +11,7 @@ const font = css`
 `;
 
 export const Product = styled.li`
-  width: 33.3%;
+  width: 300px;
   ${border};
   &:nth-last-child(1) {
     border-right: none;
