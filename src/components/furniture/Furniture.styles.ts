@@ -4,9 +4,9 @@ export const Wrap = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
+  margin-top: auto;
   flex-flow: column;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  overflow: auto;
   margin-bottom: 42px;
 `;
 export const Header = styled.div`
