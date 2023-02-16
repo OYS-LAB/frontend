@@ -11,7 +11,7 @@ const font = css`
 `;
 
 export const Product = styled.li`
-  width: 300px;
+  width: 33.3%;
   ${border};
   &:nth-last-child(1) {
     border-right: none;
@@ -26,7 +26,7 @@ export const Product_wrap_image = styled.dt`
   background-color: grey;
 `;
 export const Product_image = styled.img`
-  width: 300px;
+  width: 100%;
   height: 300px;
 `;
 export const Product_footer = styled.section`
