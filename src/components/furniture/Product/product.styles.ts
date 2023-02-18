@@ -11,7 +11,7 @@ const font = css`
 `;
 
 export const Product = styled.li`
-  width: 300px;
+  width: 33.3%;
   ${border};
   &:nth-last-child(1) {
     border-right: none;
@@ -39,18 +39,16 @@ export const Product_footer = styled.section`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 45px;
-  @media (max-width: 820px) {
-    height: 48px;
-  }
   @media (max-width: 375px) {
     font-size: 10px;
-    height: 38px;
   }
 `;
 export const Product_description = styled.dd`
   width: 50%;
-  padding: 10px 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0 10px;
   ${font};
   strong {
     display: block;

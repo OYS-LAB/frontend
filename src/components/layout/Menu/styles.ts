@@ -8,8 +8,7 @@ interface IconProps {
 export const Main = styled.section`
   text-align: center;
   margin-top: 30px;
-  height: 100%;
-  padding-bottom: 140px;
+  padding-bottom: 40px;
   @media (max-width: 1023px) {
     margin-top: 10px;
   }

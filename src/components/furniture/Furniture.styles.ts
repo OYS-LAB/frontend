@@ -6,8 +6,8 @@ export const Wrap = styled.section`
   display: flex;
   margin-top: auto;
   flex-flow: column;
-  overflow: auto;
-  margin-bottom: 42px;
+  padding-bottom: 42px;
+  overflow: hidden;
 `;
 export const Header = styled.div`
   font-size: 17pt;
@@ -26,14 +26,16 @@ export const Hr = styled.hr`
   border-top: 1px solid #000;
   margin-left: auto;
   margin-right: auto;
+  height: 33px;
   @media (max-width: 1023px) {
     width: 150px;
   }
 `;
-export const Products_wrap = styled.div`
+export const ProductsWrap = styled.div`
   width: 100%;
   height: 100%;
-  padding: 33px 62px 0 62px;
+  padding: 0 62px;
+  overflow-y: auto;
   @media (max-width: 1023px) {
     padding: 23px 0 0 0;
   }
@@ -41,6 +43,4 @@ export const Products_wrap = styled.div`
 export const Products = styled.ul`
   display: flex;
   flex-flow: wrap;
-  align-items: center;
-  justify-content: center;
 `;

@@ -37,13 +37,13 @@ const Furniture = () => {
     <$.Wrap>
       <$.Header>FURNITURE</$.Header>
       <$.Hr />
-      <$.Products_wrap>
+      <$.ProductsWrap>
         <$.Products>
           {MOCK_PRODUCTS.map(({ id, image, title, price }) => (
             <Product key={id} image={image} title={title} price={price} />
           ))}
         </$.Products>
-      </$.Products_wrap>
+      </$.ProductsWrap>
     </$.Wrap>
   ) : null;
 };
