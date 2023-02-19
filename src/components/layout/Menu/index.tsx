@@ -4,6 +4,8 @@ import useHiddenMenu from 'hooks/useHiddenMenu';
 import ShopMenu from './ShopMenu';
 import PopUpMenu from './PopUpMenu';
 import useColorMode from 'hooks/useColorMode';
+import Link from 'next/link';
+import Path from 'models/Path';
 
 const Menu = () => {
   const { isVisible: isHiddenMenuVisible, searchButtonDisplay } =
@@ -14,7 +16,9 @@ const Menu = () => {
     <$.Main>
       <$.MainHeader>
         <$.Logo>
-          <$.Img colorMode={colorMode} aria-label="OYS-LAB" />
+          <Link href={Path.MAIN}>
+            <$.Img colorMode={colorMode} aria-label="OYS-LAB" />
+          </Link>
         </$.Logo>
       </$.MainHeader>
       <$.MenuSection>

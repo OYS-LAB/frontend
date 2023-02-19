@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styled, { keyframes, css } from 'styled-components';
 import { ColorModeState } from 'atoms/colorMode';
 import closeDark from 'images/icon-dark-close.png';
@@ -64,7 +63,7 @@ export const Menu = styled.li`
     padding: 2px 0;
   }
 `;
-export const Anchor = styled(Link)<Props>`
+export const Anchor = styled.a<Props>`
   color: ${({ textColor }) => textColor};
 `;
 export const CloseButton = styled.button<Props>`

@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import useColorMode from 'hooks/useColorMode';
 import useHiddenMenu from 'hooks/useHiddenMenu';
 import * as $ from './styles';
+import Path from 'models/Path';
 const ShopMenu = () => {
   const { isVisible: isHiddenMenuVisible, handleToggle } = useHiddenMenu();
   const { textColor1: textColor } = useColorMode();
@@ -19,9 +21,9 @@ const ShopMenu = () => {
         </$.Anchor>
       </$.Menu>
       <$.Menu>
-        <$.Anchor textColor={textColor} href="/">
-          FURNITURE
-        </$.Anchor>
+        <Link href={Path.FURNITURE} onClick={handleToggle}>
+          <$.Anchor textColor={textColor}>FURNITURE</$.Anchor>
+        </Link>
       </$.Menu>
       <$.Menu>
         <$.Anchor textColor={textColor} href="/">
