@@ -6,10 +6,8 @@ export const Wrap = styled.section`
   display: flex;
   margin-top: auto;
   flex-flow: column;
-  padding-bottom: 42px;
   overflow: hidden;
   @media (max-width: 1023px) {
-    padding-bottom: 32px;
   }
 `;
 export const Header = styled.div`
@@ -29,12 +27,8 @@ export const Hr = styled.hr`
   border-top: 1px solid #000;
   margin-left: auto;
   margin-right: auto;
-  height: 33px;
   @media (max-width: 1023px) {
     width: 150px;
-  }
-  @media (max-width: 820px) {
-    height: 23px;
   }
 `;
 export const ProductsWrap = styled.div`
@@ -43,10 +37,11 @@ export const ProductsWrap = styled.div`
   padding: 0 62px;
   overflow-y: auto;
   @media (max-width: 1023px) {
-    padding: 23px 0 0 0;
+    padding: 0;
   }
 `;
 export const Products = styled.ul`
   display: flex;
   flex-flow: wrap;
+  padding: 18px 0 48px;
 `;

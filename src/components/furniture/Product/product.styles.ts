@@ -37,8 +37,9 @@ export const Product_wrap = styled.dl`
   font-size: 12px;
 `;
 export const Product_wrap_image = styled.dt`
-width:100%
-height:100%`;
+width:100%;
+height: 100%;
+`
 export const Product_image = styled.img`
   width: 100%;
   height: 300px;

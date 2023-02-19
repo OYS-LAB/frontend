@@ -27,13 +27,13 @@ export const Button = styled.button<DarkMode>`
   &:hover {
     cursor: pointer;
   }
-  &: active, focus {
+  &:active, focus {
     border: none;
   }
   margin: ${({ colorButtonDisplay }) => colorButtonDisplay};
 
   @media (max-width: 1023px) {
-    padding-bottom: 40px;
+    padding-bottom: 18px;
   }
 `;
 

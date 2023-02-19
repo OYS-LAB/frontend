@@ -55,7 +55,7 @@ export const Img = styled(Icon)<IconProps>`
 
 export const Main = styled.section`
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   @media (max-width: 1023px) {
     margin-top: 10px;
   }

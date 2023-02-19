@@ -51,6 +51,6 @@ export const Menus = styled.ul<MenusProps>`
 
 export const Menu = styled.li`
   &:nth-child(2) {
-    margin: 0 25px;
+    margin: 0 42px;
   }
 `;
