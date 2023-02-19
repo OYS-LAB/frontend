@@ -12,6 +12,9 @@ export const Main = styled.section`
   @media (max-width: 1023px) {
     margin-top: 10px;
   }
+  @media (max-width: 820px) {
+    padding-bottom: 0;
+  }
 `;
 export const MenuSection = styled.div`
   display: inline-block;

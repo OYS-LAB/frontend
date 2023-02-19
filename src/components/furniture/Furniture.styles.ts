@@ -8,6 +8,9 @@ export const Wrap = styled.section`
   flex-flow: column;
   padding-bottom: 42px;
   overflow: hidden;
+  @media (max-width: 1023px) {
+    padding-bottom: 32px;
+  }
 `;
 export const Header = styled.div`
   font-size: 17pt;
@@ -29,6 +32,9 @@ export const Hr = styled.hr`
   height: 33px;
   @media (max-width: 1023px) {
     width: 150px;
+  }
+  @media (max-width: 820px) {
+    height: 23px;
   }
 `;
 export const ProductsWrap = styled.div`

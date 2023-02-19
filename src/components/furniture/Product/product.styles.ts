@@ -13,11 +13,22 @@ const font = css`
 export const Product = styled.li`
   width: 33.3%;
   ${border};
-  &:nth-last-child(1) {
-    border-right: none;
+  @media (min-width: 1023px) {
+    &:nth-child(3n) {
+      border-right: none;
+    }
+    &:nth-child(n + 4) {
+      border-top: none;
+    }
   }
   @media (max-width: 820px) {
     width: 50%;
+    &:nth-child(2n) {
+      border-right: none;
+    }
+    &:nth-child(n + 3) {
+      border-top: none;
+    }
   }
 `;
 export const Product_wrap = styled.dl`
@@ -26,11 +37,12 @@ export const Product_wrap = styled.dl`
   font-size: 12px;
 `;
 export const Product_wrap_image = styled.dt`
-  background-color: grey;
-`;
+width:100%
+height:100%`;
 export const Product_image = styled.img`
   width: 100%;
   height: 300px;
+  display: block;
   @media (max-width: 820px) {
     height: 50%;
   }
@@ -39,6 +51,7 @@ export const Product_footer = styled.section`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  border-top: 1px solid #000;
   @media (max-width: 375px) {
     font-size: 10px;
   }
