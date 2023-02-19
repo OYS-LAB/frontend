@@ -3,12 +3,20 @@ import * as $ from './styles';
 import useHiddenMenu from 'hooks/useHiddenMenu';
 import ShopMenu from './ShopMenu';
 import PopUpMenu from './PopUpMenu';
+import useColorMode from 'hooks/useColorMode';
 
 const Menu = () => {
   const { isVisible: isHiddenMenuVisible, searchButtonDisplay } =
     useHiddenMenu();
+  const { colorMode } = useColorMode();
+
   return (
     <$.Main>
+      <$.MainHeader>
+        <$.Logo>
+          <$.Img colorMode={colorMode} aria-label="OYS-LAB" />
+        </$.Logo>
+      </$.MainHeader>
       <$.MenuSection>
         <ShopMenu />
         <$.ButtonSection>

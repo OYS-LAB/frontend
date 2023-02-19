@@ -4,7 +4,6 @@ import TopMarquee from './TopMarquee';
 import Footer from './Footer';
 import Flakes from './Flakes';
 import Menu from './Menu';
-import Logo from './Logo';
 import Cart from './Cart';
 
 const Layout = (props: PropsWithChildren) => {
@@ -14,7 +13,6 @@ const Layout = (props: PropsWithChildren) => {
       <Flakes />
       <TopMarquee />
       <$.ContentsContainer>
-        <Logo />
         <Menu />
         <Cart />
         {children}
