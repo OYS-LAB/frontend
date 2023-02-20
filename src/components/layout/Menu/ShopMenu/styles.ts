@@ -46,6 +46,7 @@ export const Anchor = styled(Link)<AnchorProps>`
   font-weight: 600;
   font-size: 17pt;
   color: ${({ textColor }) => textColor};
+  transition: color 0.5s ease-in;
   @media (max-width: 1023px) {
     font-size: 14pt;
   }

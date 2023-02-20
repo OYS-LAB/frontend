@@ -13,7 +13,7 @@ const Menu = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <$.Main>
+    <$.LayoutSection>
       <$.MainHeader>
         <$.Logo>
           <Link href={Path.MAIN}>
@@ -35,7 +35,7 @@ const Menu = () => {
         {isHiddenMenuVisible && <PopUpMenu />}
         {/* <PopUpMenu /> */}
       </$.MenuSection>
-    </$.Main>
+    </$.LayoutSection>
   );
 };
 

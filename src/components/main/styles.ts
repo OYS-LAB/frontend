@@ -8,7 +8,7 @@ export const Wrap = styled.section`
 export const MainImage = styled.img`
   display: block;
   max-width: 720px;
-  width: 60vh;
+  width: 100vh;
   margin: 0 auto;
   margin-top: auto;
   @media (max-width: 600px) {

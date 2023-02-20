@@ -43,9 +43,9 @@ body {
     height: 100vh;
 	color : ${props => props.textColor};
   	background-color : ${props => props.backgroundColor};
-	transition: background 0.4s ease, color 0.4s ease;
+	transition: background 0.1s ease, color 0.5s ease-in;
 	overflow-y: hidden;
-	 padding:env(safe-area-inset-top)
+	padding:env(safe-area-inset-top)
     env(safe-area-inset-right)
     env(safe-area-inset-bottom)
     env(safe-area-inset-left);

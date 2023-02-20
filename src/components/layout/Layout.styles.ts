@@ -8,7 +8,8 @@ export const Wrap = styled.div`
 
 export const ContentsContainer = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-flow: column;
+  height:100%
+  position:relative;
 `;

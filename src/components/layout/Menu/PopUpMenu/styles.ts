@@ -23,11 +23,11 @@ opacity: 1;
 transform: translateY(0%);
 }
 `;
-export const PopupMenu = styled.ul<MenusProps>`
+export const PopupMenus = styled.ul<MenusProps>`
   display: ${({ isHiddenMenuVisible }) =>
     isHiddenMenuVisible ? 'flex' : 'none'};
   animation: fadeInDown 1s;
-  padding-top: 50px;
+  padding-top: 40px;
   flex-flow: column;
   height: 100%;
   padding-bottom: 100px;
@@ -54,6 +54,11 @@ export const Menu = styled.li`
   &:nth-last-child(1) {
     padding-bottom: 0;
     margin-top: auto;
+    position: fixed;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
   }
   &:hover {
     cursor: pointer;

@@ -9,7 +9,7 @@ const ShopMenu = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <$.PopupMenu isHiddenMenuVisible={isHiddenMenuVisible}>
+    <$.PopupMenus isHiddenMenuVisible={isHiddenMenuVisible}>
       <$.Menu>
         <$.Anchor textColor={textColor} href="/">
           ALL
@@ -45,7 +45,7 @@ const ShopMenu = () => {
           <$.Img colorMode={colorMode} aria-label="close" />
         </$.CloseButton>
       </$.Menu>
-    </$.PopupMenu>
+    </$.PopupMenus>
   );
 };
 

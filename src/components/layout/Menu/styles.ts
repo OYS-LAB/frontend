@@ -11,7 +11,6 @@ interface darkModeIconProps {
 
 export const MainHeader = styled.section`
   text-align: center;
-
   @media (max-width: 600px) {
     padding-top: 10px;
   }
@@ -53,7 +52,7 @@ export const Img = styled(Icon)<IconProps>`
   }
 `;
 
-export const Main = styled.section`
+export const LayoutSection = styled.section`
   text-align: center;
   padding-bottom: 20px;
   @media (max-width: 1023px) {
@@ -66,6 +65,8 @@ export const Main = styled.section`
 export const MenuSection = styled.div`
   display: inline-block;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 export const ButtonSection = styled.section`
   display: flex;
