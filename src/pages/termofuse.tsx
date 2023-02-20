@@ -1,5 +1,5 @@
-import TermOfUse from 'components/termofuse';
+import Termofuse from 'components/termofuse';
 
 export default function FurniturePage() {
-  return <TermOfUse />;
+  return <Termofuse />;
 }

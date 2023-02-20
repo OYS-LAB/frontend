@@ -5,10 +5,10 @@ import { ColorModeState } from 'atoms/colorMode';
 
 interface DarkMode {
   backgroundColor: string;
-  textColor: string;
+  textcolor1: string;
   borderColor: string;
   backgroundColor2: string;
-  textColor2: string;
+  textcolor2: string;
   colorButtonDisplay: string;
 }
 interface IconProps {
@@ -27,7 +27,8 @@ export const Button = styled.button<DarkMode>`
   &:hover {
     cursor: pointer;
   }
-  &:active, focus {
+  &:active,
+  focus {
     border: none;
   }
   margin: ${({ colorButtonDisplay }) => colorButtonDisplay};

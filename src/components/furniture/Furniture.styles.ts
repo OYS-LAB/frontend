@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface HrProps {
+  borderColor: string;
+}
+
 export const Wrap = styled.section`
   width: 100%;
   height: 100%;
@@ -21,10 +25,10 @@ export const Header = styled.div`
     font-size: 14pt;
   }
 `;
-export const Hr = styled.hr`
+export const Hr = styled.hr<HrProps>`
   width: 300px;
   border: 0;
-  border-top: 1px solid #000;
+  border-top: 1px solid ${({ borderColor }) => borderColor};
   margin-left: auto;
   margin-right: auto;
   @media (max-width: 1023px) {

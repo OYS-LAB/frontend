@@ -1,6 +1,6 @@
 import useHiddenMenu from 'hooks/useHiddenMenu';
 
-const TermOfUse = () => {
+const Termofuse = () => {
   const { contentDisplay } = useHiddenMenu();
   const isVisible = contentDisplay === 'block';
 
@@ -11,4 +11,4 @@ const TermOfUse = () => {
   ) : null;
 };
 
-export default TermOfUse;
+export default Termofuse;

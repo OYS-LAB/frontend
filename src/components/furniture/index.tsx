@@ -1,3 +1,4 @@
+import useColorMode from 'hooks/useColorMode';
 import useHiddenMenu from 'hooks/useHiddenMenu';
 import * as $ from './Furniture.styles';
 import Product from './Product';
@@ -31,12 +32,13 @@ const MOCK_PRODUCTS = [
 
 const Furniture = () => {
   const { contentDisplay } = useHiddenMenu();
+  const { borderColor } = useColorMode();
   const isVisible = contentDisplay === 'block';
 
   return isVisible ? (
     <$.Wrap>
       <$.Header>FURNITURE</$.Header>
-      <$.Hr />
+      <$.Hr borderColor={borderColor} />
       <$.ProductsWrap>
         <$.Products>
           {MOCK_PRODUCTS.map(({ id, image, title, price }) => (

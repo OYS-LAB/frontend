@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
+
 interface FooterProps {
   backgroundColor: string;
-  textColor: string;
+  textcolor: string;
   borderColor: string;
   height: string;
   isHiddenMenuVisible: boolean;
 }
 interface AnchorType {
-  textColor: string;
+  textcolor: string;
 }
 interface SectionType {
   display: string;
@@ -54,6 +55,7 @@ export const ContainerChild = styled.p`
   display: inline-block;
   margin-right: 20pt;
   padding-top: 20px;
+
   &:nth-last-child(1) {
     display: block;
     padding-top: 0;
@@ -114,6 +116,7 @@ export const MenuContainer = styled.div`
 export const Menus = styled.ul`
   text-align: center;
   font-size: 9pt;
+
   @media (max-width: 1023px) {
     padding-right: 0;
     padding-left: 5%;
@@ -122,6 +125,7 @@ export const Menus = styled.ul`
 
 interface CopyrightProps {
   isMobile?: boolean;
+  textcolor: string;
 }
 export const Copyright = styled.em<CopyrightProps>`
   display: ${({ isMobile }) => (isMobile ? 'none' : 'inline')};
@@ -130,6 +134,7 @@ export const Copyright = styled.em<CopyrightProps>`
   font-size: 9pt;
   position: absolute;
   padding-left: 50px;
+  color: ${({ textcolor }) => textcolor};
 
   @media (max-width: 1023px) {
     font-weight: 500;
@@ -160,8 +165,8 @@ export const Copyright = styled.em<CopyrightProps>`
           `};
   }
 `;
-export const Anchor = styled.a<AnchorType>`
-  color: ${({ textColor }) => textColor};
+export const Anchor = styled.span<AnchorType>`
+  color: ${({ textcolor }) => textcolor};
 `;
 
 export const Menu = styled.li`

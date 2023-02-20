@@ -7,8 +7,8 @@ const ColorModeButton = () => {
     handleToggle,
     backgroundColor1,
     backgroundColor2,
-    textColor1,
-    textColor2,
+    textcolor1,
+    textcolor2,
     borderColor,
   } = useColorMode();
   const { colorButtonDisplay } = useHiddenMenu();
@@ -19,9 +19,9 @@ const ColorModeButton = () => {
       aria-label="dark-light"
       onClick={handleToggle}
       backgroundColor={backgroundColor1}
-      textColor={textColor1}
+      textcolor1={textcolor1}
       backgroundColor2={backgroundColor2}
-      textColor2={textColor2}
+      textcolor2={textcolor2}
       borderColor={borderColor}
       colorButtonDisplay={colorButtonDisplay}
     >

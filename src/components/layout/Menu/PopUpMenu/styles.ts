@@ -7,7 +7,7 @@ interface MenusProps {
   isHiddenMenuVisible: boolean;
 }
 interface Props {
-  textColor: string;
+  textcolor: string;
 }
 
 interface IconProps {
@@ -69,14 +69,14 @@ export const Menu = styled.li`
   }
 `;
 export const Anchor = styled.a<Props>`
-  color: ${({ textColor }) => textColor};
+  color: ${({ textcolor }) => textcolor};
 `;
 export const CloseButton = styled.button<Props>`
   background-color: transparent;
   border: none;
   bottom: 0;
   cursor: pointer;
-  color: ${({ textColor }) => textColor};
+  color: ${({ textcolor }) => textcolor};
 `;
 
 const getLogoIconSrc = (colorMode: ColorModeState) =>

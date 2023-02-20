@@ -1,16 +1,12 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 
-interface AnchorProps {
-  textColor: string;
-}
 interface ListsProps {
   height: string;
   display: string;
   contentDisplay: string;
 }
 
-export const ShopMenu = styled.section`
+export const MainMenu = styled.section`
   padding: 18px 0;
   @media (max-width: 1023px) {
     padding: 20px 0;
@@ -41,12 +37,10 @@ export const Menu = styled.li`
     }
   }
 `;
-export const Anchor = styled(Link)<AnchorProps>`
+export const Anchor = styled.a`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 17pt;
-  color: ${({ textColor }) => textColor};
-  transition: color 0.5s ease-in;
   @media (max-width: 1023px) {
     font-size: 14pt;
   }

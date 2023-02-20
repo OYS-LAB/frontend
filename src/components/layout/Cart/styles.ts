@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
 interface WrapperProps {
-    backgroundColor2: string;
-    isHiddenMenuVisible: boolean;
-  }
+  backgroundColor2: string;
+  isHiddenMenuVisible: boolean;
+}
 
 export const Wrapper = styled.div<WrapperProps>`
   z-index: 9999;
@@ -37,10 +37,10 @@ export const Wrapper = styled.div<WrapperProps>`
   }
 `;
 interface MenusProps {
-  textColor2: string;
+  textcolor2: string;
 }
 export const Menus = styled.ul<MenusProps>`
-  color: ${({ textColor2 }) => textColor2};
+  color: ${({ textcolor2 }) => textcolor2};
   font-size: 12px;
   padding: 0 50px;
   display: flex;

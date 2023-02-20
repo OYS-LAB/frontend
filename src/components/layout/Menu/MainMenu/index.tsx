@@ -2,12 +2,11 @@ import useHiddenMenu from 'hooks/useHiddenMenu';
 import useColorMode from 'hooks/useColorMode';
 import * as $ from './styles';
 
-const HiddenMenu = () => {
+const MainMenu = () => {
   const { handleToggle, height, display, contentDisplay } = useHiddenMenu();
-  const { textColor1: textColor } = useColorMode();
 
   return (
-    <$.ShopMenu>
+    <$.MainMenu>
       <$.Menus
         height={height}
         display={display}
@@ -15,13 +14,11 @@ const HiddenMenu = () => {
       >
         <$.Menu onClick={handleToggle}>SHOP</$.Menu>
         <$.Menu>
-          <$.Anchor textColor={textColor} href="/">
-            ARCHIVE
-          </$.Anchor>
+          <$.Anchor>ARCHIVE</$.Anchor>
         </$.Menu>
       </$.Menus>
-    </$.ShopMenu>
+    </$.MainMenu>
   );
 };
 
-export default HiddenMenu;
+export default MainMenu;

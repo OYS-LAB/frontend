@@ -1,10 +1,18 @@
 import styled, { css } from 'styled-components';
 
-const border = css`
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
+interface BorderProps {
+  borderColor: string;
+}
+interface SoldoutProps {
+  backgroundColor2: string;
+  textcolor2: string;
+}
+const border = css<BorderProps>`
+  border-top: 1px solid ${({ borderColor }) => borderColor};
+  border-bottom: 1px solid ${({ borderColor }) => borderColor};
+  border-right: 1px solid ${({ borderColor }) => borderColor};
 `;
+
 const font = css`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 400;
@@ -37,9 +45,9 @@ export const Product_wrap = styled.dl`
   font-size: 12px;
 `;
 export const Product_wrap_image = styled.dt`
-width:100%;
-height: 100%;
-`
+  width: 100%;
+  height: 100%;
+`;
 export const Product_image = styled.img`
   width: 100%;
   height: 300px;
@@ -48,11 +56,11 @@ export const Product_image = styled.img`
     height: 50%;
   }
 `;
-export const Product_footer = styled.section`
+export const Product_footer = styled.section<BorderProps>`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-top: 1px solid #000;
+  border-top: 1px solid ${({ borderColor }) => borderColor};
   @media (max-width: 375px) {
     font-size: 10px;
   }
@@ -72,11 +80,11 @@ export const Product_description = styled.dd`
     padding: 7px 0 7px 8px;
   }
 `;
-export const Product_soldOut_wrap = styled.div`
+export const Product_soldOut_wrap = styled.div<SoldoutProps>`
   padding: 10px 15px;
   button {
-    background-color: #000;
-    color: #fff;
+    background-color: ${({ backgroundColor2 }) => backgroundColor2};
+    color: ${({ textcolor2 }) => textcolor2};
     border: none;
     border-radius: 15px;
     ${font};

@@ -1,7 +1,7 @@
 import ColorModeButton from './ColorModeButton';
 import * as $ from './styles';
 import useHiddenMenu from 'hooks/useHiddenMenu';
-import ShopMenu from './ShopMenu';
+import MainMenu from './MainMenu';
 import PopUpMenu from './PopUpMenu';
 import useColorMode from 'hooks/useColorMode';
 import Link from 'next/link';
@@ -25,7 +25,7 @@ const Menu = () => {
         </$.Logo>
       </$.MainHeader>
       <$.MenuSection>
-        <ShopMenu />
+        <MainMenu />
         <$.ButtonSection>
           <ColorModeButton />
           {/* 
