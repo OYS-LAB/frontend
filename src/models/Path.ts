@@ -1,6 +1,8 @@
 enum Path {
-    MAIN = '/',
-    FURNITURE = 'furniture'
+  MAIN = '/',
+  FURNITURE = 'furniture',
+  ABOUT = 'about',
+  TERMOFUSE = 'termofuse',
 }
 
 export default Path;

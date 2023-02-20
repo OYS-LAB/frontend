@@ -1,5 +1,7 @@
 import useColorMode from 'hooks/useColorMode';
 import useHiddenMenu from 'hooks/useHiddenMenu';
+import Path from 'models/Path';
+import Link from 'next/link';
 import * as $ from './styles';
 
 const Footer = () => {
@@ -24,34 +26,26 @@ const Footer = () => {
         <$.Copyright>© 2023, OYS.</$.Copyright>
         <$.Menus role="navigation">
           <$.Menu>
-            <$.Anchor textColor={textColor} href="/">
-              ABOUT
-            </$.Anchor>
+            <Link href={Path.ABOUT}>
+              <$.Anchor textColor={textColor}>ABOUT</$.Anchor>
+            </Link>
           </$.Menu>
           <$.Menu>
-            <$.Anchor textColor={textColor} href="/">
-              STOCKIST
-            </$.Anchor>
+            <$.Anchor textColor={textColor}>STOCKIST</$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.Anchor textColor={textColor} href="/">
-              ORDER
-            </$.Anchor>
+            <$.Anchor textColor={textColor}>ORDER</$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.Anchor textColor={textColor} href="/">
-              COSTOMER SERVICE
-            </$.Anchor>
+            <$.Anchor textColor={textColor}>COSTOMER SERVICE</$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.Anchor textColor={textColor} href="/">
-              LEGAL
-            </$.Anchor>
+            <Link href={Path.TERMOFUSE}>
+              <$.Anchor textColor={textColor}>TERMS OF USE</$.Anchor>
+            </Link>
           </$.Menu>
           <$.Menu>
-            <$.Anchor textColor={textColor} href="/">
-              INSTAGRAM
-            </$.Anchor>
+            <$.Anchor textColor={textColor}>INSTAGRAM</$.Anchor>
           </$.Menu>
         </$.Menus>
       </$.MenuContainer>

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styled, { css } from 'styled-components';
 interface FooterProps {
   backgroundColor: string;
@@ -161,7 +160,7 @@ export const Copyright = styled.em<CopyrightProps>`
           `};
   }
 `;
-export const Anchor = styled(Link)<AnchorType>`
+export const Anchor = styled.a<AnchorType>`
   color: ${({ textColor }) => textColor};
 `;
 
