@@ -9,12 +9,16 @@ const useHiddenMenu = () => {
   const handleToggle = () => {
     setHiddenMenuVisible(hiddenMenuVisible === 'HIDE' ? 'VISIBLE' : 'HIDE');
   };
+  const closeToggle = () => {
+    setHiddenMenuVisible(hiddenMenuVisible === 'VISIBLE' ? 'HIDE' : 'HIDE');
+  };
   const isVisible = hiddenMenuVisible === 'VISIBLE';
 
   return {
     ...hiddenMenuStylesMap[hiddenMenuVisible],
     isVisible,
     handleToggle,
+    closeToggle,
   };
 };
 

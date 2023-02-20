@@ -8,15 +8,18 @@ import Link from 'next/link';
 import Path from 'models/Path';
 
 const Menu = () => {
-  const { isVisible: isHiddenMenuVisible, searchButtonDisplay } =
-    useHiddenMenu();
+  const {
+    isVisible: isHiddenMenuVisible,
+    searchButtonDisplay,
+    closeToggle,
+  } = useHiddenMenu();
   const { colorMode } = useColorMode();
 
   return (
     <$.LayoutSection>
       <$.MainHeader>
         <$.Logo>
-          <Link href={Path.MAIN}>
+          <Link href={Path.MAIN} onClick={closeToggle}>
             <$.Img colorMode={colorMode} aria-label="OYS-LAB" />
           </Link>
         </$.Logo>
