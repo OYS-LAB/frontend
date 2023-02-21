@@ -6,7 +6,6 @@ export const Wrap = styled.section`
 `;
 
 export const MainImage = styled.img`
-  // max-width: 720px;
   width: 68%;
   position: fixed;
   bottom: 0;

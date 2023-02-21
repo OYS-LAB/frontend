@@ -1,13 +1,15 @@
 import useHiddenMenu from 'hooks/useHiddenMenu';
 
+import * as $ from './styles';
+
 const Termofuse = () => {
   const { contentDisplay } = useHiddenMenu();
   const isVisible = contentDisplay === 'block';
 
   return isVisible ? (
-    <div>
-      <h1> TERM OF USE </h1>
-    </div>
+    <$.Wrap>
+      <p>TERM OF US</p>
+    </$.Wrap>
   ) : null;
 };
 
