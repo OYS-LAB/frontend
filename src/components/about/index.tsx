@@ -19,7 +19,7 @@ const About = () => {
             }
           />
         </$.AboutImageWrap>
-        <$.AboutDescription>
+        <$.AboutDescription borderColor={borderColor}>
           <p>
             OYS-LAB, based in Seoul, is dedicated to creating spactial things
             that are sustainable, time-less, and sensuous. Our mission is to
