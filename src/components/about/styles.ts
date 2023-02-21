@@ -6,7 +6,7 @@ interface Props {
 
 export const Wrap = styled.section`
   margin-top: auto;
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
@@ -22,11 +22,9 @@ export const AboutImageWrap = styled.div`
 `;
 export const AboutImage = styled.img`
   width: 100%;
-  object-fit: fill;
 `;
 export const AboutDescription = styled.div<Props>`
   display: flex;
-  flex-flow: coloumn;
   width: 475px;
   padding-left: 45px;
   p {
