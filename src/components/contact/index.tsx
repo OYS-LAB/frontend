@@ -1,11 +1,14 @@
 import useColorMode from 'hooks/useColorMode';
+import useHiddenMenu from 'hooks/useHiddenMenu';
 import dummy from 'images/img-dummy.png';
 
 import * as $ from './styles';
 
 const Contact = () => {
+  const { contentDisplay } = useHiddenMenu();
   const { colorMode } = useColorMode();
-  return (
+  const isVisible = contentDisplay === 'block';
+  return isVisible ? (
     <$.Wrap>
       <$.MainImage src={colorMode === 'DARK' ? dummy.src : dummy.src} />
       <$.ContactGroup>
@@ -21,7 +24,7 @@ const Contact = () => {
         </ul>
       </$.ContactGroup>
     </$.Wrap>
-  );
+  ) : null;
 };
 
 export default Contact;

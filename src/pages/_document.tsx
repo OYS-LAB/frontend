@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="ko">
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Red+Hat+Display:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Red+Hat+Display:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <title>OYS-LAB</title>

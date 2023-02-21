@@ -42,7 +42,9 @@ const Footer = () => {
             <$.Anchor textcolor={textcolor}>ORDER</$.Anchor>
           </$.Menu>
           <$.Menu>
-            <$.Anchor textcolor={textcolor}>COSTOMER SERVICE</$.Anchor>
+            <Link href={Path.CONTACT}>
+              <$.Anchor textcolor={textcolor}>CONTACT</$.Anchor>
+            </Link>
           </$.Menu>
           <$.Menu>
             <Link href={Path.TERMOFUSE}>
