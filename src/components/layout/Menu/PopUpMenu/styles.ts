@@ -58,7 +58,6 @@ export const Menu = styled.li`
     top: 73%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: none;
   }
   &:hover {
     cursor: pointer;
