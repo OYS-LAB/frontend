@@ -1,5 +1,5 @@
 import About from 'components/about';
 
-export default function FurniturePage() {
+export default function AboutPage() {
   return <About />;
 }

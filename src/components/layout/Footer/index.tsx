@@ -42,17 +42,23 @@ const Footer = () => {
             <$.Anchor textcolor={textcolor}>ORDER</$.Anchor>
           </$.Menu>
           <$.Menu>
-            <Link href={Path.CONTACT}>
+            <Link href={Path.CONTACT} onClick={closeToggle}>
               <$.Anchor textcolor={textcolor}>CONTACT</$.Anchor>
             </Link>
           </$.Menu>
           <$.Menu>
-            <Link href={Path.TERMOFUSE}>
+            <Link href={Path.TERMOFUSE} onClick={closeToggle}>
               <$.Anchor textcolor={textcolor}>TERMS OF USE</$.Anchor>
             </Link>
           </$.Menu>
           <$.Menu>
-            <$.Anchor textcolor={textcolor}>INSTAGRAM</$.Anchor>
+            <Link
+              href="https://www.instagram.com/oys__lab/"
+              target="_blank"
+              onClick={closeToggle}
+            >
+              <$.Anchor textcolor={textcolor}>INSTAGRAM</$.Anchor>
+            </Link>
           </$.Menu>
         </$.Menus>
       </$.MenuContainer>
