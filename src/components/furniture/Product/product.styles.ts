@@ -23,7 +23,7 @@ export const Product = styled.li`
   ${border};
   @media (min-width: 1023px) {
     &:nth-child(3n) {
-      border-right: none;
+      border-right: 1px solid transparent;
     }
     &:nth-child(n + 4) {
       border-top: none;
@@ -32,7 +32,7 @@ export const Product = styled.li`
   @media (max-width: 820px) {
     width: 50%;
     &:nth-child(2n) {
-      border-right: none;
+      border-right: 1px solid transparent;
     }
     &:nth-child(n + 3) {
       border-top: none;
@@ -40,7 +40,7 @@ export const Product = styled.li`
   }
 `;
 export const Product_wrap = styled.dl`
-  overflow: hidden;
+  position: relative;
   ${font};
   font-size: 12px;
 `;
@@ -50,11 +50,7 @@ export const Product_wrap_image = styled.dt`
 `;
 export const Product_image = styled.img`
   width: 100%;
-  height: 300px;
   display: block;
-  @media (max-width: 820px) {
-    height: 50%;
-  }
 `;
 export const Product_footer = styled.section<BorderProps>`
   display: flex;

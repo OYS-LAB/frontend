@@ -10,9 +10,6 @@ export const Wrap = styled.section`
   display: flex;
   margin-top: auto;
   flex-flow: column;
-  overflow: hidden;
-  @media (max-width: 1023px) {
-  }
 `;
 export const Header = styled.div`
   font-size: 17pt;
@@ -36,10 +33,11 @@ export const Hr = styled.hr<HrProps>`
   }
 `;
 export const ProductsWrap = styled.div`
-  width: 100%;
-  height: 100%;
   padding: 0 62px;
-  overflow-y: auto;
+  width: 100%;
+  max-height: 100vh;
+  overflow: scroll;
+  pointer-events: auto;
   @media (max-width: 1023px) {
     padding: 0;
   }

@@ -16,11 +16,11 @@ const Contact = () => {
           <$.ContactGroupList>
             INTERVIEW, STORE PARTNERSHIP, CURATION
           </$.ContactGroupList>
-          <$.ContactGroupList>: CONTACT@OYS_LAB.COM</$.ContactGroupList>
+          <$.ContactGroupList>: CONTACT@OYS-LAB.COM</$.ContactGroupList>
           <$.ContactGroupList>RENTAL, SPONSORED</$.ContactGroupList>
           <$.ContactGroupList>: SHOP@OYS-LAB.COM</$.ContactGroupList>
           <$.ContactGroupList>INSTAGRAM</$.ContactGroupList>
-          <$.ContactGroupList>: @OYS_LAB</$.ContactGroupList>
+          <$.ContactGroupList>: @OYS__LAB</$.ContactGroupList>
         </ul>
       </$.ContactGroup>
     </$.Wrap>
