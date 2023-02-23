@@ -5,11 +5,13 @@ interface Props {
 }
 
 export const Wrap = styled.section`
-  margin-top: auto;
+  display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
+  height: 100%;
   align-items: center;
+  justify-content: center;
+  overflow-y: auto;
 `;
 export const AboutMain = styled.div`
   display: flex;
@@ -19,19 +21,20 @@ export const AboutMain = styled.div`
   }
 `;
 export const AboutImageWrap = styled.div`
-  width: 30%;
   display: flex;
   @media (max-width: 600px) {
     margin: 0 auto;
   }
 `;
 export const AboutImage = styled.img`
-  width: 100%;
+  width: 400px;
 `;
 export const AboutDescription = styled.div<Props>`
-  display: flex;
-  width: 475px;
+  width: 400px;
   padding-left: 45px;
+  display: flex;
+  align-items: center;
+
   @media (max-width: 600px) {
     padding: 0;
   }
@@ -40,11 +43,10 @@ export const AboutDescription = styled.div<Props>`
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    position: fixed;
     width: 430px;
-    padding: 100px 0 30px 0;
+    padding-bottom: 30px;
     border-bottom: 1px solid ${({ borderColor }) => borderColor};
-
+    margin-bottom: 80px;
     @media (max-width: 600px) {
       width: 100%;
       padding: 28px 23px 25px 23px;

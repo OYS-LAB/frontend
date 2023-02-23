@@ -30,17 +30,15 @@ export const PopupMenus = styled.ul<MenusProps>`
   padding-top: 40px;
   flex-flow: column;
   height: 100%;
+  min-height: 200px;
+  overflow-y: auto;
   padding-bottom: 100px;
   animation-name: ${fadeInDown};
   animation-duration: 0.5s;
   animation-timing-function: linear;
   @media (max-width: 1023px) {
     margin-top: 0;
-    height: 81%;
     padding-top: 0px;
-  }
-  @media (max-width: 600px) {
-    height: 91%;
   }
 `;
 export const Menu = styled.li`
@@ -54,10 +52,6 @@ export const Menu = styled.li`
   &:nth-last-child(1) {
     padding-bottom: 0;
     margin-top: auto;
-    position: fixed;
-    top: 73%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
   &:hover {
     cursor: pointer;

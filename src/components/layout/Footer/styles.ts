@@ -71,6 +71,8 @@ export const Footer = styled.section<FooterProps>`
   bottom: 0;
   background-color: ${({ backgroundColor }) => backgroundColor};
   transition: background 0.4s ease, color 0.4s ease;
+  padding-bottom: calc(constant(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
 
   height: ${({ height }) => height};
   ${({ isHiddenMenuVisible }) =>
@@ -91,20 +93,7 @@ export const Footer = styled.section<FooterProps>`
       isHiddenMenuVisible &&
       css`
         display: block;
-        height: 190px;
-        padding: 0 0 35px 0;
-      `}
-  }
-  @media (max-width: 600px) {
-    display: none;
-    border-top-width: 0.4px;
-
-    ${({ isHiddenMenuVisible }) =>
-      isHiddenMenuVisible &&
-      css`
-        display: block;
         height: 150px;
-        padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
       `}
   }
 `;

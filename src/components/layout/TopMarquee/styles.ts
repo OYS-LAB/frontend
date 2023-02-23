@@ -9,9 +9,6 @@ interface WrapProps {
 
 export const Wrap = styled.div<WrapProps>`
   background-color: ${({ backgroundColor1 }) => backgroundColor1};
-  position: fixed;
-  width: 100%;
-  top: 0;
 `;
 
 const slideInLeft = keyframes`

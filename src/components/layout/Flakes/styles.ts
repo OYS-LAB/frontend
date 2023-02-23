@@ -18,10 +18,6 @@ export const Flake = styled.div`
   top: -10%;
   z-index: 1000;
   width: 100%;
-  padding-top: 13px;
-  @media (max-width: 1023px) {
-    padding-top: 5px;
-  }
 `;
 const Icon = styled.i`
   display: block;

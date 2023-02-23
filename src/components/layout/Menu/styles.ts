@@ -9,6 +9,11 @@ interface darkModeIconProps {
   searchButtonDisplay: string;
 }
 
+
+interface LayoutStyleProps {
+  isVisiblePopUpMenu: boolean;
+}
+
 export const MainHeader = styled.section`
   text-align: center;
   @media (max-width: 600px) {
@@ -52,26 +57,23 @@ export const Img = styled(Icon)<IconProps>`
   }
 `;
 
-export const LayoutSection = styled.section`
+export const LayoutSection = styled.section<LayoutStyleProps>`
   text-align: center;
-  padding-bottom: 20px;
-  @media (max-width: 1023px) {
-    margin-top: 10px;
-  }
+  padding: 23px 0 20px;
   @media (max-width: 820px) {
     padding-bottom: 0;
   }
+
+  ${({ isVisiblePopUpMenu }) => isVisiblePopUpMenu && css`
+    height: 100%;
+  `}
+
 `;
 export const MenuSection = styled.div`
   display: inline-block;
   height: 100%;
   display: flex;
   flex-direction: column;
-`;
-export const ButtonSection = styled.section`
-  display: flex;
-  justify-content: center;
-  padding: 0 14px;
 `;
 
 export const Button = styled.button`

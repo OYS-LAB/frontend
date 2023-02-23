@@ -9,14 +9,14 @@ import Path from 'models/Path';
 
 const Menu = () => {
   const {
-    isVisible: isHiddenMenuVisible,
+    isVisible: isVisiblePopUpMenu,
     searchButtonDisplay,
     closeToggle,
   } = useHiddenMenu();
   const { colorMode } = useColorMode();
 
   return (
-    <$.LayoutSection>
+    <$.LayoutSection isVisiblePopUpMenu={isVisiblePopUpMenu}>
       <$.MainHeader>
         <$.Logo>
           <Link href={Path.MAIN} onClick={closeToggle}>
@@ -26,17 +26,14 @@ const Menu = () => {
       </$.MainHeader>
       <$.MenuSection>
         <MainMenu />
-        <$.ButtonSection>
-          <ColorModeButton />
-          {/* 
+        <ColorModeButton />
+        {/* 
           1차 오픈 이후 개발 예정
           <$.Button aria-label="search">
             <$.SearchIcon searchButtonDisplay={searchButtonDisplay} />
           </$.Button>
         */}
-        </$.ButtonSection>
-        {isHiddenMenuVisible && <PopUpMenu />}
-        {/* <PopUpMenu /> */}
+        {isVisiblePopUpMenu && <PopUpMenu />}
       </$.MenuSection>
     </$.LayoutSection>
   );

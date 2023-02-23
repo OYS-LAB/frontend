@@ -5,18 +5,19 @@ import Footer from './Footer';
 import Flakes from './Flakes';
 import Menu from './Menu';
 import Cart from './Cart';
+import useHiddenMenu from 'hooks/useHiddenMenu';
 
 const Layout = (props: PropsWithChildren) => {
   const { children } = props;
+  const { isVisible } = useHiddenMenu();
+
   return (
-    <$.Wrap>
+    <$.Wrap isVisiblePopUpMenu={isVisible}>
       <Flakes />
+      <Cart />
       <TopMarquee />
-      <$.ContentsContainer>
-        <Menu />
-        <Cart />
-        {children}
-      </$.ContentsContainer>
+      <Menu />
+      {!isVisible && <$.ContentsContainer>{children}</$.ContentsContainer>}
       <Footer />
     </$.Wrap>
   );

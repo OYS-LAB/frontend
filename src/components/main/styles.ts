@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.section`
-  margin-top: auto;
-  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
 `;
 
 export const MainImage = styled.img`
   display: block;
-  max-width: 720px;
+  position: absolute;
   width: 100vh;
-  margin: 0 auto;
-  margin-top: auto;
-  @media (max-width: 600px) {
-    width: 100%;
-  }
+  left: 50%;
+  transform: translateX(-50%);
 `;
