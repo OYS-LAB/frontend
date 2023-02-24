@@ -5,7 +5,7 @@ interface WrapperProps {
   isHiddenMenuVisible: boolean;
 }
 
-export const Wrapper = styled.div<WrapperProps>`
+export const CartWrapper = styled.div<WrapperProps>`
   z-index: 9999;
   background-color: ${({ backgroundColor2 }) => backgroundColor2};
 
@@ -39,7 +39,7 @@ export const Wrapper = styled.div<WrapperProps>`
 interface MenusProps {
   textcolor2: string;
 }
-export const Menus = styled.ul<MenusProps>`
+export const CartMenu = styled.ul<MenusProps>`
   color: ${({ textcolor2 }) => textcolor2};
   font-size: 12px;
   padding: 0 50px;
@@ -47,10 +47,9 @@ export const Menus = styled.ul<MenusProps>`
   align-items: center;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 500;
-`;
-
-export const Menu = styled.li`
-  &:nth-child(2) {
-    margin: 0 42px;
+  li {
+    &:nth-child(2) {
+      margin: 0 42px;
+    }
   }
 `;
