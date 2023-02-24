@@ -35,6 +35,9 @@ export const Button = styled.button<DarkMode>`
   @media (max-width: 1023px) {
     padding-bottom: 18px;
   }
+  @media (max-width: 600px) {
+    padding-bottom: 15px;
+  }
 `;
 
 const Icon = styled.i`

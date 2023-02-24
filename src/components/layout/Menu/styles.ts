@@ -9,7 +9,6 @@ interface darkModeIconProps {
   searchButtonDisplay: string;
 }
 
-
 interface LayoutStyleProps {
   isVisiblePopUpMenu: boolean;
 }
@@ -57,17 +56,21 @@ export const Img = styled(Icon)<IconProps>`
   }
 `;
 
-export const LayoutSection = styled.section<LayoutStyleProps>`
+export const MenuWrap = styled.section<LayoutStyleProps>`
   text-align: center;
   padding: 23px 0 20px;
   @media (max-width: 820px) {
     padding-bottom: 0;
   }
+  @media (max-width: 600px) {
+    padding: 0px 0 20px;
+  }
 
-  ${({ isVisiblePopUpMenu }) => isVisiblePopUpMenu && css`
-    height: 100%;
-  `}
-
+  ${({ isVisiblePopUpMenu }) =>
+    isVisiblePopUpMenu &&
+    css`
+      height: 100%;
+    `}
 `;
 export const MenuSection = styled.div`
   display: inline-block;

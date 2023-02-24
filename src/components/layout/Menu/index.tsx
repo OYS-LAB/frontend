@@ -16,7 +16,7 @@ const Menu = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <$.LayoutSection isVisiblePopUpMenu={isVisiblePopUpMenu}>
+    <$.MenuWrap isVisiblePopUpMenu={isVisiblePopUpMenu}>
       <$.MainHeader>
         <$.Logo>
           <Link href={Path.MAIN} onClick={closeToggle}>
@@ -35,7 +35,7 @@ const Menu = () => {
         */}
         {isVisiblePopUpMenu && <PopUpMenu />}
       </$.MenuSection>
-    </$.LayoutSection>
+    </$.MenuWrap>
   );
 };
 
