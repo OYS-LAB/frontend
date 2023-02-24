@@ -7,9 +7,9 @@ const Termofuse = () => {
   const isVisible = contentDisplay === 'block';
 
   return isVisible ? (
-    <$.Wrap>
+    <$.TermofuseWrap>
       <p>TERM OF US</p>
-    </$.Wrap>
+    </$.TermofuseWrap>
   ) : null;
 };
 
