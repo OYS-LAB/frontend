@@ -7,7 +7,7 @@ interface WrapProps {
   backgroundColor1: string;
 }
 
-export const Wrap = styled.div<WrapProps>`
+export const TopMarqueeWrap = styled.div<WrapProps>`
   background-color: ${({ backgroundColor1 }) => backgroundColor1};
 `;
 
@@ -16,7 +16,7 @@ const slideInLeft = keyframes`
   to { transform: translate(104%, 0px); }
 `;
 
-export const Header = styled.div`
+export const TopMarqueeHeader = styled.div`
   width: calc(100% - 50px);
   padding-top: 3px;
   @media (max-width: 1023px) {
@@ -24,7 +24,7 @@ export const Header = styled.div`
   }
 `;
 
-export const Message = styled.p`
+export const TopMarqueeMessage = styled.p`
   display: inline-block;
   width: 100%;
   font-family: 'Red Hat Display', sans-serif;
@@ -42,7 +42,7 @@ export const Message = styled.p`
   }
 `;
 
-export const Hr = styled.hr<HrProps>`
+export const TopMarqueeHr = styled.hr<HrProps>`
   border: none;
   border-top: 1px solid ${({ borderColor }) => borderColor};
 `;

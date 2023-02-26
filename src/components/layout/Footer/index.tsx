@@ -26,32 +26,32 @@ const Footer = () => {
       height={height}
       isHiddenMenuVisible={isHiddenMenuVisible}
     >
-      <$.Hr borderColor={borderColor} />
-      <$.MenuContainer>
+      <$.FooterHr borderColor={borderColor} />
+      <$.FooterMenuWrap>
         <$.Copyright textcolor={textcolor}>© 2023, OYS.</$.Copyright>
-        <$.Menus role="navigation">
-          <$.Menu>
+        <$.FooterNavigation role="navigation">
+          <li>
             <Link href={Path.ABOUT} onClick={closeToggle}>
               <$.Anchor textcolor={textcolor}>ABOUT</$.Anchor>
             </Link>
-          </$.Menu>
-          <$.Menu>
+          </li>
+          <li>
             <$.Anchor textcolor={textcolor}>STOCKIST</$.Anchor>
-          </$.Menu>
-          <$.Menu>
+          </li>
+          <li>
             <$.Anchor textcolor={textcolor}>ORDER</$.Anchor>
-          </$.Menu>
-          <$.Menu>
+          </li>
+          <li>
             <Link href={Path.CONTACT} onClick={closeToggle}>
               <$.Anchor textcolor={textcolor}>CONTACT</$.Anchor>
             </Link>
-          </$.Menu>
-          <$.Menu>
+          </li>
+          <li>
             <Link href={Path.TERMOFUSE} onClick={closeToggle}>
               <$.Anchor textcolor={textcolor}>TERMS OF USE</$.Anchor>
             </Link>
-          </$.Menu>
-          <$.Menu>
+          </li>
+          <li>
             <Link
               href="https://www.instagram.com/oys__lab/"
               target="_blank"
@@ -59,15 +59,15 @@ const Footer = () => {
             >
               <$.Anchor textcolor={textcolor}>INSTAGRAM</$.Anchor>
             </Link>
-          </$.Menu>
-        </$.Menus>
-      </$.MenuContainer>
-      <$.Container display={display}>
-        <$.ContainerChild>COMPANY : OYS CO.,LTD</$.ContainerChild>
-        <$.ContainerChild>REPRESENTATIVE : SYO</$.ContainerChild>
-        <$.ContainerChild>REGISTRATION : </$.ContainerChild>
-        <$.ContainerChild>EMAIL : CONTACT@OYS-LAB.COM</$.ContainerChild>
-      </$.Container>
+          </li>
+        </$.FooterNavigation>
+      </$.FooterMenuWrap>
+      <$.FooterInfoContainer display={display}>
+        <p>COMPANY : OYS CO.,LTD</p>
+        <p>REPRESENTATIVE : SYO</p>
+        <p>REGISTRATION : </p>
+        <p>EMAIL : CONTACT@OYS-LAB.COM</p>
+      </$.FooterInfoContainer>
       <$.Copyright isMobile textcolor={textcolor}>
         © 2023, OYS.
       </$.Copyright>

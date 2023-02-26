@@ -7,16 +7,16 @@ const Cart = () => {
   const { isVisible: isHiddenMenuVisible } = useHiddenMenu();
 
   return (
-    <$.Wrapper
+    <$.CartWrapper
       backgroundColor2={backgroundColor2}
       isHiddenMenuVisible={isHiddenMenuVisible}
     >
-      <$.Menus textcolor2={textcolor2}>
-        <$.Menu>(KR/USD)</$.Menu>
-        <$.Menu>ACCOUNT</$.Menu>
-        <$.Menu>BAG:0</$.Menu>
-      </$.Menus>
-    </$.Wrapper>
+      <$.CartMenu textcolor2={textcolor2}>
+        <li>(KR/USD)</li>
+        <li>ACCOUNT</li>
+        <li>BAG:0</li>
+      </$.CartMenu>
+    </$.CartWrapper>
   );
 };
 

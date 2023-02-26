@@ -12,9 +12,9 @@ const Contents = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <$.Wrap>
+    <$.MainWrap>
       <$.MainImage src={IMAGE_MAP[colorMode]} />
-    </$.Wrap>
+    </$.MainWrap>
   );
 };
 

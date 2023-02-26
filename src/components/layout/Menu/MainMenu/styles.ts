@@ -6,7 +6,7 @@ interface ListsProps {
   contentDisplay: string;
 }
 
-export const MainMenu = styled.section`
+export const MainMenuWrap = styled.section`
   padding: 18px 0;
   @media (max-width: 1023px) {
     padding: 20px 0;
@@ -15,7 +15,7 @@ export const MainMenu = styled.section`
     padding: 16px 0 9px 0;
   }
 `;
-export const Menus = styled.ul<ListsProps>`
+export const MainMenu = styled.ul<ListsProps>`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 17pt;
@@ -26,18 +26,19 @@ export const Menus = styled.ul<ListsProps>`
   @media (max-width: 1023px) {
     font-size: 14pt;
   }
-`;
-export const Menu = styled.li`
-  &:nth-child(1) {
-    padding-bottom: 6px;
-  }
-  @media (max-width: 1023px) {
+  li {
     &:nth-child(1) {
-      padding-bottom: 4px;
+      padding-bottom: 6px;
+    }
+    @media (max-width: 1023px) {
+      &:nth-child(1) {
+        padding-bottom: 4px;
+      }
     }
   }
 `;
-export const Anchor = styled.a`
+
+export const MainMenuAnchor = styled.a`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 17pt;
