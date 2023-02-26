@@ -34,6 +34,7 @@ export const CartWrapper = styled.div<WrapperProps>`
     right: 5%;
     bottom: 7px;
     top: auto;
+    margin-bottom: env(safe-area-inset-bottom);
   }
 `;
 interface MenusProps {
