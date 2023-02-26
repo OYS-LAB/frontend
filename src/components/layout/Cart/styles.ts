@@ -20,7 +20,7 @@ export const CartWrapper = styled.div<WrapperProps>`
   @media (max-width: 1023px) {
     width: 87.5%;
     right: 6.2%;
-    bottom: 7px;
+    bottom: env(safe-area-inset-bottom);
     top: auto;
     justify-content: center;
     ${({ isHiddenMenuVisible }) =>
@@ -32,9 +32,7 @@ export const CartWrapper = styled.div<WrapperProps>`
   @media (max-width: 600px) {
     width: 90%;
     right: 5%;
-    bottom: 7px;
     top: auto;
-    margin-bottom: env(safe-area-inset-bottom);
   }
 `;
 interface MenusProps {
