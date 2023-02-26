@@ -9,18 +9,17 @@ interface darkModeIconProps {
   searchButtonDisplay: string;
 }
 
-
 interface LayoutStyleProps {
   isVisiblePopUpMenu: boolean;
 }
 
-export const MainHeader = styled.section`
+export const MainMenuHeader = styled.section`
   text-align: center;
   @media (max-width: 600px) {
     padding-top: 10px;
   }
 `;
-export const Logo = styled.div`
+export const MainMenuLogo = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
@@ -47,7 +46,7 @@ const Icon = styled.i`
   background-position: center, center;
 `;
 
-export const Img = styled(Icon)<IconProps>`
+export const MainMenuImg = styled(Icon)<IconProps>`
   background-image: url('${({ colorMode }) => getLogoIconSrc(colorMode)}');
   width: 230px;
   height: 40px;
@@ -57,17 +56,21 @@ export const Img = styled(Icon)<IconProps>`
   }
 `;
 
-export const LayoutSection = styled.section<LayoutStyleProps>`
+export const MenuWrap = styled.section<LayoutStyleProps>`
   text-align: center;
   padding: 23px 0 20px;
   @media (max-width: 820px) {
     padding-bottom: 0;
   }
+  @media (max-width: 600px) {
+    padding: 0px 0 20px;
+  }
 
-  ${({ isVisiblePopUpMenu }) => isVisiblePopUpMenu && css`
-    height: 100%;
-  `}
-
+  ${({ isVisiblePopUpMenu }) =>
+    isVisiblePopUpMenu &&
+    css`
+      height: 100%;
+    `}
 `;
 export const MenuSection = styled.div`
   display: inline-block;

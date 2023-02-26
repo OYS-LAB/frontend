@@ -15,7 +15,7 @@ const ColorModeButton = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <$.Button
+    <$.ColorModeButton
       aria-label="dark-light"
       onClick={handleToggle}
       backgroundColor={backgroundColor1}
@@ -26,7 +26,7 @@ const ColorModeButton = () => {
       colorButtonDisplay={colorButtonDisplay}
     >
       <$.DarkLightIcon colorMode={colorMode} />
-    </$.Button>
+    </$.ColorModeButton>
   );
 };
 

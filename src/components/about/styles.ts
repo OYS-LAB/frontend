@@ -3,7 +3,6 @@ import styled from 'styled-components';
 interface Props {
   borderColor: string;
 }
-
 export const Wrap = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -28,15 +27,18 @@ export const AboutImageWrap = styled.div`
 `;
 export const AboutImage = styled.img`
   width: 400px;
+  @media (max-width: 600px) {
+    width: 170px;
+  }
 `;
 export const AboutDescription = styled.div<Props>`
-  width: 400px;
+  width: 430px;
   padding-left: 45px;
   display: flex;
   align-items: center;
 
   @media (max-width: 600px) {
-    padding: 0;
+    padding: 20px 38px 65px 38px;
   }
   p {
     font-family: 'Red Hat Display', sans-serif;
@@ -47,11 +49,11 @@ export const AboutDescription = styled.div<Props>`
     padding-bottom: 30px;
     border-bottom: 1px solid ${({ borderColor }) => borderColor};
     margin-bottom: 80px;
+    text-align: justify;
     @media (max-width: 600px) {
       width: 100%;
-      padding: 28px 23px 25px 23px;
       margin: 0 auto;
-      line-height: 16px;
+      padding-bottom: 25px;
     }
   }
 `;
@@ -59,6 +61,7 @@ export const AboutFooter = styled.div`
   width: 100%;
   position: fixed;
   bottom: 28px;
+
   ul {
     text-align: center;
     justify-content: center;
@@ -66,6 +69,9 @@ export const AboutFooter = styled.div`
     font-weight: 700;
     font-size: 26px;
     padding-bottom: 28px;
+    @media (max-width: 600px) {
+      padding-bottom: 18px;
+    }
     li {
       display: inline-block;
       width: 33%;

@@ -6,18 +6,18 @@ const MainMenu = () => {
   const { handleToggle, height, display, contentDisplay } = useHiddenMenu();
 
   return (
-    <$.MainMenu>
-      <$.Menus
+    <$.MainMenuWrap>
+      <$.MainMenu
         height={height}
         display={display}
         contentDisplay={contentDisplay}
       >
-        <$.Menu onClick={handleToggle}>SHOP</$.Menu>
-        <$.Menu>
-          <$.Anchor>ARCHIVE</$.Anchor>
-        </$.Menu>
-      </$.Menus>
-    </$.MainMenu>
+        <li onClick={handleToggle}>SHOP</li>
+        <li>
+          <$.MainMenuAnchor>ARCHIVE</$.MainMenuAnchor>
+        </li>
+      </$.MainMenu>
+    </$.MainMenuWrap>
   );
 };
 

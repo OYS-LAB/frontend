@@ -16,14 +16,14 @@ const Menu = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <$.LayoutSection isVisiblePopUpMenu={isVisiblePopUpMenu}>
-      <$.MainHeader>
-        <$.Logo>
+    <$.MenuWrap isVisiblePopUpMenu={isVisiblePopUpMenu}>
+      <$.MainMenuHeader>
+        <$.MainMenuLogo>
           <Link href={Path.MAIN} onClick={closeToggle}>
-            <$.Img colorMode={colorMode} aria-label="OYS-LAB" />
+            <$.MainMenuImg colorMode={colorMode} aria-label="OYS-LAB" />
           </Link>
-        </$.Logo>
-      </$.MainHeader>
+        </$.MainMenuLogo>
+      </$.MainMenuHeader>
       <$.MenuSection>
         <MainMenu />
         <ColorModeButton />
@@ -35,7 +35,7 @@ const Menu = () => {
         */}
         {isVisiblePopUpMenu && <PopUpMenu />}
       </$.MenuSection>
-    </$.LayoutSection>
+    </$.MenuWrap>
   );
 };
 
