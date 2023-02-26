@@ -39,20 +39,20 @@ export const Product = styled.li`
     }
   }
 `;
-export const Product_wrap = styled.dl`
+export const ProductWrap = styled.dl`
   position: relative;
   ${font};
   font-size: 12px;
 `;
-export const Product_wrap_image = styled.dt`
+export const ProductWrapImageSection = styled.dt`
   width: 100%;
   height: 100%;
 `;
-export const Product_image = styled.img`
+export const ProductImage = styled.img`
   width: 100%;
   display: block;
 `;
-export const Product_footer = styled.section<BorderProps>`
+export const ProductInformation = styled.section<BorderProps>`
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -61,7 +61,7 @@ export const Product_footer = styled.section<BorderProps>`
     font-size: 10px;
   }
 `;
-export const Product_description = styled.dd`
+export const ProductDescription = styled.dd`
   width: 50%;
   display: flex;
   flex-flow: column;
@@ -76,7 +76,7 @@ export const Product_description = styled.dd`
     padding: 7px 0 7px 8px;
   }
 `;
-export const Product_soldOut_wrap = styled.div<SoldoutProps>`
+export const ProductSoldoutButton = styled.div<SoldoutProps>`
   padding: 10px 15px;
   button {
     background-color: ${({ backgroundColor2 }) => backgroundColor2};

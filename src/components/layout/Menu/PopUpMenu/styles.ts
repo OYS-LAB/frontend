@@ -23,7 +23,7 @@ opacity: 1;
 transform: translateY(0%);
 }
 `;
-export const PopupMenus = styled.ul<MenusProps>`
+export const PopupMenu = styled.ul<MenusProps>`
   display: ${({ isHiddenMenuVisible }) =>
     isHiddenMenuVisible ? 'flex' : 'none'};
   animation: fadeInDown 1s;
@@ -40,31 +40,31 @@ export const PopupMenus = styled.ul<MenusProps>`
     margin-top: 0;
     padding-top: 0px;
   }
+  li {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+    font-size: 17pt;
+    padding: 3px 0;
+    &:nth-child(1) {
+      padding-top: 0;
+    }
+    &:nth-last-child(1) {
+      padding-bottom: 0;
+      margin-top: auto;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    @media (max-width: 1023px) {
+      font-size: 14pt;
+      padding: 2px 0;
+    }
+  }
 `;
-export const Menu = styled.li`
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: 600;
-  font-size: 17pt;
-  padding: 3px 0;
-  &:nth-child(1) {
-    padding-top: 0;
-  }
-  &:nth-last-child(1) {
-    padding-bottom: 0;
-    margin-top: auto;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  @media (max-width: 1023px) {
-    font-size: 14pt;
-    padding: 2px 0;
-  }
-`;
-export const Anchor = styled.a<Props>`
+export const PopupMenuAnchor = styled.a<Props>`
   color: ${({ textcolor }) => textcolor};
 `;
-export const CloseButton = styled.button<Props>`
+export const PopupMenuCloseButton = styled.button<Props>`
   background-color: transparent;
   border: none;
   bottom: 0;
@@ -84,7 +84,7 @@ const Icon = styled.i`
   background-position: center, center;
 `;
 
-export const Img = styled(Icon)<IconProps>`
+export const PopupMenuCloseImg = styled(Icon)<IconProps>`
   background-image: url('${({ colorMode }) => getLogoIconSrc(colorMode)}');
   width: 230px;
   height: 40px;

@@ -18,7 +18,7 @@ interface IconProps {
 const getLogoIconSrc = (colorMode: ColorModeState) =>
   colorMode === 'DARK' ? lightIcon.src : darkIcon.src;
 
-export const Button = styled.button<DarkMode>`
+export const ColorModeButton = styled.button<DarkMode>`
   background-color: transparent;
   border: none;
   padding: 0;

@@ -13,13 +13,13 @@ interface LayoutStyleProps {
   isVisiblePopUpMenu: boolean;
 }
 
-export const MainHeader = styled.section`
+export const MainMenuHeader = styled.section`
   text-align: center;
   @media (max-width: 600px) {
     padding-top: 10px;
   }
 `;
-export const Logo = styled.div`
+export const MainMenuLogo = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@ const Icon = styled.i`
   background-position: center, center;
 `;
 
-export const Img = styled(Icon)<IconProps>`
+export const MainMenuImg = styled(Icon)<IconProps>`
   background-image: url('${({ colorMode }) => getLogoIconSrc(colorMode)}');
   width: 230px;
   height: 40px;
