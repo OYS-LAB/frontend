@@ -17,13 +17,13 @@ const Menu = () => {
 
   return (
     <$.MenuWrap isVisiblePopUpMenu={isVisiblePopUpMenu}>
-      <$.MainHeader>
-        <$.Logo>
+      <$.MainMenuHeader>
+        <$.MainMenuLogo>
           <Link href={Path.MAIN} onClick={closeToggle}>
-            <$.Img colorMode={colorMode} aria-label="OYS-LAB" />
+            <$.MainMenuImg colorMode={colorMode} aria-label="OYS-LAB" />
           </Link>
-        </$.Logo>
-      </$.MainHeader>
+        </$.MainMenuLogo>
+      </$.MainMenuHeader>
       <$.MenuSection>
         <MainMenu />
         <ColorModeButton />

@@ -6,12 +6,12 @@ const TopMarquee = () => {
   const { borderColor, backgroundColor1 } = useColorMode();
 
   return (
-    <$.Wrap backgroundColor1={backgroundColor1}>
-      <$.Header>
-        <$.Message>{welcomeMessage}</$.Message>
-        <$.Hr borderColor={borderColor} />
-      </$.Header>
-    </$.Wrap>
+    <$.TopMarqueeWrap backgroundColor1={backgroundColor1}>
+      <$.TopMarqueeHeader>
+        <$.TopMarqueeMessage>{welcomeMessage}</$.TopMarqueeMessage>
+        <$.TopMarqueeHr borderColor={borderColor} />
+      </$.TopMarqueeHeader>
+    </$.TopMarqueeWrap>
   );
 };
 

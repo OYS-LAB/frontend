@@ -12,16 +12,12 @@ const Contact = () => {
     <$.Wrap>
       <$.MainImage src={colorMode === 'DARK' ? dummy.src : dummy.src} />
       <$.ContactGroup>
-        <ul>
-          <$.ContactGroupList>
-            INTERVIEW, STORE PARTNERSHIP, CURATION
-          </$.ContactGroupList>
-          <$.ContactGroupList>: CONTACT@OYS-LAB.COM</$.ContactGroupList>
-          <$.ContactGroupList>RENTAL, SPONSORED</$.ContactGroupList>
-          <$.ContactGroupList>: SHOP@OYS-LAB.COM</$.ContactGroupList>
-          <$.ContactGroupList>INSTAGRAM</$.ContactGroupList>
-          <$.ContactGroupList>: @OYS__LAB</$.ContactGroupList>
-        </ul>
+        <p>INTERVIEW, STORE PARTNERSHIP, CURATION</p>
+        <p>: CONTACT@OYS-LAB.COM</p>
+        <p>RENTAL, SPONSORED</p>
+        <p>: SHOP@OYS-LAB.COM</p>
+        <p>INSTAGRAM</p>
+        <p>: @OYS__LAB</p>
       </$.ContactGroup>
     </$.Wrap>
   ) : null;

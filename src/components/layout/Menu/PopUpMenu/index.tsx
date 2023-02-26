@@ -9,43 +9,43 @@ const ShopMenu = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <$.PopupMenus isHiddenMenuVisible={isHiddenMenuVisible}>
-      <$.Menu>
-        <$.Anchor textcolor={textcolor} href="/">
+    <$.PopupMenu isHiddenMenuVisible={isHiddenMenuVisible}>
+      <li>
+        <$.PopupMenuAnchor textcolor={textcolor} href="/">
           ALL
-        </$.Anchor>
-      </$.Menu>
-      <$.Menu>
-        <$.Anchor textcolor={textcolor} href="/">
+        </$.PopupMenuAnchor>
+      </li>
+      <li>
+        <$.PopupMenuAnchor textcolor={textcolor} href="/">
           BEST
-        </$.Anchor>
-      </$.Menu>
-      <$.Menu>
+        </$.PopupMenuAnchor>
+      </li>
+      <li>
         <Link href={Path.FURNITURE} onClick={handleToggle}>
-          <$.Anchor textcolor={textcolor}>FURNITURE</$.Anchor>
+          <$.PopupMenuAnchor textcolor={textcolor}>FURNITURE</$.PopupMenuAnchor>
         </Link>
-      </$.Menu>
-      <$.Menu>
-        <$.Anchor textcolor={textcolor} href="/">
+      </li>
+      <li>
+        <$.PopupMenuAnchor textcolor={textcolor} href="/">
           HOME ACC
-        </$.Anchor>
-      </$.Menu>
-      <$.Menu>
-        <$.Anchor textcolor={textcolor} href="/">
+        </$.PopupMenuAnchor>
+      </li>
+      <li>
+        <$.PopupMenuAnchor textcolor={textcolor} href="/">
           SCENT
-        </$.Anchor>
-      </$.Menu>
-      <$.Menu>
-        <$.Anchor textcolor={textcolor} href="/">
+        </$.PopupMenuAnchor>
+      </li>
+      <li>
+        <$.PopupMenuAnchor textcolor={textcolor} href="/">
           ETC.
-        </$.Anchor>
-      </$.Menu>
-      <$.Menu>
-        <$.CloseButton textcolor={textcolor} onClick={handleToggle}>
-          <$.Img colorMode={colorMode} aria-label="close" />
-        </$.CloseButton>
-      </$.Menu>
-    </$.PopupMenus>
+        </$.PopupMenuAnchor>
+      </li>
+      <li>
+        <$.PopupMenuCloseButton textcolor={textcolor} onClick={handleToggle}>
+          <$.PopupMenuCloseImg colorMode={colorMode} aria-label="close" />
+        </$.PopupMenuCloseButton>
+      </li>
+    </$.PopupMenu>
   );
 };
 

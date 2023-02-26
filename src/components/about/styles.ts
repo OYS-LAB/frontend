@@ -38,7 +38,7 @@ export const AboutDescription = styled.div<Props>`
   align-items: center;
 
   @media (max-width: 600px) {
-    padding: 20px 23px 65px 23px;
+    padding: 20px 38px 65px 38px;
   }
   p {
     font-family: 'Red Hat Display', sans-serif;

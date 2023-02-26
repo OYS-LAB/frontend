@@ -19,13 +19,13 @@ export const ContactGroup = styled.div`
   font-weight: 500;
   text-align: center;
   font-size: 12px;
-`;
-export const ContactGroupList = styled.li`
-  &: nth-child(2n+1) {
-    text-decoration: underline;
-    padding-bottom: 4px;
-  }
-  &: nth-child(2n) {
-    padding-bottom: 15px;
+  p {
+    &: nth-child(2n+1) {
+      text-decoration: underline;
+      padding-bottom: 4px;
+    }
+    &: nth-child(2n) {
+      padding-bottom: 15px;
+    }
   }
 `;

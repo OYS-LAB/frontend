@@ -17,7 +17,7 @@ interface SectionType {
 interface HrProps {
   borderColor: string;
 }
-export const Hr = styled.hr<HrProps>`
+export const FooterHr = styled.hr<HrProps>`
   border: none;
   border-top: 1px solid ${({ borderColor }) => borderColor};
   margin-left: 50px;
@@ -31,7 +31,7 @@ export const Hr = styled.hr<HrProps>`
   }
 `;
 
-export const Container = styled.section<SectionType>`
+export const FooterInfoContainer = styled.section<SectionType>`
   display: ${({ display }) => display};
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 400;
@@ -50,18 +50,18 @@ export const Container = styled.section<SectionType>`
     padding-top: 10px;
     padding-left: 15%;
   }
-`;
-export const ContainerChild = styled.p`
-  display: inline-block;
-  margin-right: 20pt;
-  padding-top: 20px;
+  p {
+    display: inline-block;
+    margin-right: 20pt;
+    padding-top: 20px;
 
-  &:nth-last-child(1) {
-    display: block;
-    padding-top: 0;
-  }
-  @media (max-width: 1023px) {
-    padding-top: 0px;
+    &:nth-last-child(1) {
+      display: block;
+      padding-top: 0;
+    }
+    @media (max-width: 1023px) {
+      padding-top: 0px;
+    }
   }
 `;
 
@@ -80,7 +80,7 @@ export const Footer = styled.section<FooterProps>`
     css`
       &:hover {
         height: auto;
-        & ${Container} {
+        & ${FooterInfoContainer} {
           display: block;
         }
       }
@@ -98,17 +98,32 @@ export const Footer = styled.section<FooterProps>`
   }
 `;
 
-export const MenuContainer = styled.div`
+export const FooterMenuWrap = styled.div`
   position: relative;
 `;
 
-export const Menus = styled.ul`
+export const FooterNavigation = styled.ul`
   text-align: center;
   font-size: 9pt;
 
   @media (max-width: 1023px) {
     padding-right: 0;
     padding-left: 5%;
+  }
+  li {
+    display: inline-block;
+    margin-right: 20pt;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+    &:nth-last-child(1) {
+      margin: 0;
+    }
+    @media (max-width: 1023px) {
+      margin-right: 10pt;
+      margin-bottom: 7pt;
+      font-size: 10pt;
+      font-weight: 500;
+    }
   }
 `;
 
@@ -156,20 +171,4 @@ export const Copyright = styled.em<CopyrightProps>`
 `;
 export const Anchor = styled.span<AnchorType>`
   color: ${({ textcolor }) => textcolor};
-`;
-
-export const Menu = styled.li`
-  display: inline-block;
-  margin-right: 20pt;
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: 400;
-  &:nth-last-child(1) {
-    margin: 0;
-  }
-  @media (max-width: 1023px) {
-    margin-right: 10pt;
-    margin-bottom: 7pt;
-    font-size: 10pt;
-    font-weight: 500;
-  }
 `;
