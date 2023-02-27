@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
 
 interface WrapperProps {
-  backgroundColor2: string;
+  reverseColor: string;
   isHiddenMenuVisible: boolean;
 }
 
 export const CartWrapper = styled.div<WrapperProps>`
   z-index: 9999;
-  background-color: ${({ backgroundColor2 }) => backgroundColor2};
+  background-color: ${({ reverseColor }) => reverseColor};
 
   margin-top: 4px;
   width: 35%;
@@ -36,10 +36,10 @@ export const CartWrapper = styled.div<WrapperProps>`
   }
 `;
 interface MenusProps {
-  textcolor2: string;
+  baseColor: string;
 }
 export const CartMenu = styled.ul<MenusProps>`
-  color: ${({ textcolor2 }) => textcolor2};
+  color: ${({ baseColor }) => baseColor};
   font-size: 12px;
   padding: 0 50px;
   display: flex;

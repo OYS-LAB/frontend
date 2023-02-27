@@ -7,7 +7,7 @@ import aboutLightImage from 'images/img-light-about.png';
 const About = () => {
   const { contentDisplay } = useHiddenMenu();
   const isVisible = contentDisplay === 'block';
-  const { colorMode, borderColor } = useColorMode();
+  const { colorMode, reverseColor } = useColorMode();
 
   return isVisible ? (
     <$.Wrap>
@@ -19,7 +19,7 @@ const About = () => {
             }
           />
         </$.AboutImageWrap>
-        <$.AboutDescription borderColor={borderColor}>
+        <$.AboutDescription reverseColor={reverseColor}>
           <p>
             OYS-LAB, based in Seoul, is dedicated to creating spactial things
             that are sustainable, timeless, and sensuous. Our mission is to

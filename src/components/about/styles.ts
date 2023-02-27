@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface Props {
-  borderColor: string;
+  reverseColor: string;
 }
 export const Wrap = styled.section`
   display: flex;
@@ -47,7 +47,7 @@ export const AboutDescription = styled.div<Props>`
     line-height: 15px;
     width: 430px;
     padding-bottom: 30px;
-    border-bottom: 1px solid ${({ borderColor }) => borderColor};
+    border-bottom: 1px solid ${({ reverseColor }) => reverseColor};
     margin-bottom: 80px;
     text-align: justify;
     @media (max-width: 600px) {

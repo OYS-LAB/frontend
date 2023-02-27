@@ -1,5 +1,4 @@
 import useHiddenMenu from 'hooks/useHiddenMenu';
-import useColorMode from 'hooks/useColorMode';
 import * as $ from './styles';
 
 const MainMenu = () => {

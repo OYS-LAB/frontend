@@ -5,11 +5,7 @@ import Link from 'next/link';
 import * as $ from './styles';
 
 const Footer = () => {
-  const {
-    borderColor,
-    backgroundColor1: backgroundColor,
-    textcolor1: textcolor,
-  } = useColorMode();
+  const { baseColor, reverseColor } = useColorMode();
 
   const {
     closeToggle,
@@ -20,35 +16,34 @@ const Footer = () => {
 
   return (
     <$.Footer
-      backgroundColor={backgroundColor}
-      textcolor={textcolor}
-      borderColor={borderColor}
+      baseColor={baseColor}
+      reverseColor={reverseColor}
       height={height}
       isHiddenMenuVisible={isHiddenMenuVisible}
     >
-      <$.FooterHr borderColor={borderColor} />
+      <$.FooterHr reverseColor={reverseColor} />
       <$.FooterMenuWrap>
-        <$.Copyright textcolor={textcolor}>© 2023, OYS.</$.Copyright>
+        <$.Copyright reverseColor={reverseColor}>© 2023, OYS.</$.Copyright>
         <$.FooterNavigation role="navigation">
           <li>
             <Link href={Path.ABOUT} onClick={closeToggle}>
-              <$.Anchor textcolor={textcolor}>ABOUT</$.Anchor>
+              <$.Anchor reverseColor={reverseColor}>ABOUT</$.Anchor>
             </Link>
           </li>
           <li>
-            <$.Anchor textcolor={textcolor}>STOCKIST</$.Anchor>
+            <$.Anchor reverseColor={reverseColor}>STOCKIST</$.Anchor>
           </li>
           <li>
-            <$.Anchor textcolor={textcolor}>ORDER</$.Anchor>
+            <$.Anchor reverseColor={reverseColor}>ORDER</$.Anchor>
           </li>
           <li>
             <Link href={Path.CONTACT} onClick={closeToggle}>
-              <$.Anchor textcolor={textcolor}>CONTACT</$.Anchor>
+              <$.Anchor reverseColor={reverseColor}>CONTACT</$.Anchor>
             </Link>
           </li>
           <li>
             <Link href={Path.TERMOFUSE} onClick={closeToggle}>
-              <$.Anchor textcolor={textcolor}>TERMS OF USE</$.Anchor>
+              <$.Anchor reverseColor={reverseColor}>TERMS OF USE</$.Anchor>
             </Link>
           </li>
           <li>
@@ -57,7 +52,7 @@ const Footer = () => {
               target="_blank"
               onClick={closeToggle}
             >
-              <$.Anchor textcolor={textcolor}>INSTAGRAM</$.Anchor>
+              <$.Anchor reverseColor={reverseColor}>INSTAGRAM</$.Anchor>
             </Link>
           </li>
         </$.FooterNavigation>
@@ -68,7 +63,7 @@ const Footer = () => {
         <p>REGISTRATION : </p>
         <p>EMAIL : CONTACT@OYS-LAB.COM</p>
       </$.FooterInfoContainer>
-      <$.Copyright isMobile textcolor={textcolor}>
+      <$.Copyright isMobile reverseColor={reverseColor}>
         © 2023, OYS.
       </$.Copyright>
     </$.Footer>
