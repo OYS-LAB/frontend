@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface HrProps {
-  borderColor: string;
+  reverseColor: string;
 }
 
 export const FurnitureSection = styled.section`
@@ -24,7 +24,7 @@ export const FurnitureSectionHeader = styled.div`
 export const FurnitureSectionHr = styled.hr<HrProps>`
   width: 300px;
   border: 0;
-  border-top: 1px solid ${({ borderColor }) => borderColor};
+  border-top: 1px solid ${({ reverseColor }) => reverseColor};
   margin-left: auto;
   margin-right: auto;
   @media (max-width: 1023px) {

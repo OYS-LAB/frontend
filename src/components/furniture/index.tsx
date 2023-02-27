@@ -29,13 +29,13 @@ const MOCK_PRODUCTS = [
 
 const Furniture = () => {
   const { contentDisplay } = useHiddenMenu();
-  const { borderColor } = useColorMode();
+  const { reverseColor } = useColorMode();
   const isVisible = contentDisplay === 'block';
 
   return isVisible ? (
     <$.FurnitureSection>
       <$.FurnitureSectionHeader>FURNITURE</$.FurnitureSectionHeader>
-      <$.FurnitureSectionHr borderColor={borderColor} />
+      <$.FurnitureSectionHr reverseColor={reverseColor} />
       <$.FurnitureProductsWrap>
         <$.FurnitureProducts>
           {MOCK_PRODUCTS.map(({ id, image, title, price }) => (
