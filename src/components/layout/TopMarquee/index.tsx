@@ -3,13 +3,13 @@ import * as $ from './styles';
 
 const TopMarquee = () => {
   const welcomeMessage = 'welcome! soft open will be coming soon';
-  const { borderColor, backgroundColor1 } = useColorMode();
+  const { baseColor, reverseColor } = useColorMode();
 
   return (
-    <$.TopMarqueeWrap backgroundColor1={backgroundColor1}>
+    <$.TopMarqueeWrap baseColor={baseColor}>
       <$.TopMarqueeHeader>
         <$.TopMarqueeMessage>{welcomeMessage}</$.TopMarqueeMessage>
-        <$.TopMarqueeHr borderColor={borderColor} />
+        <$.TopMarqueeHr reverseColor={reverseColor} />
       </$.TopMarqueeHeader>
     </$.TopMarqueeWrap>
   );

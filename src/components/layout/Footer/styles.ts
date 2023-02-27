@@ -1,30 +1,29 @@
 import styled, { css } from 'styled-components';
 
 interface FooterProps {
-  backgroundColor: string;
-  textcolor: string;
-  borderColor: string;
+  baseColor: string;
+  reverseColor: string;
   height: string;
   isHiddenMenuVisible: boolean;
 }
 interface AnchorType {
-  textcolor: string;
+  reverseColor: string;
 }
 interface SectionType {
   display: string;
 }
 
 interface HrProps {
-  borderColor: string;
+  reverseColor: string;
 }
 export const FooterHr = styled.hr<HrProps>`
   border: none;
-  border-top: 1px solid ${({ borderColor }) => borderColor};
+  border-top: 1px solid ${({ reverseColor }) => reverseColor};
   margin-left: 50px;
   padding-bottom: 9px;
   @media (max-width: 1023px) {
     padding-bottom: 20px;
-    border-top: 0.4px solid ${({ borderColor }) => borderColor};
+    border-top: 0.4px solid ${({ reverseColor }) => reverseColor};
   }
   @media (max-width: 600px) {
     padding-bottom: 14px;
@@ -69,7 +68,7 @@ export const Footer = styled.section<FooterProps>`
   position: fixed;
   width: 100%;
   bottom: 0;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${({ baseColor }) => baseColor};
   transition: background 0.4s ease, color 0.4s ease;
   padding-bottom: calc(constant(safe-area-inset-bottom));
   padding-bottom: calc(env(safe-area-inset-bottom));
@@ -129,7 +128,7 @@ export const FooterNavigation = styled.ul`
 
 interface CopyrightProps {
   isMobile?: boolean;
-  textcolor: string;
+  reverseColor: string;
 }
 export const Copyright = styled.em<CopyrightProps>`
   display: ${({ isMobile }) => (isMobile ? 'none' : 'inline')};
@@ -138,7 +137,7 @@ export const Copyright = styled.em<CopyrightProps>`
   font-size: 9pt;
   position: absolute;
   padding-left: 50px;
-  color: ${({ textcolor }) => textcolor};
+  color: ${({ reverseColor }) => reverseColor};
 
   @media (max-width: 1023px) {
     font-weight: 500;
@@ -170,5 +169,5 @@ export const Copyright = styled.em<CopyrightProps>`
   }
 `;
 export const Anchor = styled.span<AnchorType>`
-  color: ${({ textcolor }) => textcolor};
+  color: ${({ reverseColor }) => reverseColor};
 `;

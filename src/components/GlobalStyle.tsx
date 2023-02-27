@@ -1,8 +1,8 @@
 import useColorMode from 'hooks/useColorMode';
 import { createGlobalStyle } from 'styled-components';
 interface GlobalStyleProps {
-  backgroundColor: string;
-  textcolor: string;
+  baseColor: string;
+  reverseColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
@@ -41,8 +41,8 @@ body {
 	line-height: 1;
 	width: 100%;
     height: 100vh;
-	color : ${props => props.textcolor};
-  	background-color : ${props => props.backgroundColor};
+	color : ${props => props.reverseColor};
+  	background-color : ${props => props.baseColor};
 	transition: background 0.1s ease, color 0.3s ease-in;
 	overflow: hidden;
 	padding:env(safe-area-inset-top)
@@ -73,11 +73,8 @@ table {
 `;
 
 const GlobalStyleComponent = () => {
-  const { backgroundColor1: backgroundColor, textcolor1: textcolor } =
-    useColorMode();
+  const { baseColor, reverseColor } = useColorMode();
 
-  return (
-    <GlobalStyle backgroundColor={backgroundColor} textcolor={textcolor} />
-  );
+  return <GlobalStyle baseColor={baseColor} reverseColor={reverseColor} />;
 };
 export default GlobalStyleComponent;

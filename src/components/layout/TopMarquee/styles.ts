@@ -1,14 +1,14 @@
 import styled, { keyframes } from 'styled-components';
 
 interface HrProps {
-  borderColor: string;
+  reverseColor: string;
 }
 interface WrapProps {
-  backgroundColor1: string;
+  baseColor: string;
 }
 
 export const TopMarqueeWrap = styled.div<WrapProps>`
-  background-color: ${({ backgroundColor1 }) => backgroundColor1};
+  background-color: ${({ baseColor }) => baseColor};
 `;
 
 const slideInLeft = keyframes`
@@ -44,5 +44,5 @@ export const TopMarqueeMessage = styled.p`
 
 export const TopMarqueeHr = styled.hr<HrProps>`
   border: none;
-  border-top: 1px solid ${({ borderColor }) => borderColor};
+  border-top: 1px solid ${({ reverseColor }) => reverseColor};
 `;
