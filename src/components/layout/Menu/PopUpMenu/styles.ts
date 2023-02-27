@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
-import { ColorModeState } from 'atoms/colorMode';
+import { ColorMode } from 'atoms/colorMode';
 import closeDark from 'images/icon-dark-close.png';
 import closeLight from 'images/icon-light-close.png';
 
@@ -7,11 +7,11 @@ interface MenusProps {
   isHiddenMenuVisible: boolean;
 }
 interface Props {
-  textcolor: string;
+  reverseColor: string;
 }
 
 interface IconProps {
-  colorMode: ColorModeState;
+  colorMode: ColorMode;
 }
 const fadeInDown = keyframes`
 0%{
@@ -62,17 +62,17 @@ export const PopupMenu = styled.ul<MenusProps>`
   }
 `;
 export const PopupMenuAnchor = styled.a<Props>`
-  color: ${({ textcolor }) => textcolor};
+  color: ${({ reverseColor }) => reverseColor};
 `;
 export const PopupMenuCloseButton = styled.button<Props>`
   background-color: transparent;
   border: none;
   bottom: 0;
   cursor: pointer;
-  color: ${({ textcolor }) => textcolor};
+  color: ${({ reverseColor }) => reverseColor};
 `;
 
-const getLogoIconSrc = (colorMode: ColorModeState) =>
+const getLogoIconSrc = (colorMode: ColorMode) =>
   colorMode === 'DARK' ? closeLight.src : closeDark.src;
 
 const Icon = styled.i`

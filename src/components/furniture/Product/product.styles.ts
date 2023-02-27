@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components';
 
 interface BorderProps {
-  borderColor: string;
+  reverseColor: string;
 }
 interface SoldoutProps {
-  backgroundColor2: string;
-  textcolor2: string;
+  baseColor: string;
+  reverseColor: string;
 }
 const border = css<BorderProps>`
-  border-top: 1px solid ${({ borderColor }) => borderColor};
-  border-bottom: 1px solid ${({ borderColor }) => borderColor};
-  border-right: 1px solid ${({ borderColor }) => borderColor};
+  border-top: 1px solid ${({ reverseColor }) => reverseColor};
+  border-bottom: 1px solid ${({ reverseColor }) => reverseColor};
+  border-right: 1px solid ${({ reverseColor }) => reverseColor};
 `;
 
 const font = css`
@@ -56,7 +56,7 @@ export const ProductInformation = styled.section<BorderProps>`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-top: 1px solid ${({ borderColor }) => borderColor};
+  border-top: 1px solid ${({ reverseColor }) => reverseColor};
   @media (max-width: 375px) {
     font-size: 10px;
   }
@@ -79,8 +79,8 @@ export const ProductDescription = styled.dd`
 export const ProductSoldoutButton = styled.div<SoldoutProps>`
   padding: 10px 15px;
   button {
-    background-color: ${({ backgroundColor2 }) => backgroundColor2};
-    color: ${({ textcolor2 }) => textcolor2};
+    background-color: ${({ reverseColor }) => reverseColor};
+    color: ${({ baseColor }) => baseColor};
     border: none;
     border-radius: 15px;
     ${font};

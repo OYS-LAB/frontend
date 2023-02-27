@@ -11,27 +11,23 @@ interface ProductProps {
 
 const Product: FC<ProductProps> = props => {
   const { image, title, price } = props;
-  const {
-    borderColor,
-    backgroundColor2: backgroundColor2,
-    textcolor2: textcolor2,
-  } = useColorMode();
+  const { baseColor, reverseColor } = useColorMode();
 
   return (
     <>
-      <$.Product borderColor={borderColor}>
+      <$.Product reverseColor={reverseColor}>
         <$.ProductWrap>
           <$.ProductWrapImageSection>
             <$.ProductImage src={image} />
           </$.ProductWrapImageSection>
-          <$.ProductInformation borderColor={borderColor}>
+          <$.ProductInformation reverseColor={reverseColor}>
             <$.ProductDescription>
               <strong>{title}</strong>
               <span>{price}</span>
             </$.ProductDescription>
             <$.ProductSoldoutButton
-              backgroundColor2={backgroundColor2}
-              textcolor2={textcolor2}
+              baseColor={baseColor}
+              reverseColor={reverseColor}
             >
               <button>Sold Out</button>
             </$.ProductSoldoutButton>

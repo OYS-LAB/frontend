@@ -1,21 +1,16 @@
 import styled, { css } from 'styled-components';
 import darkIcon from 'images/icon-dark-light.png';
 import lightIcon from 'images/icon-light-light.png';
-import { ColorModeState } from 'atoms/colorMode';
+import { ColorMode } from 'atoms/colorMode';
 
 interface DarkMode {
-  backgroundColor: string;
-  textcolor1: string;
-  borderColor: string;
-  backgroundColor2: string;
-  textcolor2: string;
   colorButtonDisplay: string;
 }
 interface IconProps {
-  colorMode: ColorModeState;
+  colorMode: ColorMode;
 }
 
-const getLogoIconSrc = (colorMode: ColorModeState) =>
+const getLogoIconSrc = (colorMode: ColorMode) =>
   colorMode === 'DARK' ? lightIcon.src : darkIcon.src;
 
 export const ColorModeButton = styled.button<DarkMode>`

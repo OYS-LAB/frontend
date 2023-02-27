@@ -3,15 +3,15 @@ import useHiddenMenu from 'hooks/useHiddenMenu';
 import * as $ from './styles';
 
 const Cart = () => {
-  const { backgroundColor2, textcolor2 } = useColorMode();
+  const { baseColor, reverseColor } = useColorMode();
   const { isVisible: isHiddenMenuVisible } = useHiddenMenu();
 
   return (
     <$.CartWrapper
-      backgroundColor2={backgroundColor2}
+      reverseColor={reverseColor}
       isHiddenMenuVisible={isHiddenMenuVisible}
     >
-      <$.CartMenu textcolor2={textcolor2}>
+      <$.CartMenu baseColor={baseColor}>
         <li>(KR/USD)</li>
         <li>ACCOUNT</li>
         <li>BAG:0</li>
