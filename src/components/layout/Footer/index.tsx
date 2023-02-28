@@ -30,12 +30,15 @@ const Footer = () => {
               <$.Anchor reverseColor={reverseColor}>ABOUT</$.Anchor>
             </Link>
           </li>
+          {/* 
           <li>
             <$.Anchor reverseColor={reverseColor}>STOCKIST</$.Anchor>
           </li>
+
           <li>
             <$.Anchor reverseColor={reverseColor}>ORDER</$.Anchor>
           </li>
+           */}
           <li>
             <Link href={Path.CONTACT} onClick={closeToggle}>
               <$.Anchor reverseColor={reverseColor}>CONTACT</$.Anchor>

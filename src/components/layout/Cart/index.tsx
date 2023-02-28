@@ -11,10 +11,18 @@ const Cart = () => {
       reverseColor={reverseColor}
       isHiddenMenuVisible={isHiddenMenuVisible}
     >
+      {/*     
       <$.CartMenu baseColor={baseColor}>
         <li>(KR/USD)</li>
         <li>ACCOUNT</li>
         <li>BAG:0</li>
+      </$.CartMenu>
+*/}
+
+      <$.CartMenu baseColor={baseColor}>
+        <li></li>
+        <li></li>
+        <li></li>
       </$.CartMenu>
     </$.CartWrapper>
   );

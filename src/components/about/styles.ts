@@ -11,6 +11,7 @@ export const Wrap = styled.section`
   align-items: center;
   justify-content: center;
   overflow-y: auto;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0px);
 `;
 export const AboutMain = styled.div`
   display: flex;
@@ -37,6 +38,10 @@ export const AboutDescription = styled.div<Props>`
   display: flex;
   align-items: center;
 
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
+
   @media (max-width: 600px) {
     padding: 20px 38px 65px 38px;
   }
@@ -45,13 +50,12 @@ export const AboutDescription = styled.div<Props>`
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    width: 430px;
+    width: 100%;
     padding-bottom: 30px;
     border-bottom: 1px solid ${({ reverseColor }) => reverseColor};
     margin-bottom: 80px;
     text-align: justify;
     @media (max-width: 600px) {
-      width: 100%;
       margin: 0 auto;
       padding-bottom: 25px;
     }
@@ -60,7 +64,7 @@ export const AboutDescription = styled.div<Props>`
 export const AboutFooter = styled.div`
   width: 100%;
   position: fixed;
-  bottom: 28px;
+  bottom: calc(env(safe-area-inset-bottom) + 28px);
 
   ul {
     text-align: center;

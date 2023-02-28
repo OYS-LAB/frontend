@@ -1,8 +1,12 @@
+import useColorMode from 'hooks/useColorMode';
 import useHiddenMenu from 'hooks/useHiddenMenu';
+import Path from 'models/Path';
+import Link from 'next/link';
 import * as $ from './styles';
 
 const MainMenu = () => {
   const { handleToggle, height, display, contentDisplay } = useHiddenMenu();
+  const { reverseColor } = useColorMode();
 
   return (
     <$.MainMenuWrap>
@@ -12,8 +16,10 @@ const MainMenu = () => {
         contentDisplay={contentDisplay}
       >
         <li onClick={handleToggle}>SHOP</li>
-        <li>
-          <$.MainMenuAnchor>ARCHIVE</$.MainMenuAnchor>
+        <li onClick={handleToggle}>
+          <Link href={Path.ABOUT}>
+            <$.MainMenuAnchor color={reverseColor}>ABOUT</$.MainMenuAnchor>
+          </Link>
         </li>
       </$.MainMenu>
     </$.MainMenuWrap>
