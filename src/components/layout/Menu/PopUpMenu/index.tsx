@@ -11,15 +11,13 @@ const ShopMenu = () => {
   return (
     <$.PopupMenu isHiddenMenuVisible={isHiddenMenuVisible}>
       <li>
-        <$.PopupMenuAnchor reverseColor={reverseColor} href="/">
-          ALL
-        </$.PopupMenuAnchor>
+        <$.PopupMenuAnchor reverseColor={reverseColor}>O</$.PopupMenuAnchor>
       </li>
+
       <li>
-        <$.PopupMenuAnchor reverseColor={reverseColor} href="/">
-          BEST
-        </$.PopupMenuAnchor>
+        <$.PopupMenuAnchor reverseColor={reverseColor}>Y</$.PopupMenuAnchor>
       </li>
+      {/* 
       <li>
         <Link href={Path.FURNITURE} onClick={handleToggle}>
           <$.PopupMenuAnchor reverseColor={reverseColor}>
@@ -27,21 +25,19 @@ const ShopMenu = () => {
           </$.PopupMenuAnchor>
         </Link>
       </li>
+       */}
       <li>
-        <$.PopupMenuAnchor reverseColor={reverseColor} href="/">
-          HOME ACC
-        </$.PopupMenuAnchor>
+        <$.PopupMenuAnchor reverseColor={reverseColor}>S</$.PopupMenuAnchor>
       </li>
+
       <li>
-        <$.PopupMenuAnchor reverseColor={reverseColor} href="/">
-          SCENT
-        </$.PopupMenuAnchor>
+        <$.PopupMenuAnchor reverseColor={reverseColor}>-</$.PopupMenuAnchor>
       </li>
+
       <li>
-        <$.PopupMenuAnchor reverseColor={reverseColor} href="/">
-          ETC.
-        </$.PopupMenuAnchor>
+        <$.PopupMenuAnchor reverseColor={reverseColor}>LAB</$.PopupMenuAnchor>
       </li>
+
       <li>
         <$.PopupMenuCloseButton
           reverseColor={reverseColor}
