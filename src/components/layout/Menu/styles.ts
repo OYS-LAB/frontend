@@ -3,7 +3,7 @@ import darkLightIcon from 'images/icon-dark-light.png';
 import searchIcon from 'images/icon-search.png';
 import logoDark from 'images/icon-logo-dark.png';
 import logoLight from 'images/icon-logo-light.png';
-import { ColorModeState } from 'atoms/colorMode';
+import { ColorMode } from 'atoms/colorMode';
 
 interface darkModeIconProps {
   searchButtonDisplay: string;
@@ -31,10 +31,10 @@ export const Image = styled.img`
 `;
 
 interface IconProps {
-  colorMode: ColorModeState;
+  colorMode: ColorMode;
 }
 
-const getLogoIconSrc = (colorMode: ColorModeState) =>
+const getLogoIconSrc = (colorMode: ColorMode) =>
   colorMode === 'DARK' ? logoLight.src : logoDark.src;
 
 const Icon = styled.i`
