@@ -10,9 +10,10 @@ export default function Document() {
         />
         <title>OYS-LAB</title>
         <meta name="description" content="OYS-LAB" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta
           name="viewport"
-          content="width=device-width, minimal-ui, initial-scale=1.0, viewport-fit=cover"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, viewport-fit=cover"
         />
       </Head>
       <body>

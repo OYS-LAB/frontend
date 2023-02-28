@@ -73,17 +73,20 @@ export const Footer = styled.section<FooterProps>`
   padding-bottom: calc(constant(safe-area-inset-bottom));
   padding-bottom: calc(env(safe-area-inset-bottom));
 
-  height: ${({ height }) => height};
+  height: 30px;
   ${({ isHiddenMenuVisible }) =>
-    !isHiddenMenuVisible &&
-    css`
-      &:hover {
-        height: auto;
-        & ${FooterInfoContainer} {
-          display: block;
-        }
-      }
-    `}
+    !isHiddenMenuVisible
+      ? css`
+          &:hover {
+            height: auto;
+            & ${FooterInfoContainer} {
+              display: block;
+            }
+          }
+        `
+      : css`
+          height: 110px;
+        `}
 
   @media (max-width: 1023px) {
     display: none;
