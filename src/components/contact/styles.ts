@@ -19,6 +19,9 @@ export const ContactGroup = styled.div`
   font-weight: 500;
   text-align: center;
   font-size: 12px;
+  width: 100%;
+  max-height: 100vh;
+  overflow: scroll;
   p {
     &: nth-child(2n+1) {
       text-decoration: underline;
@@ -26,6 +29,18 @@ export const ContactGroup = styled.div`
     }
     &: nth-child(2n) {
       padding-bottom: 15px;
+    }
+    &: nth-child(5) {
+      text-decoration: none;
+      font-style: italic;
+      padding: 30px 0 15px 0;
+    }
+    &: nth-child(6) {
+      text-decoration: underline;
+      padding-bottom: 4px;
+    }
+    &: nth-last-child(1) {
+      text-decoration: none;
     }
   }
 `;
