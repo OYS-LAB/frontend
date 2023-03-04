@@ -12,14 +12,14 @@ const Layout = (props: PropsWithChildren) => {
   const { isVisible } = useHiddenMenu();
 
   return (
-    <$.Wrap isVisiblePopUpMenu={isVisible}>
+    <$.LayoutWrap isVisiblePopUpMenu={isVisible}>
       <Flakes />
       <Cart />
       <TopMarquee />
       <Menu />
       {!isVisible && <$.ContentsContainer>{children}</$.ContentsContainer>}
       <Footer />
-    </$.Wrap>
+    </$.LayoutWrap>
   );
 };
 

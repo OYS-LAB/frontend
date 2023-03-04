@@ -9,17 +9,17 @@ interface darkModeIconProps {
   searchButtonDisplay: string;
 }
 
-interface LayoutStyleProps {
+interface MenuWrapProps {
   isVisiblePopUpMenu: boolean;
 }
 
-export const MainMenuHeader = styled.section`
+export const MenuHeader = styled.section`
   text-align: center;
   @media (max-width: 600px) {
     padding-top: 10px;
   }
 `;
-export const MainMenuLogo = styled.div`
+export const MenuLogo = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@ const Icon = styled.i`
   background-position: center, center;
 `;
 
-export const MainMenuImg = styled(Icon)<IconProps>`
+export const MenuImg = styled(Icon)<IconProps>`
   background-image: url('${({ colorMode }) => getLogoIconSrc(colorMode)}');
   width: 230px;
   height: 40px;
@@ -56,7 +56,7 @@ export const MainMenuImg = styled(Icon)<IconProps>`
   }
 `;
 
-export const MenuWrap = styled.section<LayoutStyleProps>`
+export const MenuWrap = styled.section<MenuWrapProps>`
   text-align: center;
   padding: 23px 0 20px;
   @media (max-width: 820px) {
@@ -79,23 +79,23 @@ export const MenuSection = styled.div`
   flex-direction: column;
 `;
 
-export const Button = styled.button`
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-bottom: 38px;
-  &:hover {
-    cursor: pointer;
-  }
-  &:active,
-  focus {
-    border: none;
-  }
-`;
+// export const Button = styled.button`
+//   background-color: transparent;
+//   border: none;
+//   padding: 0;
+//   margin: 0;
+//   display: inline-block;
+//   width: 20px;
+//   height: 20px;
+//   margin-bottom: 38px;
+//   &:hover {
+//     cursor: pointer;
+//   }
+//   &:active,
+//   focus {
+//     border: none;
+//   }
+// `;
 
 const darkModeIcon = styled.i<darkModeIconProps>`
   display: ${({ searchButtonDisplay }) => searchButtonDisplay};

@@ -38,10 +38,15 @@ export const MainMenu = styled.ul<ListsProps>`
   }
 `;
 
-export const MainMenuAnchor = styled.a`
+interface MainMenuAnchorProps {
+  reverseColor: string;
+}
+
+export const MainMenuAnchor = styled.span<MainMenuAnchorProps>`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   font-size: 17pt;
+  color: ${({ reverseColor }) => reverseColor};
   @media (max-width: 1023px) {
     font-size: 14pt;
   }

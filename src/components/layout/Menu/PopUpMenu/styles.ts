@@ -61,7 +61,7 @@ export const PopupMenu = styled.ul<MenusProps>`
     }
   }
 `;
-export const PopupMenuAnchor = styled.a<Props>`
+export const PopupMenuAnchor = styled.span<Props>`
   color: ${({ reverseColor }) => reverseColor};
 `;
 export const PopupMenuCloseButton = styled.button<Props>`
