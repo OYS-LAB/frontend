@@ -4,6 +4,7 @@ enum Path {
   ABOUT = 'about',
   TERMOFUSE = 'termofuse',
   CONTACT = 'contact',
+  HOMEOBJECT = 'homeobject',
 }
 
 export default Path;

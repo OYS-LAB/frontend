@@ -5,28 +5,27 @@ import * as $ from './styles';
 import Path from 'models/Path';
 const ShopMenu = () => {
   const { isVisible: isHiddenMenuVisible, handleToggle } = useHiddenMenu();
-  const { reverseColor } = useColorMode();
-  const { colorMode } = useColorMode();
+  const { reverseColor, colorMode } = useColorMode();
 
   return (
     <$.PopupMenu isHiddenMenuVisible={isHiddenMenuVisible}>
-      <li>
+      {/* <li>
         <$.PopupMenuAnchor reverseColor={reverseColor}>O</$.PopupMenuAnchor>
       </li>
 
       <li>
         <$.PopupMenuAnchor reverseColor={reverseColor}>Y</$.PopupMenuAnchor>
-      </li>
-      {/* 
+      </li> */}
+
       <li>
-        <Link href={Path.FURNITURE} onClick={handleToggle}>
+        <Link href={Path.HOMEOBJECT} onClick={handleToggle}>
           <$.PopupMenuAnchor reverseColor={reverseColor}>
-            FURNITURE
+            HOME OBJECT
           </$.PopupMenuAnchor>
         </Link>
       </li>
-       */}
-      <li>
+
+      {/* <li>
         <$.PopupMenuAnchor reverseColor={reverseColor}>S</$.PopupMenuAnchor>
       </li>
 
@@ -36,7 +35,7 @@ const ShopMenu = () => {
 
       <li>
         <$.PopupMenuAnchor reverseColor={reverseColor}>LAB</$.PopupMenuAnchor>
-      </li>
+      </li> */}
 
       <li>
         <$.PopupMenuCloseButton
