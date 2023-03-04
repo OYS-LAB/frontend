@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrap = styled.section``;
+export const ContactWrap = styled.section``;
 
-export const MainImage = styled.img`
+export const ContactMainImage = styled.img`
   display: block;
   max-width: 720px;
   width: 100vh;

@@ -10,8 +10,8 @@ const Contact = () => {
   const { colorMode } = useColorMode();
   const isVisible = contentDisplay === 'block';
   return isVisible ? (
-    <$.Wrap>
-      <$.MainImage
+    <$.ContactWrap>
+      <$.ContactMainImage
         src={colorMode === 'DARK' ? imgAboutDark.src : imgAboutLight.src}
       />
       <$.ContactGroup>
@@ -23,7 +23,7 @@ const Contact = () => {
         <p>INSTAGRAM</p>
         <p>: @OYS__LAB</p>
       </$.ContactGroup>
-    </$.Wrap>
+    </$.ContactWrap>
   ) : null;
 };
 

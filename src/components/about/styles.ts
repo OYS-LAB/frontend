@@ -3,7 +3,7 @@ import styled from 'styled-components';
 interface Props {
   reverseColor: string;
 }
-export const Wrap = styled.section`
+export const AboutWrap = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 100%;

@@ -10,7 +10,7 @@ const About = () => {
   const { colorMode, reverseColor } = useColorMode();
 
   return isVisible ? (
-    <$.Wrap>
+    <$.AboutWrap>
       <$.AboutMain>
         <$.AboutImageWrap>
           <$.AboutImage
@@ -42,7 +42,7 @@ const About = () => {
           <li>SPACE.</li>
         </ul>
       </$.AboutFooter>
-    </$.Wrap>
+    </$.AboutWrap>
   ) : null;
 };
 
