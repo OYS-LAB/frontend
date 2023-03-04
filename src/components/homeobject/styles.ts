@@ -42,7 +42,7 @@ export const HomeObjectMessageWrap = styled.div`
   p:nth-child(1) {
     padding: 200px 0 10px 0;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
   }
   p:nth-last-child(1) {
     font-size: 12px;
