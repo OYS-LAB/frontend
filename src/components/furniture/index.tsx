@@ -31,7 +31,6 @@ const Furniture = () => {
   const { contentDisplay } = useHiddenMenu();
   const { reverseColor } = useColorMode();
   const isVisible = contentDisplay === 'block';
-
   return isVisible ? (
     <$.FurnitureSection>
       <$.FurnitureSectionHeader>FURNITURE</$.FurnitureSectionHeader>

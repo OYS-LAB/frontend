@@ -4,13 +4,13 @@ interface HrProps {
   reverseColor: string;
 }
 
-export const HomeObjectSection = styled.section`
+export const EtcSection = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column;
 `;
-export const HomeObjectSectionHeader = styled.div`
+export const EtcSectionHeader = styled.div`
   font-size: 17pt;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
@@ -21,7 +21,7 @@ export const HomeObjectSectionHeader = styled.div`
     font-size: 14pt;
   }
 `;
-export const HomeObjectSectionHr = styled.hr<HrProps>`
+export const EtcSectionHr = styled.hr<HrProps>`
   width: 300px;
   border: 0;
   border-top: 1px solid ${({ reverseColor }) => reverseColor};
@@ -31,7 +31,7 @@ export const HomeObjectSectionHr = styled.hr<HrProps>`
     width: 150px;
   }
 `;
-export const HomeObjectMessageWrap = styled.div`
+export const EtcMessageWrap = styled.div`
   padding: 0 62px;
   width: 100%;
   max-height: 100vh;

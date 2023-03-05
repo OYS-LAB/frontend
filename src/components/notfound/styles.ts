@@ -39,11 +39,11 @@ export const HomeObjectMessageWrap = styled.div<MessageWrapProps>`
   button {
     background-color: ${({ baseColor }) => baseColor};
     color: ${({ reverseColor }) => reverseColor};
-    border: 2px solid ${({ reverseColor }) => reverseColor};
-    padding: 8px 10px;
+    border: 1px solid ${({ reverseColor }) => reverseColor};
+    padding: 7px 8px;
     border-radius: 20px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
   }
   button:hover {
     cursor: pointer;

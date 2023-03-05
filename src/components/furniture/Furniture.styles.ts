@@ -15,7 +15,7 @@ export const FurnitureSectionHeader = styled.div`
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
   text-align: center;
-  padding-bottom: 10pt;
+  padding-bottom: 6pt;
   @media (max-width: 1023px) {
     padding-bottom: 4px;
     font-size: 14pt;

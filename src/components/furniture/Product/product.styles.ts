@@ -86,10 +86,11 @@ export const ProductSoldoutButton = styled.div<SoldoutProps>`
     ${font};
     padding: 5px 10px;
     @media (max-width: 375px) {
+      padding: 4px 7px;
       font-size: 7px;
     }
   }
   @media (max-width: 375px) {
-    padding: 8px 9px;
+    padding: 10px 9px;
   }
 `;
