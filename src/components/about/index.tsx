@@ -17,6 +17,7 @@ const About = () => {
             src={
               colorMode === 'DARK' ? aboutDarkImage.src : aboutLightImage.src
             }
+            alt="OYS-LAB about image"
           />
         </$.AboutImageWrap>
         <$.AboutDescription reverseColor={reverseColor}>

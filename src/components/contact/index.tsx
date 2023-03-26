@@ -13,6 +13,7 @@ const Contact = () => {
     <$.ContactWrap>
       <$.ContactMainImage
         src={colorMode === 'DARK' ? imgAboutDark.src : imgAboutLight.src}
+        alt="OYS-LAB contact image"
       />
       <$.ContactGroup>
         <p>INTERVIEW, STORE PARTNERSHIP, CURATION</p>

@@ -18,7 +18,7 @@ const Product: FC<ProductProps> = props => {
       <$.Product reverseColor={reverseColor}>
         <$.ProductWrap>
           <$.ProductWrapImageSection>
-            <$.ProductImage src={image} />
+            <$.ProductImage src={image} alt="OYS-LAB product image" />
           </$.ProductWrapImageSection>
           <$.ProductInformation reverseColor={reverseColor}>
             <$.ProductDescription>

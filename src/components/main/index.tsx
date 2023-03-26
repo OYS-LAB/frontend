@@ -13,7 +13,7 @@ const Contents = () => {
 
   return (
     <$.MainWrap>
-      <$.MainImage src={IMAGE_MAP[colorMode]} />
+      <$.MainImage src={IMAGE_MAP[colorMode]} alt="OYS-LAB main image" />
     </$.MainWrap>
   );
 };
