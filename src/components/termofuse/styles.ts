@@ -6,6 +6,7 @@ export const TermofuseWrap = styled.section`
   margin: 0 auto;
   text-align: center;
   overflow-y: auto;
+  font-size: 12px;
   @media (max-width: 600px) {
     width: 90%;
   }

@@ -1,7 +1,7 @@
 import useColorMode from 'hooks/useColorMode';
 import useHiddenMenu from 'hooks/useHiddenMenu';
-import * as $ from './Furniture.styles';
-import Product from './Product';
+import * as $ from './styles';
+import Product from 'components/furniture/Product';
 import product_1 from 'images/img-product_1.jpg';
 import product_2 from 'images/img-product_2.jpg';
 import product_3 from 'images/img-product_3.jpg';
@@ -27,23 +27,23 @@ const MOCK_PRODUCTS = [
   },
 ];
 
-const Furniture = () => {
+const AllProduct = () => {
   const { contentDisplay } = useHiddenMenu();
   const { reverseColor } = useColorMode();
   const isVisible = contentDisplay === 'block';
   return isVisible ? (
-    <$.FurnitureSection>
-      <$.FurnitureSectionHeader>FURNITURE</$.FurnitureSectionHeader>
-      <$.FurnitureSectionHr reverseColor={reverseColor} />
-      <$.FurnitureProductsWrap>
-        <$.FurnitureProducts>
+    <$.AllProductSection>
+      <$.AllProductSectionHeader>ALL</$.AllProductSectionHeader>
+      <$.AllProductSectionHr reverseColor={reverseColor} />
+      <$.AllProductsWrap>
+        <$.AllProducts>
           {MOCK_PRODUCTS.map(({ id, image, title, price }) => (
             <Product key={id} image={image} title={title} price={price} />
           ))}
-        </$.FurnitureProducts>
-      </$.FurnitureProductsWrap>
-    </$.FurnitureSection>
+        </$.AllProducts>
+      </$.AllProductsWrap>
+    </$.AllProductSection>
   ) : null;
 };
 
-export default Furniture;
+export default AllProduct;

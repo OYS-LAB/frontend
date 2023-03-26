@@ -71,6 +71,10 @@ export const ProductDescription = styled.dd`
   strong {
     display: block;
     padding-bottom: 7px;
+    font-size: 14px;
+    @media (max-width: 375px) {
+      font-size: 12px;
+    }
   }
   @media (max-width: 375px) {
     padding: 7px 0 7px 8px;
@@ -85,11 +89,12 @@ export const ProductSoldoutButton = styled.div<SoldoutProps>`
     border-radius: 15px;
     ${font};
     padding: 5px 10px;
+    font-size: 8px;
     @media (max-width: 375px) {
-      font-size: 7px;
+      padding: 4px 7px;
     }
   }
   @media (max-width: 375px) {
-    padding: 8px 9px;
+    padding: 10px 9px;
   }
 `;

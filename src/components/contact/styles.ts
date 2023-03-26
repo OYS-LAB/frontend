@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrap = styled.section``;
+export const ContactWrap = styled.section``;
 
-export const MainImage = styled.img`
+export const ContactMainImage = styled.img`
   display: block;
   max-width: 720px;
   width: 100vh;
@@ -19,13 +19,31 @@ export const ContactGroup = styled.div`
   font-weight: 500;
   text-align: center;
   font-size: 12px;
+  width: 100%;
+  max-height: 100vh;
+  overflow: scroll;
   p {
     &: nth-child(2n+1) {
       text-decoration: underline;
       padding-bottom: 4px;
     }
     &: nth-child(2n) {
+      font-weight: 400;
       padding-bottom: 15px;
+    }
+    &: nth-child(5) {
+      text-decoration: none;
+      font-style: italic;
+      padding: 30px 0 15px 0;
+    }
+    &: nth-child(6) {
+      text-decoration: underline;
+      font-weight: 500;
+      padding-bottom: 4px;
+    }
+    &: nth-last-child(1) {
+      text-decoration: none;
+      font-weight: 400;
     }
   }
 `;

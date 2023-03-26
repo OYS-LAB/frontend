@@ -4,13 +4,13 @@ interface HrProps {
   reverseColor: string;
 }
 
-export const FurnitureSection = styled.section`
+export const AllProductSection = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column;
 `;
-export const FurnitureSectionHeader = styled.div`
+export const AllProductSectionHeader = styled.div`
   font-size: 17pt;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 600;
@@ -21,7 +21,7 @@ export const FurnitureSectionHeader = styled.div`
     font-size: 14pt;
   }
 `;
-export const FurnitureSectionHr = styled.hr<HrProps>`
+export const AllProductSectionHr = styled.hr<HrProps>`
   width: 300px;
   border: 0;
   border-top: 1px solid ${({ reverseColor }) => reverseColor};
@@ -31,7 +31,7 @@ export const FurnitureSectionHr = styled.hr<HrProps>`
     width: 150px;
   }
 `;
-export const FurnitureProductsWrap = styled.div`
+export const AllProductsWrap = styled.div`
   padding: 0 62px;
   width: 100%;
   max-height: 100vh;
@@ -41,7 +41,7 @@ export const FurnitureProductsWrap = styled.div`
     padding: 0;
   }
 `;
-export const FurnitureProducts = styled.ul`
+export const AllProducts = styled.ul`
   display: flex;
   flex-flow: wrap;
   padding: 18px 0 48px;

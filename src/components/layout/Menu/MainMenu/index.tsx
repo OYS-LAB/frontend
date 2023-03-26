@@ -16,9 +16,11 @@ const MainMenu = () => {
         contentDisplay={contentDisplay}
       >
         <li onClick={handleToggle}>SHOP</li>
-        <li onClick={handleToggle}>
+        <li>
           <Link href={Path.ABOUT}>
-            <$.MainMenuAnchor color={reverseColor}>ABOUT</$.MainMenuAnchor>
+            <$.MainMenuAnchor reverseColor={reverseColor}>
+              ABOUT
+            </$.MainMenuAnchor>
           </Link>
         </li>
       </$.MainMenu>
