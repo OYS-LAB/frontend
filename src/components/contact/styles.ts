@@ -28,6 +28,7 @@ export const ContactGroup = styled.div`
       padding-bottom: 4px;
     }
     &: nth-child(2n) {
+      font-weight: 400;
       padding-bottom: 15px;
     }
     &: nth-child(5) {
@@ -37,10 +38,12 @@ export const ContactGroup = styled.div`
     }
     &: nth-child(6) {
       text-decoration: underline;
+      font-weight: 500;
       padding-bottom: 4px;
     }
     &: nth-last-child(1) {
       text-decoration: none;
+      font-weight: 400;
     }
   }
 `;
